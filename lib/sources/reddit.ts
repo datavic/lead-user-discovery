@@ -82,7 +82,14 @@ export async function searchRedditRss(query: string, limit = 15): Promise<Candid
     if (res.ok) return parseRedditFeed(await res.text());
 
     if (res.status !== 429 || attempt >= 3) {
-      throw new Error(`Reddit RSS search failed (${res.status})`);
+      // 403 here usually means the caller's IP range is blocked outright
+      // (Reddit blocks datacenter ranges), which is worth distinguishing from
+      // ordinary rate limiting.
+      const hint =
+        res.status === 403
+          ? " — Reddit blocks datacenter IPs; set REDDIT_CLIENT_ID/SECRET to use the OAuth API instead"
+          : "";
+      throw new Error(`Reddit RSS search failed (${res.status})${hint}`);
     }
 
     await new Promise((resolve) => setTimeout(resolve, 5000 * (attempt + 1)));

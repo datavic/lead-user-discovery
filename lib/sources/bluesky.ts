@@ -15,7 +15,10 @@ export async function searchBluesky(query: string, limit = 15): Promise<Candidat
   });
 
   if (!res.ok) {
-    throw new Error(`Bluesky search failed (${res.status})`);
+    // Include the body: a 403 from Bluesky itself (JSON with an error name)
+    // means something different from a 403 served by an intermediary.
+    const detail = (await res.text().catch(() => "")).slice(0, 200);
+    throw new Error(`Bluesky search failed (${res.status}): ${detail}`);
   }
 
   const data = await res.json();
