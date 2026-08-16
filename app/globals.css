@@ -902,3 +902,25 @@ main {
   padding: 2px 9px;
   border-radius: 999px;
 }
+
+@media (max-width: 430px) {
+  /* Reclaim room for the nav; the mark alone still identifies the site. */
+  .brand {
+    font-size: 0;
+    gap: 0;
+  }
+
+  .logo-mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .site-nav {
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .highlight {
+    padding: 17px;
+  }
+}

@@ -132,8 +132,9 @@ export default function About() {
 
       <h2>Where the data comes from</h2>
       <p className="section-note">
-        Every source below is queried live at search time. Nothing is bought, scraped behind a login,
-        or taken from private data — these are public posts their authors chose to publish.
+        Every source below is queried directly — nightly for the tracked topics, and on demand if you
+        run your own scan. Nothing is bought, scraped from behind a login, or taken from private
+        data; these are public posts their authors chose to publish.
       </p>
 
       <div className="source-table">
