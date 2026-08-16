@@ -6,8 +6,8 @@
   --border: #21242f;
   --border-hi: #2d3140;
   --text: #e8eaf0;
-  --muted: #8b90a0;
-  --faint: #5f6474;
+  --muted: #d7dae3;
+  --faint: #a9aec0;
   --accent: #6b93ff;
   --accent-dim: rgba(107, 147, 255, 0.12);
   --good: #4fb98a;
@@ -581,4 +581,114 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 @media (max-width: 640px) {
   main { padding: 36px 16px 64px; }
   h1 { font-size: 27px; }
+}
+
+/* ---- Site chrome ---- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(8, 9, 13, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner,
+.site-footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(107, 147, 255, 0.7);
+}
+
+.site-nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  transition: color 0.15s;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.site-footer-inner {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  color: var(--faint);
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-hi);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+main {
+  padding-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .site-header-inner,
+  .site-footer-inner {
+    padding: 0 16px;
+  }
+
+  .site-nav {
+    gap: 15px;
+  }
+
+  .site-footer-inner {
+    padding: 18px 16px 24px;
+  }
 }

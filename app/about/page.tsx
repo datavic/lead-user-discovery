@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SE_SITES } from "@/lib/sources/stackexchange";
 
 interface SourceRow {
@@ -124,10 +123,6 @@ const PHASE_LABEL: Record<Phase["status"], string> = {
 export default function About() {
   return (
     <main>
-      <Link href="/" className="back-link">
-        ← Back to search
-      </Link>
-
       <h1>About this tool</h1>
       <p className="subtitle">
         This automates the sourcing step of Eric von Hippel&apos;s Lead User methodology (MIT, 1986).
