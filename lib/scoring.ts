@@ -27,14 +27,23 @@ export function buildSearchQueries(topic: string): string[] {
   return SELF_SOLUTION_PHRASES.map((phrase) => `${topic} "${phrase}"`);
 }
 
+/**
+ * Keyed on URL and on author+title, because crossposts and multi-query hits
+ * surface the same post under different URLs.
+ */
 function dedupeByUrl(candidates: Candidate[]): Candidate[] {
   const seen = new Set<string>();
   const result: Candidate[] = [];
+
   for (const candidate of candidates) {
-    if (seen.has(candidate.url)) continue;
+    const titleKey = `${candidate.author}::${candidate.title.toLowerCase().replace(/\W+/g, " ").trim()}`;
+    if (seen.has(candidate.url) || seen.has(titleKey)) continue;
+
     seen.add(candidate.url);
+    seen.add(titleKey);
     result.push(candidate);
   }
+
   return result;
 }
 
