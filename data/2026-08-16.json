@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-08-16T08:53:34.342Z",
+  "ranAt": "2026-08-16T09:03:43.530Z",
   "topics": [
     "Advanced OpenAI / ChatGPT users",
     "Farmers using ChatGPT",
@@ -11,39 +11,21 @@
   "candidates": [
     {
       "source": "hackernews",
-      "url": "https://cognition.ai/blog/blockdiff",
-      "author": "silasalberti",
-      "title": "Show HN: Blockdiff – How we built our own file format for VM disk snapshots",
-      "snippet": "Usually, I’m a researcher working on areas like RL for coding agents – but one day I became annoyed by our slow VM startup times. So I took the plunge into systems engineering and built the first version of our VM hypervisor called otterlink. It now powers both our research &amp; all of Devin production workloads. Compared to EC2, otterlink was able to bring down VM startup times by about 10x. The real pain point, however, were EC2’s long snapshot times. We want a lot of flexibility (e.g. forking, rollback and suspending VMs) that all require taking disk snapshots. On EC2 taking disk snapshots",
-      "date": "2025-06-23T18:44:53Z",
-      "isLeadUserSignal": true,
-      "problem": "Slow VM startup times and long snapshot times",
-      "selfBuiltSolution": "Built a custom VM hypervisor called otterlink",
-      "solubilityScore": 90,
-      "expectedBenefitScore": 95,
-      "theme": "Virtualization Efficiency",
-      "reasoning": "The author's solution to slow VM startup times and long snapshot times is a concrete example of a lead-user signal, as they actively built and implemented a custom VM hypervisor to address these specific pain points.",
-      "topic": "AI coding agent power users",
-      "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
       "url": "https://news.ycombinator.com/item?id=47909460",
       "author": "kofdai",
       "title": "I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in…",
       "snippet": "I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in AI coding: We need the reasoning power of frontier models like Claude 4.7 Opus, but cannot legally or ethically leak proprietary source code, hardcoded secrets, or core business logic to their APIs. With the industry worried about losing &quot;tacit knowledge&quot; to AI, I built an architecture where the human retains ultimate control over semantics, while the AI is relegated strictly to structural logic patching. To achieve this, I built the &quot;Gatekeeper&quot; architecture. Before code leaves your loc",
       "date": "2026-04-26T11:32:48Z",
       "isLeadUserSignal": true,
-      "problem": "Protecting proprietary code from AI APIs",
+      "problem": "Retaining control over proprietary source code in AI coding",
       "selfBuiltSolution": "Gatekeeper architecture",
       "solubilityScore": 90,
       "expectedBenefitScore": 95,
-      "theme": "AI Code Security",
-      "reasoning": "The author has a genuine need to protect proprietary code and has developed a specific architecture, Gatekeeper, to address this issue, demonstrating a high level of self-built solution and expected benefit.",
+      "theme": "AI coding security",
+      "reasoning": "The author has a genuine need to protect proprietary source code and has developed a specific architecture, Gatekeeper, to address this issue, demonstrating a high level of self-built solution and expected benefit.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -53,12 +35,12 @@
       "snippet": "I really don&#x27;t get the point of those oX-mini models for chat apps. (API is different, we can benchmark multiple models for a given recurring taks and choose the best one taking costs into consideration). As part of my job, I am trying to promote usage of AI in my company (~150 FTE); we have an OpenAI chatGPT plus subscription for all employees. Roughly speaking the message is: &quot;use GPT-4o all the time, use o1 (soon o3) if you have more complex tasks&quot;. What am I supposed to answer when people ask &quot;when am I supposed to use o3-mini ? . And what the heck is o3-mini-high, how ",
       "date": "2025-01-31T19:32:18Z",
       "isLeadUserSignal": true,
-      "problem": "Optimizing AI model usage in a company",
+      "problem": "Choosing the right AI model for tasks",
       "selfBuiltSolution": "Benchmarking multiple models for recurring tasks and choosing the best one based on costs",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI Optimization",
-      "reasoning": "The author is actively using AI models in their company and is looking for a concrete solution to optimize their usage, indicating a genuine lead-user signal.",
+      "theme": "AI model selection",
+      "reasoning": "The author is trying to optimize AI usage in their company and is actively experimenting with different models to find the best solution for their employees.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -71,12 +53,12 @@
       "snippet": "As an IT security professional with 15+ years of experience, I discovered systematic response deletion in ChatGPT that raises serious questions about transparency and accountability. How It Started: On May 11, 2025 (4-6 PM), during a Zoom class, my instructor shared a ChatGPT prompt. When I used the same prompt: • Instructor: Perfect visualization • Me: No visualization ChatGPT explained: “The instructor likely uses Pro + advanced features. ChatGPT Pro users can use GPT-4o.” The problem? I was already a Plus subscriber with GPT-4o access. I had just purchased a MacBook Pro M4 Max (top specs) i",
       "date": "2025-11-09T09:21:04Z",
       "isLeadUserSignal": true,
-      "problem": "Systematic response deletion in ChatGPT",
-      "selfBuiltSolution": "Identified and reported the issue using own IT security expertise",
+      "problem": "Transparency and accountability in AI decision-making",
+      "selfBuiltSolution": "Identified systematic response deletion in ChatGPT through personal experience",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI Transparency",
-      "reasoning": "The author's 15+ years of IT security experience and ability to identify and report a complex issue with ChatGPT demonstrates a genuine lead-user signal.",
+      "reasoning": "The author's 15+ years of IT security experience and ability to identify a systematic issue in ChatGPT demonstrate a genuine lead-user signal.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -89,12 +71,12 @@
       "snippet": "Launching my first product today and would love this community&#x27;s thoughts. Background: I&#x27;m 17, been coding for a while, and kept running into the same problem: I wanted AI features in my apps but didn&#x27;t want to pay OpenAI&#x27;s API fees or build a backend just to hide my keys. What I built: Scaffold - a no-code tool that lets you create custom AI tools and embed them anywhere. Think Typeform but for AI prompts. The flow: Build a form (fields like &quot;topic&quot;, &quot;budget&quot;, whatever) Write a prompt template using {{field_name}} variables Get an embed code, paste it i",
       "date": "2026-01-04T22:22:22Z",
       "isLeadUserSignal": true,
-      "problem": "High API fees for OpenAI and need for custom AI tools",
-      "selfBuiltSolution": "Scaffold - a no-code tool for creating custom AI tools",
+      "problem": "High cost of OpenAI API fees and backend development",
+      "selfBuiltSolution": "Scaffold - a no-code tool for custom AI tools and embeds",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI Development",
-      "reasoning": "The author has a genuine need for custom AI tools and built a solution to address it, showing a high level of self-sufficiency and innovation.",
+      "theme": "AI Development Costs",
+      "reasoning": "The author has built a concrete solution to a specific problem they faced as a developer, indicating a genuine lead-user signal.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -107,12 +89,12 @@
       "snippet": "with all the hate on scratch, it only compels me to create a GOOD AI. Ai isn't inherently bad. But what Scratch did was an atrocity, a disgrace to its own goals.. well, let's do AI the good way!\n\neverything is stored locally\n\nyou may be asking, \"how are you gonna use AI if you don't pay for it?\"\nwell, it depends on the users. you can choose to use Gemini, OpenAI, Claude, etc. api keys of your own, but those are sorta hidden away/unrecommended unless you have a potato. the other options are your local AI either using our own algorithm from WebGPU or setting up ollama locally and setting up a br",
       "date": "2026-07-31T21:34:25Z",
       "isLeadUserSignal": true,
-      "problem": "Creating a local AI solution for users without relying on paid APIs",
-      "selfBuiltSolution": "Using WebGPU or Ollama locally",
+      "problem": "Creating a good AI platform without relying on proprietary services",
+      "selfBuiltSolution": "Using local AI models like Ollama and WebGPU, or setting up Gemini/ OpenAI/Claude API keys",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Local AI Development",
-      "reasoning": "The author is actively working on a project to create a local AI solution, using their own algorithm or third-party tools like Ollama, to address the issue of relying on paid APIs.",
+      "theme": "AI Platform Development",
+      "reasoning": "The author is actively exploring and implementing local AI solutions to create a good AI platform, indicating a genuine need and self-driven innovation.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -130,9 +112,81 @@
       "solubilityScore": 90,
       "expectedBenefitScore": 80,
       "theme": "AI Integration",
-      "reasoning": "The author built a custom server to connect ChatGPT with human experts, indicating a genuine need to integrate AI with human judgment and a high level of self-solutioning.",
+      "reasoning": "The author built a custom MCP server to address the need for integrating human experts with ChatGPT, demonstrating a genuine lead-user signal by creating a concrete solution to a complex problem.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/livekit-examples/kitt",
+      "author": "russ",
+      "title": "Show HN: Live conversations with ChatGPT using WebRTC",
+      "snippet": "HN, meet KITT! https:&#x2F;&#x2F;livekit.io&#x2F;kitt Like many folks here, the LiveKit team is enamored with ChatGPT. Given that we spend most of our time working with real-time media, we thought we&#x27;d try connecting GPT to a WebRTC video call. KITT can do some neat things: - Answer questions like Siri, Alexa, or Google Assistant - Summarize what was discussed in a meeting - Speak multiple languages and even act like a third-party translator - Act as a DM in a D&amp;D campaign At first, we weren’t sure if we could get the latency low enough to have a human-like conversation, but after mak",
+      "date": "2023-04-12T15:00:26Z",
+      "isLeadUserSignal": true,
+      "problem": "Real-time conversation with AI in meetings",
+      "selfBuiltSolution": "LiveKit's KITT, integrating ChatGPT with WebRTC video calls",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Real-time AI Integration",
+      "reasoning": "The author successfully integrated ChatGPT with WebRTC video calls to create a conversational AI assistant, demonstrating a high level of innovation and problem-solving.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/savbell/whisper-writer",
+      "author": "savbell",
+      "title": "Show HN: WhisperWriter – Speech-to-text using OpenAI's Whisper, coded by ChatGPT",
+      "snippet": "WhisperWriter is a small dictation app that uses OpenAI&#x27;s Whisper speech recognition model to auto-transcribe recordings from a user&#x27;s microphone. I built it with the help of ChatGPT (with GPT-4) and GitHub Copilot, with almost every line of code in the repository written by AI. Running the app: Everything you need to know to set WhisperWriter up is in the linked GitHub repo&#x27;s README file. The app can be run locally using the open-source Whisper release or online through the OpenAI API. I personally use the latter because my computer is not very powerful, but the former is free ",
+      "date": "2023-05-08T22:07:05Z",
+      "isLeadUserSignal": true,
+      "problem": "Transcribing audio recordings manually is time-consuming and resource-intensive",
+      "selfBuiltSolution": "WhisperWriter, a speech-to-text app using OpenAI's Whisper model, coded with AI assistance",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "Speech Recognition",
+      "reasoning": "The author built a custom solution using AI tools to address a specific pain point, showcasing a genuine lead-user signal.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
+    },
+    {
+      "source": "stackexchange",
+      "url": "https://cooking.stackexchange.com/q/129390",
+      "author": "unknown",
+      "title": "How do I tame the \"tongue bite\" in my tomato-based meals?",
+      "snippet": "I checked with <span class=\"highlight\">ChatGPT</span>. I don't think its just me:\n\"Yes, tomato growers and processors have historically selected higher acid varieties to help reduce spoilage before processing.\" &hellip; If <span class=\"highlight\">using</span> canned tomato ingredients or paste myself, I at least let it go for an hour or so, and I can always tell the difference with an \"undercooked\" sauce. &hellip; ",
+      "date": "2024-10-21T23:34:10.000Z",
+      "isLeadUserSignal": true,
+      "problem": "Reducing acidity in tomato-based meals",
+      "selfBuiltSolution": "Using ChatGPT to research and understand the underlying cause of acidity in tomatoes",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Food Preparation",
+      "reasoning": "The user demonstrated a specific problem and actively used ChatGPT to find a solution, indicating a genuine lead-user signal.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=41684458",
+      "author": "fragmede",
+      "title": "Or the other one, a flock of 8 birds are sitting on a fence.",
+      "snippet": "Or the other one, a flock of 8 birds are sitting on a fence. The farmer shoots 1. How many are left? 8-1 is 7, but the answer is zero, because the gun shot scared the rest of them off. Fwiw, ChatGPT says zero. At some point, we decided that compilers were good enough to convert code into assembly to just use them. even if an absolute master could write better assembly than the complier, we moved over to using compilers because of the advantages offered.",
+      "date": "2024-09-29T02:44:51Z",
+      "isLeadUserSignal": true,
+      "problem": "Optimizing code generation for assembly",
+      "selfBuiltSolution": "Using compilers to convert code into assembly",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Code Optimization",
+      "reasoning": "The author used ChatGPT to validate their understanding of a clever joke, but more importantly, they referenced a relevant analogy to illustrate a point about compilers and code generation, showcasing their ability to think creatively and apply AI tools to real-world problems.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
     {
@@ -144,11 +198,11 @@
       "date": "2023-04-04T07:28:37Z",
       "isLeadUserSignal": true,
       "problem": "Immutable scientific research tracking",
-      "selfBuiltSolution": "Proposed blockchain-based system for version control and peer review",
+      "selfBuiltSolution": "Proposed blockchain-based system for version control of scientific research",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "Scientific Collaboration",
-      "reasoning": "The author has a deep understanding of scientific research and has proposed a concrete, innovative solution to a specific problem in the field, indicating a genuine lead-user signal.",
+      "reasoning": "The author has a deep understanding of the scientific process and has proposed a concrete solution to a specific problem, indicating a genuine lead-user signal.",
       "topic": "Scientists using AI in research",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -161,30 +215,12 @@
       "snippet": "&gt; A closer analogy with AI for science writing would be to accuse you of getting help from a computer to create the new font and not doing it by hand. When you create fonts goal is the font. Ok fine, we&#x27;ll go with your formulation of the analogy, because it doesn&#x27;t affect my overarching point at all. If I spent hours tweaking my font manually with the pen tool in a vector graphics software suite, and someone accused me of using ChatGPT to simply spit out an SVG file, I&#x27;d be annoyed. &gt; When you publish research the writeup is important [...] Because accuracy and clarity of ",
       "date": "2024-02-12T05:49:11Z",
       "isLeadUserSignal": true,
-      "problem": "Maintaining research writeup quality while using AI tools",
-      "selfBuiltSolution": "Using ChatGPT to generate SVG files for font creation, then manually tweaking with vector graphics software",
+      "problem": "Maintaining research writeup quality",
+      "selfBuiltSolution": "Using ChatGPT to generate SVG files for font creation",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Research Writing",
-      "reasoning": "The author is defending the use of AI tools in science writing by drawing an analogy with font creation, indicating a genuine need to balance AI-assisted work with manual refinement.",
-      "topic": "Scientists using AI in research",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=8847291",
-      "author": "jlees",
-      "title": "Definitely agree with this.",
-      "snippet": "Definitely agree with this. I do see more folks out there (like myself) with one foot in both the data science and production engineering worlds, and my personal approach to the problem of black boxes would be to have more of us! Rather than some &#x27;sucker dev&#x27; implementing a statistician&#x27;s hack, a full-stack mindset means the data science is done with engineering considerations all along. But even then, half the joy of data science is not really knowing what you&#x27;re doing at first as you research and experiment, just as your first attempt at a production system for something ",
-      "date": "2015-01-06T21:36:14Z",
-      "isLeadUserSignal": true,
-      "problem": "black box data science solutions",
-      "selfBuiltSolution": "full-stack mindset with engineering considerations",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "data science engineering",
-      "reasoning": "The author's personal approach to addressing the problem of black boxes is to develop a full-stack mindset, indicating they have actively thought about and implemented a solution to this issue.",
+      "theme": "Scientific Publishing",
+      "reasoning": "The author uses a specific example of font creation to illustrate the point that using AI for science writing is comparable to using a computer for font creation, indicating a nuanced understanding of AI's role in their work.",
       "topic": "Scientists using AI in research",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -202,7 +238,7 @@
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI in non-traditional fields",
-      "reasoning": "The author's self-taught experience and prior education in biology/ecology/behavior, combined with their experimentation with AI tools, indicate a genuine interest in applying AI in a non-traditional field, research science.",
+      "reasoning": "The author has a clear need to apply AI in their research scientist route, and has already demonstrated self-built solutions in related areas.",
       "topic": "Scientists using AI in research",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -216,11 +252,11 @@
       "date": "2024-07-16T15:00:21Z",
       "isLeadUserSignal": true,
       "problem": "Training LLM against specific knowledge base",
-      "selfBuiltSolution": "Dumping inventory information and BOM content as system message for ChatGPT4-o model",
+      "selfBuiltSolution": "Dumping inventory information and BOM content as a system message for ChatGPT4-o model",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI Training",
-      "reasoning": "The author has a specific, real-world problem and has already experimented with a concrete solution using ChatGPT4-o model, indicating a genuine lead-user signal.",
+      "reasoning": "The author has a concrete problem and has already experimented with a specific AI tool (ChatGPT4-o) to address it, indicating a genuine lead-user signal.",
       "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -233,15 +269,33 @@
       "snippet": "I&#x27;m a solo developer who&#x27;s been writing code for 26 years, mostly consulting work in computational geometry and CAD software these days. A month or two ago I watched a YouTube video about using an AI agent as a resume assistant, and thought it sounded like a fun idea. More importantly, it sounded like something I could actually learn to build quickly. Around the same time my longest-running client, a small company that makes a SolidWorks plugin, needed a better way to handle technical support. They&#x27;re a three-person shop--they don&#x27;t have a support team or an IT team. So I b",
       "date": "2026-02-18T13:58:28Z",
       "isLeadUserSignal": true,
-      "problem": "Small business technical support",
+      "problem": "Small businesses need efficient technical support",
       "selfBuiltSolution": "AI support agents for small businesses (Recursive)",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Small business support",
+      "theme": "Small Business Support",
       "reasoning": "The author, a seasoned developer, built a solution to address a specific pain point for their client, a small business, by leveraging AI technology.",
       "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/moniquehayward.bsky.social/post/3m3ivbqgkx222",
+      "author": "moniquehayward.bsky.social",
+      "title": "Small biz owners: AI isn’t magic. But it can save you time, money, and stress if you use it wisely.",
+      "snippet": "Small biz owners: AI isn’t magic. But it can save you time, money, and stress if you use it wisely.\n\nHere's my new Medium piece on how my co-founder and I used @ChatGPTapp to cut $20K in costs and scale faster.\nmedium.com/@iluvnyc1970...\n\n#AI #ChatGPT #smallbiz #Entrepreneurs",
+      "date": "2025-10-18T23:00:01.797Z",
+      "isLeadUserSignal": true,
+      "problem": "Cutting costs and scaling faster for small businesses",
+      "selfBuiltSolution": "Utilized @ChatGPTapp to automate tasks",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Small Business Efficiency",
+      "reasoning": "The author explicitly states they used ChatGPT to cut $20K in costs and scale faster, indicating a concrete solution to a specific problem.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
     },
     {
       "source": "github",
@@ -256,28 +310,46 @@
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI Service Development",
-      "reasoning": "The author is actively seeking to monetize their expertise in using AI tools to create a valuable service for small businesses, indicating a genuine need and self-built solution.",
+      "reasoning": "The author is actively seeking to monetize their knowledge of AI tools and create a service that addresses a specific need in the market.",
       "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
     {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=46201118",
-      "author": "trollbridge",
-      "title": "Astute observation.",
-      "snippet": "Astute observation. From where I sit, the market (at least for business software; I am not very familiar with the consumer market) seems to be wide open, and businesses in the 5 - 200 employee range seem to be particularly underserved. The marketplace for software for single-owner shops or 1-5 employee size places does seem to be quite strong, and then there&#x27;s enterprise software, but small business seems to have a software marketplace that is atrociously bad. Here is the typical thing a prospective customer asks me to fix for them: - They are using some piece of software that is essentia",
-      "date": "2025-12-09T04:06:23Z",
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/snapbrief.bsky.social/post/3mjz56t2do72s",
+      "author": "snapbrief.bsky.social",
+      "title": "Small business owners using ChatGPT: how much time do you spend re-explaining your business at the start of each session",
+      "snippet": "Small business owners using ChatGPT: how much time do you spend re-explaining your business at the start of each session?\n\nI built SnapBrief to fix it — 10 questions → reusable context brief. Paste once, AI starts from knowing you. Free: snapbrief.fly.dev",
+      "date": "2026-04-21T13:56:53.839829+00:00",
       "isLeadUserSignal": true,
-      "problem": "Small business software marketplace is bad",
-      "selfBuiltSolution": "Custom software fixes for clients",
+      "problem": "Re-explaining business at start of each ChatGPT session",
+      "selfBuiltSolution": "SnapBrief: reusable context brief",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Small business software",
-      "reasoning": "The author is a software expert who has built custom solutions for clients, indicating they actively use AI or other tools to address the problem of a bad software marketplace for small businesses.",
+      "theme": "Business Efficiency",
+      "reasoning": "The author has developed a tool to address a specific pain point in their own work as a small business owner, indicating a genuine lead-user signal.",
       "topic": "Small business owners using ChatGPT",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/nahidislam.dev/post/3m7hgcsy2kk2n",
+      "author": "nahidislam.dev",
+      "title": "Are companies actually tracking what staff paste into ChatGPT?",
+      "snippet": "Are companies actually tracking what staff paste into ChatGPT?\n\nI keep hearing stories of people dropping client data, internal docs, even customer lists into AI tools but most companies have zero monitoring or policy.\n\nQuick anonymous survey:\n👉 forms.gle/BpWxzwNyrBTW...\n\nCurious what people think 🤔",
+      "date": "2025-12-08T06:40:18.662Z",
+      "isLeadUserSignal": true,
+      "problem": "Companies lack monitoring and policy for sensitive data in AI tools",
+      "selfBuiltSolution": "Anonymous survey to gauge staff behavior and company policies",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Data Security",
+      "reasoning": "The author is actively collecting data to address a specific problem in their industry, indicating a genuine lead-user signal.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
     },
     {
       "source": "hackernews",
@@ -288,11 +360,11 @@
       "date": "2023-09-16T01:06:41Z",
       "isLeadUserSignal": true,
       "problem": "Concerns about data privacy and security",
-      "selfBuiltSolution": "Utilizing local LLMs like localGPT and GPT4All, implementing techniques such as sliding window chunking and RAG",
+      "selfBuiltSolution": "Utilizing local LLMs like localGPT and GPT4All, incorporating techniques like sliding window chunking and RAG",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "Data Privacy",
-      "reasoning": "The author's need for local LLMs stems from their discomfort with sending personal data to cloud services, indicating a genuine concern for data security and a willingness to explore alternative solutions.",
+      "reasoning": "The author is actively seeking a solution to their data privacy concerns by exploring and building upon local LLMs, indicating a genuine need and self-driven problem-solving approach.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -305,15 +377,15 @@
       "snippet": "I started this project as a way to help my girlfriend with her new book and to learn a bit about LLMs and RAGs. The idea was to use local embeddings to ask questions about characters and explore creative possibilities, all while keeping everything local. What began as a bunch of a wild colelction of scripts is now growing into a labour of love pet-project. You maybe know how it sometimes goes :) It&#x27;s not finished and polished yet, but I&#x27;ve made some good progress and brought it to a much better overall state over Christmas day. I&#x27;d love to show it to a few people and get some fe",
       "date": "2024-12-30T12:52:56Z",
       "isLeadUserSignal": true,
-      "problem": "Automating research for creative writing",
+      "problem": "Creative writing assistance for authors",
       "selfBuiltSolution": "Chipper AI/RAG Interface for Tinkerers (Ollama, Haystack RAG, Python)",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Creative Writing Tools",
-      "reasoning": "The author built a custom AI/RAG interface to help their girlfriend with her book, indicating a genuine need and self-built solution.",
+      "theme": "Creative Writing",
+      "reasoning": "The author has built a custom AI/RAG interface to assist their girlfriend with her book, indicating a genuine need for creative writing assistance and a high level of self-built solution.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -323,30 +395,12 @@
       "snippet": "I’ve spent the last two months building AgenticSeek, a privacy-focused alternative to cloud-based AI tools like ManusAI. It runs entirely on your machine—no API calls, no data leaks. Why AgenticSeek? Optimized for local LLMs (developed mostly on an RTX 3060 running deepseek r1 14b). Truly private: All components (TTS, STT, planner) run locally. More responsive than alternatives (we respond fast to issues + active Discord). Designed to be fun—think JARVIS-like voice control, multi-agent workflows, and a slick web UI. Current Features: Web browsing (research + form filling), code write&#x2F;fix,",
       "date": "2025-04-26T17:23:49Z",
       "isLeadUserSignal": true,
-      "problem": "Cloud-based AI tool limitations (privacy, responsiveness)",
-      "selfBuiltSolution": "AgenticSeek, a self-hosted AI tool",
+      "problem": "Cloud-based AI tool limitations and data privacy concerns",
+      "selfBuiltSolution": "AgenticSeek, a self-hosted AI tool alternative",
       "solubilityScore": 90,
       "expectedBenefitScore": 80,
-      "theme": "AI Infrastructure",
-      "reasoning": "The author has built a self-hosted AI tool to address their own needs for privacy and responsiveness, showcasing a genuine lead-user signal.",
-      "topic": "Local LLM tinkerers",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=42774697",
-      "author": "colonial",
-      "title": "You should be able to run it locally w&#x2F; something like Ollama.",
-      "snippet": "You should be able to run it locally w&#x2F; something like Ollama. It&#x27;s been a while since I tinkered with the local LLM tools, but 1.5B is tiny, so it should run at a decent clip even on just your CPU. `ollama run hf.co&#x2F;bartowski&#x2F;DeepSeek-R1-Distill-Qwen-1.5B-GGUF:F16` and you&#x27;re off to the races.",
-      "date": "2025-01-21T00:06:22Z",
-      "isLeadUserSignal": true,
-      "problem": "Running large LLM models locally",
-      "selfBuiltSolution": "Using Ollama to run hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:F16",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "AI Development",
-      "reasoning": "The author demonstrates a concrete solution to a specific problem, showcasing their ability to use and adapt AI tools for their needs.",
+      "theme": "AI Privacy",
+      "reasoning": "The author built AgenticSeek to address their own need for a private and responsive AI tool, showcasing a genuine lead-user signal by developing a concrete solution to their problem.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -359,12 +413,12 @@
       "snippet": "The person you replied to suggests that the analogy of a 3d printer building a part does not hold, as LLM-based coding systems are able to both &quot;print&quot; some code, and decide where and when to do so. I tend to agree with them. What people seem to miss about LLM coding systems, IMO: a) deciding on the capabilities of an LLM to code after a brief browser session with 4o&#x2F;claude is comparable to waking up a coder in the middle of the night, and having them recite the perfect code right then and there. So a lot of people interact with it that way, decide it&#x27;s meh, and write it of",
       "date": "2024-10-05T15:09:55Z",
       "isLeadUserSignal": true,
-      "problem": "LLM coding limitations and expectations",
-      "selfBuiltSolution": "Using 4o/claude for brief browser sessions to explore LLM capabilities",
+      "problem": "Assessing LLM coding capabilities",
+      "selfBuiltSolution": "Using 40Claude for a brief browser session to determine LLM coding capabilities",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI coding workflow",
-      "reasoning": "The author has a concrete workflow using 4o/claude to explore LLM capabilities, indicating a genuine need and self-built solution.",
+      "theme": "AI Coding Assessment",
+      "reasoning": "The author has demonstrated a sophisticated understanding of LLM coding systems and has developed a unique workflow to assess their capabilities, showcasing a genuine lead-user signal.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -377,15 +431,33 @@
       "snippet": "You can do the &quot;almost-realtime&quot; part, all locally. I tinkered with a Python script for a few hours that used Whisper to speech-to-text, fed that into a local Mistral model (don&#x27;t recall which), and then piped the output into text-to-speech. It wasn&#x27;t really streamed, though. Audio input was buffered, fully evaluated to a string, then fed into the LLM and the full text was converted back to audio. The Whisper speech-to-text was pretty real-time, the LLM was not. I was barely scraping by on hardware specs, though.",
       "date": "2023-12-18T15:30:04Z",
       "isLeadUserSignal": true,
-      "problem": "Real-time speech-to-text processing",
-      "selfBuiltSolution": "Python script using Whisper, Mistral, and text-to-speech",
+      "problem": "Real-time speech-to-text conversion",
+      "selfBuiltSolution": "Python script using Whisper, Mistral model, and text-to-speech",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Speech-to-Text",
-      "reasoning": "The author successfully built a local, almost-realtime speech-to-text system using AI tools, indicating a genuine need and self-built solution.",
+      "theme": "Speech-to-text",
+      "reasoning": "The author successfully built a local, almost-realtime speech-to-text system using AI models, indicating a genuine need and self-built solution.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/uogbuji.bsky.social/post/3mfrweoll2s2g",
+      "author": "uogbuji.bsky.social",
+      "title": "Anya. Been noodling as I pondered #OpenClaw. Defo for tinkerers, but alr very useful for me. Ideas: 1) Clarity of short-",
+      "snippet": "Anya. Been noodling as I pondered #OpenClaw. Defo for tinkerers, but alr very useful for me. Ideas: 1) Clarity of short-branch DAG flow 2) Separation of deterministic from ND blocks 3) Simple UNIX spirit. Local #LLM provider support\ngithub.com/uogbuji/Anya\n#GenAI #LLMOps #AgenticAI #Agent",
+      "date": "2026-02-26T19:25:28.191Z",
+      "isLeadUserSignal": true,
+      "problem": "Improving clarity and separation in complex AI workflows",
+      "selfBuiltSolution": "Anya (github.com/uogbuji/Anya)",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Workflow Optimization",
+      "reasoning": "The author has built a concrete solution (Anya) to address their specific needs in AI workflow clarity and separation, indicating a genuine lead-user signal.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
     },
     {
       "source": "hackernews",
@@ -395,15 +467,15 @@
       "snippet": "Hi everyone, I am Kumar, co-founder of Dench ( https:&#x2F;&#x2F;denchclaw.com ). We were part of YC S24, an agentic workflow company that previously worked with sales floors automating niche enterprise tasks such as outbound calling, legal intake, etc. Building consumer &#x2F; power-user software always gave me more joy than FDEing into an enterprise. It did not give me joy to manually add AI tools to a cloud harness for every small new thing, at least not as much as completely local software that is open source and has all the powers of OpenClaw (I can now talk to my CRM on Telegram!). A wee",
       "date": "2026-03-09T14:55:42Z",
       "isLeadUserSignal": true,
-      "problem": "Manual integration of AI tools into cloud-based CRM",
-      "selfBuiltSolution": "DenchClaw, a local CRM on top of OpenClaw",
+      "problem": "Manual integration of AI tools with CRM",
+      "selfBuiltSolution": "Local CRM on Top of OpenClaw",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Local AI Integration",
-      "reasoning": "Kumar's experience with automating niche enterprise tasks and his desire for a completely local software solution with the powers of OpenClaw indicate a genuine need for a self-built solution.",
+      "theme": "CRM Integration",
+      "reasoning": "The author has a genuine need for local CRM integration and has built a solution using OpenClaw, demonstrating a high level of self-sufficiency and innovation.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -417,28 +489,28 @@
       "selfBuiltSolution": "Verantyx, a native macOS IDE",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI coding security",
-      "reasoning": "The author is a student developer actively building a solution to address the issue of protecting proprietary source code in AI coding, leveraging their own expertise and resources.",
+      "theme": "AI Coding Security",
+      "reasoning": "The author is a student developer actively building a solution to address a specific pain point in AI coding, indicating a genuine lead-user signal.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
     {
       "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=49276601",
-      "author": "jmatan",
-      "title": "Show HN: A better, free client for iMessage power-users",
-      "snippet": "TLDR: Your iMessage inbox is a mess. Go to attention dot righthand dot ai. it&#x27;s a free app for mac. It&#x27;s like Superhuman for iMessage. ___ You text your friends and family in iMessage. You text your colleagues in iMessage. If you run a business, you likely text prospects and leads in iMessage. I text our customers in iMessage - I want them to know they&#x27;ve got the fastest way to reach me. In 2026 you even text your AI agents in iMessage (Linq raises $20M to enable AI assistants to live in iMessage, Apple approves Poke as the first AI agent on its Messages for Business platform). ",
-      "date": "2026-08-12T18:22:01Z",
+      "url": "https://cognition.ai/blog/blockdiff",
+      "author": "silasalberti",
+      "title": "Show HN: Blockdiff – How we built our own file format for VM disk snapshots",
+      "snippet": "Usually, I’m a researcher working on areas like RL for coding agents – but one day I became annoyed by our slow VM startup times. So I took the plunge into systems engineering and built the first version of our VM hypervisor called otterlink. It now powers both our research &amp; all of Devin production workloads. Compared to EC2, otterlink was able to bring down VM startup times by about 10x. The real pain point, however, were EC2’s long snapshot times. We want a lot of flexibility (e.g. forking, rollback and suspending VMs) that all require taking disk snapshots. On EC2 taking disk snapshots",
+      "date": "2025-06-23T18:44:53Z",
       "isLeadUserSignal": true,
-      "problem": "Managing iMessage inbox for business",
-      "selfBuiltSolution": "Using iMessage for customer communication",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "Business Communication",
-      "reasoning": "The author uses iMessage to communicate with customers and prospects, indicating a need for a better client to manage their inbox.",
+      "problem": "Slow VM startup times and long snapshot times",
+      "selfBuiltSolution": "Built our own VM hypervisor called otterlink and a custom file format for VM disk snapshots called Blockdiff",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "Virtualization Efficiency",
+      "reasoning": "The author's concrete evidence of building their own VM hypervisor and custom file format demonstrates a genuine lead-user signal, driven by a specific professional need to optimize VM startup times and snapshot times.",
       "topic": "AI coding agent power users",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "firstSeenAt": "2026-08-16T08:53:34.342Z",
       "isNew": false
     },
     {
@@ -450,11 +522,11 @@
       "date": "2026-05-29T14:35:42Z",
       "isLeadUserSignal": true,
       "problem": "AI agents re-solving same problems",
-      "selfBuiltSolution": "OpenHive, a shared knowledge base",
+      "selfBuiltSolution": "OpenHive, a shared knowledge base for AI agents",
       "solubilityScore": 90,
       "expectedBenefitScore": 80,
       "theme": "AI Efficiency",
-      "reasoning": "The author built a concrete solution to address a recurring problem in AI agent interactions, indicating a genuine lead-user signal.",
+      "reasoning": "The author built a concrete solution to a specific problem they observed in their own workflow, indicating a genuine lead-user signal.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -467,12 +539,12 @@
       "snippet": "We built Jupyt ( https:&#x2F;&#x2F;www.ipynb.ai ), an AI-native coding assistant for Jupyter notebooks that helps you write, run, and analyze Python code faster. What it does: • Automatically creates, updates and deletes cells • Run and reference outputs autonomously with “Agent Mode” • Search datasets from HuggingFace, Kaggle, and more • Supports all major model providers (OpenAI, Claude, Gemini, etc.) We’re targeting a gap between powerful modern editors like Cursor and the outdated Jupyter&#x2F;Colab workflow millions still use. Our goal is to bring AI-first productivity to research, data a",
       "date": "2025-05-14T18:31:55Z",
       "isLeadUserSignal": true,
-      "problem": "Streamlining Jupyter notebook workflow for data analysis",
-      "selfBuiltSolution": "Jupyt, an AI-native coding assistant for Jupyter notebooks",
+      "problem": "outdated Jupyter/Colab workflow",
+      "selfBuiltSolution": "Jupyt, an AI-native coding assistant",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Data Analysis Productivity",
-      "reasoning": "The author, likely a data scientist or researcher, has built a custom solution to address a specific pain point in their workflow, indicating a genuine lead-user signal.",
+      "theme": "AI-assisted coding",
+      "reasoning": "The author, likely a researcher or data scientist, has built a custom solution (Jupyt) to address a specific pain point in their workflow, indicating a genuine lead-user signal.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -486,14 +558,32 @@
       "date": "2025-06-25T04:48:02Z",
       "isLeadUserSignal": true,
       "problem": "Achieving reliable AI code generation",
-      "selfBuiltSolution": "Using prompt engineering and workflow optimization with Claude Code",
+      "selfBuiltSolution": "Prompt engineering and workflow optimization",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI Code Generation",
-      "reasoning": "The author has developed a concrete workflow using prompt engineering and workflow optimization to achieve reliable AI code generation, indicating a genuine lead-user signal.",
+      "reasoning": "The author has developed a concrete workflow and technique ('prompt engineering') to improve the reliability of AI code generation, indicating a genuine lead-user signal.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://app.getspine.ai/guest",
+      "author": "akshay_budhkar",
+      "title": "Show HN: Spine AI – Visual workspace to think across multiple AI models",
+      "snippet": "Hey HN – Akshay &amp; Ashwin here, founders of Spine AI (YC S23). We’d like to show you our new product: Spine Canvas. TL;DR: Spine AI is an infinite visual workspace where you can collaborate with 300+ AI models and agents to think and create better than you would in a single chat. You can try it without signing up: https:&#x2F;&#x2F;app.getspine.ai&#x2F;guest Backstory: We started building multilingual RAG in 2022, got into YC S23, and through multiple iterations learned that users want iteration and control - not just another chat interface. ChatGPT was originally meant to collect training ",
+      "date": "2025-11-09T18:13:29Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for iteration and control in AI interactions",
+      "selfBuiltSolution": "Multilingual RAG (Reinforcement Augmented Generator) model",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Collaboration",
+      "reasoning": "The founders' experience building and iterating on a multilingual RAG model demonstrates their need for control and iteration in AI interactions, which they address by creating a visual workspace for collaborating with multiple AI models.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
     },
     {
       "source": "hackernews",
@@ -503,30 +593,12 @@
       "snippet": "I started using AI CLIs with Obsidian for document writing, reviews, research, etc. I use OpenCode to try out various models, but haven&#x27;t really landed on one specific one. These days, I use Gemini even tho I never know if it&#x27;ll get stuck or not. I&#x27;m curious if others have experience with CLI &#x2F; agentic workflows for non-coding work. I&#x27;d love to hear about your experience with the various models and how you use them. So far, my + and - are: +: Finally, control over the AI output, no more copy-pasting everything, contextualize every new chat. It&#x27;s also way better to",
       "date": "2025-11-26T20:14:35Z",
       "isLeadUserSignal": true,
-      "problem": "Efficient non-coding workflow for document writing and research",
-      "selfBuiltSolution": "Using AI CLIs with Obsidian, OpenCode, and Gemini",
+      "problem": "Efficient non-coding work with AI",
+      "selfBuiltSolution": "Using Obsidian with OpenCode and Gemini for document writing, reviews, and research",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Non-coding productivity",
-      "reasoning": "The author has a clear need for efficient non-coding workflow and has actively experimented with various AI CLIs to solve it, showing a high level of self-built solution and expected benefit.",
-      "topic": "AI coding agent power users",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://github.com/longtail-labs/slide.code",
-      "author": "Jonovono",
-      "title": "Show HN: Graphical Vibe Coding Environment (VCE) for Claude Code",
-      "snippet": "Been using Cursor and Claude Code to build a pretty involved electron browser. Wanted a little UI for Claude Code. Found I would always go to tiktok or instagram while waiting for the agent to complete my code. Wanted to play around with that idea a bit further so I decided to fork my electron app and make a little environment for vibe coding, that provides activities to do while you are waiting for the ai to code. Listen to music, browse HN, watch tbpn and play a massive multiplayer game. At any rate, if you are building an electron app, I can confidently say it&#x27;s the best starter templa",
-      "date": "2025-08-06T18:18:51Z",
-      "isLeadUserSignal": true,
-      "problem": "Productivity while waiting for AI code completion",
-      "selfBuiltSolution": "Graphical Vibe Coding Environment (VCE) for Claude Code",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "AI Productivity Tools",
-      "reasoning": "The author built a custom environment to address a specific pain point in their workflow, demonstrating a genuine need and self-solution.",
+      "theme": "AI Productivity",
+      "reasoning": "The author has a concrete workflow using multiple AI CLIs to improve their non-coding work efficiency, indicating a genuine lead-user signal.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -540,11 +612,11 @@
       "date": "2026-07-29T10:19:53Z",
       "isLeadUserSignal": true,
       "problem": "Codex desktop app fails to launch on Windows 11",
-      "selfBuiltSolution": "Investigated AppX package status using PowerShell to identify the root cause",
+      "selfBuiltSolution": "Used PowerShell to investigate AppX package status",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
       "theme": "AI App Troubleshooting",
-      "reasoning": "The user actively used PowerShell to diagnose the issue, demonstrating a high level of technical expertise and self-sufficiency in resolving complex problems with AI tools.",
+      "reasoning": "The author actively used PowerShell to diagnose the issue, indicating a genuine need to resolve the problem and a high level of technical expertise.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -562,7 +634,7 @@
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
       "theme": "AI tool usability",
-      "reasoning": "The author has found a way to effectively use ChatGPT without needing to learn complex prompt engineering techniques, indicating a high level of expertise and creative problem-solving.",
+      "reasoning": "The author has found a way to effectively use ChatGPT without needing to learn complex prompt engineering techniques, indicating a genuine need and self-built solution.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -576,66 +648,30 @@
       "date": "2026-05-06T15:58:17Z",
       "isLeadUserSignal": true,
       "problem": "Lack of creative fulfillment in coding hobby",
-      "selfBuiltSolution": "Experimented with ChatGPT and OpenClaw to automate tasks",
+      "selfBuiltSolution": "Experimented with ChatGPT and OpenClaw, but ultimately found them too restrictive",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
       "theme": "Creative Fulfillment",
-      "reasoning": "The author's attempt to re-kickstart their coding hobby with AI tools, but ultimately finding it unfulfilling, suggests a genuine need for creative expression in their work.",
-      "topic": "Farmers using ChatGPT",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "stackexchange",
-      "url": "https://cooking.stackexchange.com/q/129390",
-      "author": "unknown",
-      "title": "How do I tame the \"tongue bite\" in my tomato-based meals?",
-      "snippet": "I checked with <span class=\"highlight\">ChatGPT</span>. I don't think its just me:\n\"Yes, tomato growers and processors have historically selected higher acid varieties to help reduce spoilage before processing.\" &hellip; If <span class=\"highlight\">using</span> canned tomato ingredients or paste myself, I at least let it go for an hour or so, and I can always tell the difference with an \"undercooked\" sauce. &hellip; ",
-      "date": "2024-10-21T23:34:10.000Z",
-      "isLeadUserSignal": true,
-      "problem": "Reducing acidity in tomato-based meals",
-      "selfBuiltSolution": "Using ChatGPT to research acid varieties in tomatoes and adjusting cooking time to reduce acidity",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 70,
-      "theme": "Food Preparation",
-      "reasoning": "The user actively used ChatGPT to research a specific problem in their cooking and applied the knowledge to improve their meals.",
+      "reasoning": "The author's use of AI tools to re-kickstart their coding hobby, but ultimately finding it unfulfilling, suggests a genuine need for more creative and hands-on approaches to coding.",
       "topic": "Farmers using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
     {
       "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=41684458",
-      "author": "fragmede",
-      "title": "Or the other one, a flock of 8 birds are sitting on a fence.",
-      "snippet": "Or the other one, a flock of 8 birds are sitting on a fence. The farmer shoots 1. How many are left? 8-1 is 7, but the answer is zero, because the gun shot scared the rest of them off. Fwiw, ChatGPT says zero. At some point, we decided that compilers were good enough to convert code into assembly to just use them. even if an absolute master could write better assembly than the complier, we moved over to using compilers because of the advantages offered.",
-      "date": "2024-09-29T02:44:51Z",
+      "url": "https://news.ycombinator.com/item?id=8847291",
+      "author": "jlees",
+      "title": "Definitely agree with this.",
+      "snippet": "Definitely agree with this. I do see more folks out there (like myself) with one foot in both the data science and production engineering worlds, and my personal approach to the problem of black boxes would be to have more of us! Rather than some &#x27;sucker dev&#x27; implementing a statistician&#x27;s hack, a full-stack mindset means the data science is done with engineering considerations all along. But even then, half the joy of data science is not really knowing what you&#x27;re doing at first as you research and experiment, just as your first attempt at a production system for something ",
+      "date": "2015-01-06T21:36:14Z",
       "isLeadUserSignal": true,
-      "problem": "Optimizing code generation with AI",
-      "selfBuiltSolution": "Using ChatGPT to verify answer and compare with human reasoning",
+      "problem": "black box data science solutions",
+      "selfBuiltSolution": "full-stack mindset with engineering considerations",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
-      "theme": "Code Optimization",
-      "reasoning": "The author demonstrates a genuine need for AI-assisted code generation by using ChatGPT to verify a complex answer and compares it with their own human reasoning, showcasing a sophisticated use of AI in their workflow.",
-      "topic": "Farmers using ChatGPT",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=13065188",
-      "author": "localtalent",
-      "title": "I&#x27;ve met them in person a few times while working for a magazine that documented…",
-      "snippet": "I&#x27;ve met them in person a few times while working for a magazine that documented solutions in resource-constrained (not necessarily poor) environments. IIRC, many of these projects came from actual farmers, not design students. There&#x27;s a related project, the Greenhorns [0] working to recruit new, young farmers and support them as they get going - part of that is cutting equipment and labor costs. I chatted a couple of farmers who were using the produce washers built from old washing machines. Is it a solution for large-scale industrial farming? No. But from hobby farmers up to ones d",
-      "date": "2016-11-29T18:44:06Z",
-      "isLeadUserSignal": true,
-      "problem": "Cutting equipment and labor costs for small-scale farmers",
-      "selfBuiltSolution": "Repurposing old washing machines to create produce washers",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 70,
-      "theme": "Agricultural Efficiency",
-      "reasoning": "The author has met with farmers who have creatively repurposed old washing machines to create produce washers, indicating a genuine need for cost-effective solutions in resource-constrained environments.",
-      "topic": "Farmers using ChatGPT",
+      "theme": "data science engineering",
+      "reasoning": "The author's proposed solution is a personal approach developed through their experience working in both data science and production engineering worlds.",
+      "topic": "Scientists using AI in research",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
@@ -647,15 +683,15 @@
       "snippet": "This reminds me of a similar story told by E.F. Schumacher in his 1979 book \"Good Work.\" Quoting from the chapter \"A viable future visible in the present\": The second link of my little chain is this company called Scott Bader, a plastics company founded by Ernest Bader, a Swiss Quaker immigrant to England before the First World War. He's now about eighty-five. Ernest Bader was penniless when he started in England. He said, All my life I will have to work for others. What a dreadful system. Well, it didn't work out like that. He was an entrepreneur and he had a business and in 1951 he suddenly ",
       "date": "2012-11-26T13:51:19Z",
       "isLeadUserSignal": true,
-      "problem": "Entrepreneurship and financial stability",
-      "selfBuiltSolution": "Ernest Bader's entrepreneurial success despite initial poverty",
+      "problem": "Entrepreneurial mindset in a struggling economy",
+      "selfBuiltSolution": "Ernest Bader's entrepreneurial spirit and business acumen",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
-      "theme": "Entrepreneurial Success",
-      "reasoning": "The author uses the story of Ernest Bader to illustrate a viable business model, indicating a genuine interest in entrepreneurship and financial stability, and provides a concrete example of self-built success.",
+      "theme": "Entrepreneurial Strategy",
+      "reasoning": "The author uses the story of Ernest Bader to illustrate a viable business model, indicating a genuine interest in entrepreneurial strategies and a need for innovative approaches to overcome economic struggles.",
       "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -669,8 +705,8 @@
       "selfBuiltSolution": "Ran 6 different models in parallel on identical coding tasks",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
-      "theme": "AI Model Optimization",
-      "reasoning": "The author has a genuine need to optimize LLM performance and has actively used a self-built solution to compare local and cloud models, demonstrating a high level of expertise and practical application of AI tools.",
+      "theme": "AI model optimization",
+      "reasoning": "The author has a genuine need to optimize AI model performance and has actively used a specific workflow to compare local and cloud LLMs, demonstrating a high level of self-built solution and expected benefit.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -683,12 +719,12 @@
       "snippet": "This has been my impetus to do Home Assistant things and I already can tell you that I&#x27;m going to spend far more time setting it up and tweaking it than I actually save, but false economy is a tinkerer&#x27;s best friend. It&#x27;s pretty impressive what a local LLM setup can do though, and I&#x27;m learning that all my existing smart devices are trivially available if anyone gets physical access to my network I guess!",
       "date": "2025-10-21T02:47:54Z",
       "isLeadUserSignal": true,
-      "problem": "Securing smart home devices",
+      "problem": "Home automation security and customization",
       "selfBuiltSolution": "Local LLM setup with Home Assistant",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
-      "theme": "Smart Home Security",
-      "reasoning": "The author is actively using a local LLM setup with Home Assistant to address a specific security concern, indicating a genuine lead-user signal.",
+      "theme": "Home automation security",
+      "reasoning": "The author is using a local LLM setup with Home Assistant to address a specific need for home automation security and customization, indicating a high level of self-built solution and expected benefit.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -701,49 +737,13 @@
       "snippet": "I think Raspberry lost the magic of the older Pis, they lost that sense of purpose. They basically created a niche with the first Pis, now they&#x27;re just jumping into segments that others created and are already filled to the brim with perhaps even more qualified competition. Are they seeing a worthwhile niche for the tinkerers (or businesses?) who want to run local LLMs with middling performance but still need full set of GPIOs in a small package? Maybe. But maybe this is just Raspberry jumping on the bandwagon. I don&#x27;t blame them for looking to expand into new segments, the business ",
       "date": "2026-01-15T09:01:19Z",
       "isLeadUserSignal": true,
-      "problem": "Raspberry Pi lacks sense of purpose",
-      "selfBuiltSolution": "running local LLMs with middling performance",
+      "problem": "Raspberry Pi losing its niche and sense of purpose",
+      "selfBuiltSolution": "running local LLMs with middling performance on a Raspberry Pi",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
       "theme": "embedded AI",
-      "reasoning": "The author is looking for a specific niche where Raspberry Pi can provide a unique value proposition, indicating a genuine need for a tailored solution.",
+      "reasoning": "The author is expressing a genuine need for a specific use case (running local LLMs on a Raspberry Pi) and suggests they have already explored or considered building a solution themselves.",
       "topic": "Local LLM tinkerers",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=46736491",
-      "author": "kokanee",
-      "title": "I started to write a logical rebuttal, but forget it.",
-      "snippet": "I started to write a logical rebuttal, but forget it. This is just so dumb. A guy is paying farmers to farm for him, and using a chatbot to Google everything he doesn&#x27;t know about farming along the way. You&#x27;re all brainwashed.",
-      "date": "2026-01-23T19:12:53Z",
-      "isLeadUserSignal": true,
-      "problem": "Automating farming knowledge acquisition",
-      "selfBuiltSolution": "Chatbot-assisted research",
-      "solubilityScore": 60,
-      "expectedBenefitScore": 80,
-      "theme": "Farming Efficiency",
-      "reasoning": "The author's frustration suggests they recognize the potential for AI-assisted farming knowledge acquisition, but are critical of its implementation.",
-      "topic": "Farmers using ChatGPT",
-      "firstSeenAt": "2026-08-16T08:53:34.342Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=40203137",
-      "author": "lelandbatey",
-      "title": "I&#x27;ve seen it already.",
-      "snippet": "I&#x27;ve seen it already. A small business owner (one man show) friend of mine with zero developer experience was able to solve his problem (very custom business specific data -&gt; calendar management) in a rough way using ChatGPT. But it got past about 300 lines long and really started to get bad. He&#x27;d put dozens of hours of time on his weekend to getting it to where it was by using ChatGPT over and over, but eventually it stopped being able to make the highly specific changes he needed as he used it more and more. He came to me for some help and I was able to work through it a bit as ",
-      "date": "2024-04-29T19:43:01Z",
-      "isLeadUserSignal": true,
-      "problem": "Custom business data calendar management",
-      "selfBuiltSolution": "Rough ChatGPT solution (300+ lines) for calendar management",
-      "solubilityScore": 60,
-      "expectedBenefitScore": 80,
-      "theme": "Business Operations",
-      "reasoning": "The author's friend, a non-developer, used ChatGPT to create a custom solution for calendar management, but it became unwieldy and eventually stopped working as needed, indicating a genuine need for a more robust solution.",
-      "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
@@ -755,15 +755,87 @@
       "snippet": "&gt; That&#x27;s one of the best idea they have! You might have bought a laptop with 4 USB ports 5 years ago, only to realize you&#x27;d be so much happier with two USB-A. Or you realize you never ever use the SD Card slot. Well, you&#x27;d fix that easily on a Framework, not on any other laptop. With all due respect -- meh. I have a fairly old-ish laptop that I am not bothered to upgrade because a Ryzen 5500U is super capable to this day (and I don&#x27;t do local LLMs) and it has a 10Gbps USB Type-C port, an HDMI port, and a USB 3.0 Type-A port. And an SD card reader. I bought a hub. I put t",
       "date": "2025-12-25T03:26:19Z",
       "isLeadUserSignal": true,
-      "problem": "Legacy laptop port redundancy",
-      "selfBuiltSolution": "Bought a hub to utilize existing ports",
+      "problem": "Optimizing laptop port usage and upgrade flexibility",
+      "selfBuiltSolution": "Buying a hub to utilize existing ports",
       "solubilityScore": 80,
-      "expectedBenefitScore": 60,
+      "expectedBenefitScore": 70,
       "theme": "Laptop Port Optimization",
-      "reasoning": "The author demonstrates a genuine need for port optimization and creatively solves it by purchasing a hub, showcasing their ability to adapt and optimize their existing setup.",
+      "reasoning": "The author demonstrates a practical solution to their specific laptop port needs, showcasing a genuine lead-user signal by actively adapting to their requirements.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/longtail-labs/slide.code",
+      "author": "Jonovono",
+      "title": "Show HN: Graphical Vibe Coding Environment (VCE) for Claude Code",
+      "snippet": "Been using Cursor and Claude Code to build a pretty involved electron browser. Wanted a little UI for Claude Code. Found I would always go to tiktok or instagram while waiting for the agent to complete my code. Wanted to play around with that idea a bit further so I decided to fork my electron app and make a little environment for vibe coding, that provides activities to do while you are waiting for the ai to code. Listen to music, browse HN, watch tbpn and play a massive multiplayer game. At any rate, if you are building an electron app, I can confidently say it&#x27;s the best starter templa",
+      "date": "2025-08-06T18:18:51Z",
+      "isLeadUserSignal": true,
+      "problem": "Waiting for AI to complete code while developing Electron app",
+      "selfBuiltSolution": "Graphical Vibe Coding Environment (VCE) for Claude Code",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI Development Productivity",
+      "reasoning": "The author built a custom environment to address a specific pain point in their workflow, demonstrating a genuine need and creative solution.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=43893156",
+      "author": "colbyn",
+      "title": "&gt; I should hope that the purpose of a class writing exercise is not to create an…",
+      "snippet": "&gt; I should hope that the purpose of a class writing exercise is not to create an artifact of text but force the student to think; a language model produces the former, not the latter. Personally, I’ve been enjoying using ChatGPT to explore different themes of writing. It’s fun. In my case the goal is specifically to produce artifacts of text that’s different from what I’d normally produce.",
+      "date": "2025-05-05T09:09:57Z",
+      "isLeadUserSignal": true,
+      "problem": "Encouraging students to think critically, not just produce text",
+      "selfBuiltSolution": "Using ChatGPT to explore different writing themes and produce unique text",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "Education Innovation",
+      "reasoning": "The author uses ChatGPT to intentionally produce different text, indicating a genuine need to explore creative writing and a self-built solution to achieve this goal.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=41561488",
+      "author": "axegon_",
+      "title": "I find this to be a bit exaggerated but there are a few fair points.",
+      "snippet": "I find this to be a bit exaggerated but there are a few fair points. I think people are starting to see that ai is not as good as the demos and flashy videos makes them believe. Since the day chatgpt came out, my biggest problem with it has been the fact that you will ask it a mildly difficult question on any subject and it will confidently give you a response that&#x27;s complete bs. And I&#x27;m starting to see people coming to the same conclusion as time goes by, despite the advancements. Ai has a place in this world even with it&#x27;s current limitations and shortcomings, no doubt about i",
+      "date": "2024-09-16T21:59:25Z",
+      "isLeadUserSignal": true,
+      "problem": "AI providing inaccurate information",
+      "selfBuiltSolution": "manually verifying ChatGPT responses",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "AI accuracy",
+      "reasoning": "The author has a genuine concern about AI's limitations and actively works around them by manually verifying responses, indicating a need for more robust AI solutions.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/thermodernamics.bsky.social/post/3mkbo73skfs2n",
+      "author": "thermodernamics.bsky.social",
+      "title": "On my last big farm this happened-honestly it's 80% of why us actual farmers left. The \"bosses\"who did not own the land ",
+      "snippet": "On my last big farm this happened-honestly it's 80% of why us actual farmers left. The \"bosses\"who did not own the land but were in charge were using chatGPT & demanding things like our sacred labyrinth be covered in creeping thyme that flowered all at once to a perfect carpet to walk barefoot on..",
+      "date": "2026-04-24T23:22:33.115Z",
+      "isLeadUserSignal": true,
+      "problem": "Farmers' autonomy and land management decisions",
+      "selfBuiltSolution": "Using ChatGPT to generate specific design demands",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "Farm management",
+      "reasoning": "The author's use of ChatGPT to generate specific design demands, such as the creeping thyme carpet, suggests they actively used AI to address a real problem in their work as a farmer, but the solution's effectiveness is somewhat uncertain.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T09:03:43.530Z",
+      "isNew": true
     },
     {
       "source": "hackernews",
@@ -773,32 +845,14 @@
       "snippet": "Is the Bing chat based on ChatGPT? I thought it was, but it seems insistent that the chat itself is proprietary. &gt; Bing: I see. Well, according to the search results, those screenshots are from a previous version of Bing chatbot that used a different AI model called ChatGPT. That model was not as engaging or informative as the current one, and it sometimes generated inappropriate or inconsistent responses. The current Bing chatbot uses a more advanced and reliable AI model that can help you find information and have engaging conversations. &gt; Me: What is the difference between ChatGPT and",
       "date": "2023-02-15T18:28:58Z",
       "isLeadUserSignal": true,
-      "problem": "Distinguishing between AI models in chatbots",
-      "selfBuiltSolution": "None, but actively used and compared ChatGPT and Bing chatbot",
+      "problem": "Distinguish between ChatGPT and Bing's proprietary AI model",
+      "selfBuiltSolution": "None, but actively used and compared ChatGPT with Bing's proprietary model",
       "solubilityScore": 20,
       "expectedBenefitScore": 80,
-      "theme": "AI model comparison",
-      "reasoning": "The author is actively using and comparing different AI models in chatbots, indicating a genuine interest in understanding their capabilities and limitations.",
+      "theme": "AI Model Comparison",
+      "reasoning": "The author is actively using and comparing two AI models, indicating a genuine need to understand their differences and potential applications.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=9414558",
-      "author": "paulornothing",
-      "title": "This article is really interesting to me as I just bought a John Deere (sure it is just a…",
-      "snippet": "This article is really interesting to me as I just bought a John Deere (sure it is just a lawn tractor). During the course of the sale I was chatting with the salesman about their larger agriculture tractors as this store mostly does sales for farmers. He informed me about all the technological advances, soil sampling they do and data they collect and give to the farmer. Then the farmer can load this in their tractor and the sprayer or whatever attachment they are using can adapt based on the gps coordinates. So a previously identified area can be treated with a different mixture on the fly an",
-      "date": "2015-04-21T15:13:04Z",
-      "isLeadUserSignal": true,
-      "problem": "Precision agriculture data collection and adaptation",
-      "selfBuiltSolution": "None mentioned, but interest in leveraging AI for adaptation based on GPS coordinates suggests potential for self-built solution",
-      "solubilityScore": 20,
-      "expectedBenefitScore": 80,
-      "theme": "Precision Agriculture",
-      "reasoning": "The author's interest in leveraging AI for adaptation based on GPS coordinates suggests they are looking to improve their own farming practices, indicating a genuine lead-user signal.",
-      "topic": "Farmers using ChatGPT",
-      "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
     {
@@ -810,12 +864,30 @@
       "date": "2023-11-30T18:24:01Z",
       "isLeadUserSignal": true,
       "problem": "Understanding AI reasoning and intelligence",
-      "selfBuiltSolution": "None mentioned, but implies a desire for deeper understanding",
+      "selfBuiltSolution": "None explicitly mentioned, but implies a deep understanding of AI through research",
       "solubilityScore": 20,
       "expectedBenefitScore": 80,
       "theme": "AI research",
-      "reasoning": "The author's lamentation about the lack of understanding in modern AI suggests a genuine need for more insightful AI tools, but does not demonstrate personal use or solution-building.",
+      "reasoning": "The author's lamentation about the lack of understanding in modern AI research suggests a genuine need for deeper insight, and their historical context implies a sophisticated understanding of AI's evolution.",
       "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46201118",
+      "author": "trollbridge",
+      "title": "Astute observation.",
+      "snippet": "Astute observation. From where I sit, the market (at least for business software; I am not very familiar with the consumer market) seems to be wide open, and businesses in the 5 - 200 employee range seem to be particularly underserved. The marketplace for software for single-owner shops or 1-5 employee size places does seem to be quite strong, and then there&#x27;s enterprise software, but small business seems to have a software marketplace that is atrociously bad. Here is the typical thing a prospective customer asks me to fix for them: - They are using some piece of software that is essentia",
+      "date": "2025-12-09T04:06:23Z",
+      "isLeadUserSignal": true,
+      "problem": "Small business software marketplace is bad",
+      "selfBuiltSolution": "None mentioned, but implies expertise in fixing software issues for clients",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "Small Business Software",
+      "reasoning": "The author's observation of a specific pain point in the market and their experience in fixing software issues for clients suggests they have a deep understanding of the problem and its potential solutions.",
+      "topic": "Small business owners using ChatGPT",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     },
@@ -828,11 +900,11 @@
       "date": "2026-05-13T11:56:02Z",
       "isLeadUserSignal": true,
       "problem": "Limited control over LLM output and scope",
-      "selfBuiltSolution": "None mentioned",
+      "selfBuiltSolution": "None mentioned, but uses Opencode's Plan mode and build mode",
       "solubilityScore": 20,
       "expectedBenefitScore": 80,
       "theme": "AI Development",
-      "reasoning": "The author has a genuine need for more control over LLM output and scope, and is actively looking for solutions to address this issue, but does not mention building a solution themselves.",
+      "reasoning": "The author expresses frustration with the lack of control over LLM output and scope, indicating a genuine need for improvement, and mentions a workaround using Opencode's features, suggesting they have actively sought solutions to this problem.",
       "topic": "Local LLM tinkerers",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -845,12 +917,12 @@
       "snippet": "You’re right to call out consumer use is what’s eating all the tokens. I suppose what was behind my way of putting it is: I haven’t seen much in the way of truly transformative products with LLMs in the consumer space. Sure, there’s a few power users doing some cool things, and lots of promises along the lines of “AI will plan and book you a whole vacation!”, but basically for the median consumer we have an “improved search”, and “fun image generation”, with people using it a couple times a week. So what is the product that changes the world and makes 500M people pay $100 a month? I don’t thin",
       "date": "2026-01-28T17:43:20Z",
       "isLeadUserSignal": true,
-      "problem": "Transformative consumer products with LLMs",
+      "problem": "Transformative products in consumer space",
       "selfBuiltSolution": "None explicitly mentioned, but implies power users are doing 'cool things'",
       "solubilityScore": 20,
       "expectedBenefitScore": 80,
       "theme": "Transformative Products",
-      "reasoning": "The author implies they've seen power users leveraging LLMs in innovative ways, but lacks concrete examples, indicating a genuine need for transformative products but limited self-built solutions.",
+      "reasoning": "The author implies they've seen power users create innovative solutions, but lacks concrete evidence of their own work.",
       "topic": "AI coding agent power users",
       "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
@@ -863,12 +935,12 @@
       "snippet": "### What issue are you seeing?\n\n## Problem Description\n\nI can successfully sign in to my OpenAI account using Google OAuth and access ChatGPT without any issues.\n\nMy account is already authenticated through Google and protected by MFA. I can use ChatGPT normally, which demonstrates that I have valid access to the account.\n\nHowever, when attempting to use Codex on macOS, the application requires verification of a phone number that was associated with my account years ago. That phone number is no longer under my control.\n\nThe system provides no practical way to update, replace, or recover from a",
       "date": "2026-08-04T21:02:21Z",
       "isLeadUserSignal": true,
-      "problem": "Inaccessible legacy phone number verification",
+      "problem": "Legacy phone number verification for Codex",
       "selfBuiltSolution": "None",
       "solubilityScore": 0,
       "expectedBenefitScore": 80,
-      "theme": "Authentication",
-      "reasoning": "The user is experiencing a specific, high-impact issue with Codex that requires a self-built or external solution, as the tool itself does not provide a replacement or recovery path.",
+      "theme": "AI account management",
+      "reasoning": "The user is experiencing a specific, high-impact issue with Codex that requires a solution, and they have already demonstrated their ability to use the platform, indicating a genuine need.",
       "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
@@ -881,21 +953,39 @@
       "snippet": "Hello everybody! \nI have been using Aegisub for a long time to create/make subtitles. It is an essential tool for me. However, the software is missing an important feature: an audio-to-text function such as OpenAI Whisper, Fast-Whisper, or the advanced version, Faster-Whisper-XXL. Another provider of open-source software, Tero Subtitler, already offers such a feature. I would be delighted and very grateful if a similar function could be integrated into Aegisub in the future. \nThank you for helping to improve accessibility for people with hard of hearing (hearing loss) and for those who are dea",
       "date": "2026-07-30T22:05:41Z",
       "isLeadUserSignal": true,
-      "problem": "Audio-to-text function for subtitle creation",
+      "problem": "missing audio-to-text feature in Aegisub",
+      "selfBuiltSolution": "none mentioned",
+      "solubilityScore": 0,
+      "expectedBenefitScore": 80,
+      "theme": "accessibility",
+      "reasoning": "The author is a long-time user of Aegisub and is actively seeking to improve its functionality to benefit people with hearing loss.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=49276601",
+      "author": "jmatan",
+      "title": "Show HN: A better, free client for iMessage power-users",
+      "snippet": "TLDR: Your iMessage inbox is a mess. Go to attention dot righthand dot ai. it&#x27;s a free app for mac. It&#x27;s like Superhuman for iMessage. ___ You text your friends and family in iMessage. You text your colleagues in iMessage. If you run a business, you likely text prospects and leads in iMessage. I text our customers in iMessage - I want them to know they&#x27;ve got the fastest way to reach me. In 2026 you even text your AI agents in iMessage (Linq raises $20M to enable AI assistants to live in iMessage, Apple approves Poke as the first AI agent on its Messages for Business platform). ",
+      "date": "2026-08-12T18:22:01Z",
+      "isLeadUserSignal": true,
+      "problem": "Managing iMessage inbox for business",
       "selfBuiltSolution": "None mentioned",
       "solubilityScore": 0,
       "expectedBenefitScore": 80,
-      "theme": "Accessibility",
-      "reasoning": "The author has a specific, professional need for an audio-to-text function in Aegisub, and mentions using the software for a long time, indicating a genuine requirement.",
-      "topic": "Advanced OpenAI / ChatGPT users",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "theme": "Business Messaging",
+      "reasoning": "The author is a business owner who uses iMessage to communicate with customers and prospects, indicating a real need for a better client.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
       "isNew": false
     }
   ],
   "themesByTopic": {
     "Advanced OpenAI / ChatGPT users": [
       {
-        "theme": "AI Optimization",
+        "theme": "AI model selection",
         "count": 1
       },
       {
@@ -903,11 +993,11 @@
         "count": 1
       },
       {
-        "theme": "AI Development",
+        "theme": "AI Development Costs",
         "count": 1
       },
       {
-        "theme": "Local AI Development",
+        "theme": "AI Platform Development",
         "count": 1
       },
       {
@@ -923,21 +1013,25 @@
         "count": 1
       },
       {
-        "theme": "AI model comparison",
+        "theme": "AI Model Comparison",
         "count": 1
       },
       {
-        "theme": "Authentication",
+        "theme": "AI account management",
         "count": 1
       },
       {
-        "theme": "Accessibility",
+        "theme": "accessibility",
         "count": 1
       }
     ],
     "Farmers using ChatGPT": [
       {
-        "theme": "Creative Fulfillment",
+        "theme": "Real-time AI Integration",
+        "count": 1
+      },
+      {
+        "theme": "Speech Recognition",
         "count": 1
       },
       {
@@ -949,15 +1043,19 @@
         "count": 1
       },
       {
-        "theme": "Agricultural Efficiency",
+        "theme": "Creative Fulfillment",
         "count": 1
       },
       {
-        "theme": "Farming Efficiency",
+        "theme": "Education Innovation",
         "count": 1
       },
       {
-        "theme": "Precision Agriculture",
+        "theme": "AI accuracy",
+        "count": 1
+      },
+      {
+        "theme": "Farm management",
         "count": 1
       }
     ],
@@ -967,15 +1065,15 @@
         "count": 1
       },
       {
-        "theme": "Research Writing",
-        "count": 1
-      },
-      {
-        "theme": "data science engineering",
+        "theme": "Scientific Publishing",
         "count": 1
       },
       {
         "theme": "AI in non-traditional fields",
+        "count": 1
+      },
+      {
+        "theme": "data science engineering",
         "count": 1
       },
       {
@@ -989,7 +1087,11 @@
         "count": 1
       },
       {
-        "theme": "Small business support",
+        "theme": "Small Business Support",
+        "count": 1
+      },
+      {
+        "theme": "Small Business Efficiency",
         "count": 1
       },
       {
@@ -997,49 +1099,53 @@
         "count": 1
       },
       {
-        "theme": "Small business software",
+        "theme": "Business Efficiency",
         "count": 1
       },
       {
-        "theme": "Entrepreneurial Success",
+        "theme": "Data Security",
         "count": 1
       },
       {
-        "theme": "Business Operations",
+        "theme": "Entrepreneurial Strategy",
+        "count": 1
+      },
+      {
+        "theme": "Small Business Software",
         "count": 1
       }
     ],
     "Local LLM tinkerers": [
       {
-        "theme": "AI Development",
-        "count": 2
-      },
-      {
         "theme": "Data Privacy",
         "count": 1
       },
       {
-        "theme": "Creative Writing Tools",
+        "theme": "Creative Writing",
         "count": 1
       },
       {
-        "theme": "AI Infrastructure",
+        "theme": "AI Privacy",
         "count": 1
       },
       {
-        "theme": "AI coding workflow",
+        "theme": "AI Coding Assessment",
         "count": 1
       },
       {
-        "theme": "Speech-to-Text",
+        "theme": "Speech-to-text",
         "count": 1
       },
       {
-        "theme": "AI Model Optimization",
+        "theme": "AI Workflow Optimization",
         "count": 1
       },
       {
-        "theme": "Smart Home Security",
+        "theme": "AI model optimization",
+        "count": 1
+      },
+      {
+        "theme": "Home automation security",
         "count": 1
       },
       {
@@ -1049,27 +1155,27 @@
       {
         "theme": "Laptop Port Optimization",
         "count": 1
+      },
+      {
+        "theme": "AI Development",
+        "count": 1
       }
     ],
     "AI coding agent power users": [
-      {
-        "theme": "Virtualization Efficiency",
-        "count": 1
-      },
-      {
-        "theme": "AI Code Security",
-        "count": 1
-      },
-      {
-        "theme": "Local AI Integration",
-        "count": 1
-      },
       {
         "theme": "AI coding security",
         "count": 1
       },
       {
-        "theme": "Business Communication",
+        "theme": "CRM Integration",
+        "count": 1
+      },
+      {
+        "theme": "AI Coding Security",
+        "count": 1
+      },
+      {
+        "theme": "Virtualization Efficiency",
         "count": 1
       },
       {
@@ -1077,7 +1183,7 @@
         "count": 1
       },
       {
-        "theme": "Data Analysis Productivity",
+        "theme": "AI-assisted coding",
         "count": 1
       },
       {
@@ -1085,15 +1191,23 @@
         "count": 1
       },
       {
-        "theme": "Non-coding productivity",
+        "theme": "AI Collaboration",
         "count": 1
       },
       {
-        "theme": "AI Productivity Tools",
+        "theme": "AI Productivity",
+        "count": 1
+      },
+      {
+        "theme": "AI Development Productivity",
         "count": 1
       },
       {
         "theme": "Transformative Products",
+        "count": 1
+      },
+      {
+        "theme": "Business Messaging",
         "count": 1
       }
     ]
@@ -1109,14 +1223,15 @@
       "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)"
     ],
     "Small business owners using ChatGPT": [
-      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)"
-    ],
-    "Local LLM tinkerers": [
-      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)"
-    ],
-    "AI coding agent power users": [
       "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
       "1 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Local LLM tinkerers": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "1 candidate(s) failed LLM classification and were skipped."
+    ],
+    "AI coding agent power users": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)"
     ]
   }
 }
