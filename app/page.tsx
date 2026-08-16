@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import SearchForm from "@/components/SearchForm";
 import ThemeClusters from "@/components/ThemeClusters";
 import ResultCard from "@/components/ResultCard";
@@ -40,7 +41,10 @@ export default function Home() {
         Scans GitHub, Reddit, and Hacker News for people describing a problem they solved by building
         their own fix, then uses an LLM to classify genuine lead-user signals — pioneers facing needs
         ahead of the mainstream who expect high benefit from a solution (Eric von Hippel, Lead User
-        Theory).
+        Theory).{" "}
+        <Link href="/about" className="about-link">
+          Where does this data come from?
+        </Link>
       </p>
 
       <SearchForm onSearch={handleSearch} loading={loading} />
