@@ -1,0 +1,21 @@
+# Cloudflare Pages project config (the Next.js app itself).
+#
+# Pages does NOT support cron triggers — those are a Workers feature — so the
+# daily schedule lives in worker/wrangler.toml, which calls this app's
+# /api/sweep endpoint.
+
+name = "lead-user-discovery"
+compatibility_date = "2026-08-16"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Create with:
+#   npx wrangler d1 create lead-user-db
+# then paste the returned database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "lead-user-db"
+database_id = "REPLACE_WITH_DATABASE_ID"
+
+# Secrets (GROQ_API_KEY, SWEEP_SECRET, optional GITHUB_TOKEN) are set in the
+# Pages project settings, not here — this file is committed.

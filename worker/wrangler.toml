@@ -1,0 +1,22 @@
+# The cron half of the deployment. Deploy from this directory:
+#
+#   cd worker
+#   npx wrangler deploy
+#   npx wrangler secret put SWEEP_SECRET
+#
+# Test without waiting for the schedule:
+#   npx wrangler dev --test-scheduled
+#   curl "http://localhost:8787/__scheduled?cron=0+6+*+*+*"
+
+name = "lead-user-cron"
+main = "cron.ts"
+compatibility_date = "2026-08-16"
+
+# 06:00 UTC daily. Cloudflare cron is always UTC.
+[triggers]
+crons = ["0 6 * * *"]
+
+[vars]
+# Point at the deployed Pages app. SWEEP_SECRET is set via `wrangler secret put`,
+# never here — this file is committed.
+APP_URL = "https://lead-user-discovery.pages.dev"
