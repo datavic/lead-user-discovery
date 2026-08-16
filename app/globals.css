@@ -357,3 +357,11 @@ h2 {
 .method-list strong {
   color: var(--text);
 }
+
+.sweep-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 14px 0 22px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border);
+}

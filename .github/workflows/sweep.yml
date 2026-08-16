@@ -1,0 +1,54 @@
+name: Daily lead user sweep
+
+# Runs the discovery pipeline every night and commits the results. GitHub
+# Actions has no request timeout, so the free-tier LLM rate limits that make a
+# live search slow are not a problem here — and the site can then render
+# pre-computed results instantly.
+
+on:
+  schedule:
+    # 06:00 UTC daily. GitHub cron is always UTC.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {} # allows running it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run sweep
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SWEEP_TOPICS: ${{ vars.SWEEP_TOPICS || 'Advanced OpenAI / ChatGPT users' }}
+          MAX_CANDIDATES_TO_CLASSIFY: "25"
+        run: npx tsx scripts/sweep.ts
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No change in findings today."
+          else
+            git commit -m "Sweep $(date -u +%Y-%m-%d): refresh lead user findings"
+            git push
+          fi

@@ -93,14 +93,46 @@ function heuristicScore(candidate: Candidate): number {
   return score;
 }
 
+const STOPWORDS = new Set([
+  "the", "and", "for", "with", "using", "use", "used", "how", "who", "what",
+  "their", "them", "from", "that", "this", "are", "was", "has", "have", "its",
+  "advanced", "users", "user", "people", "own",
+]);
+
+/** Significant words from the topic, used to verify a result is on-topic. */
+function topicKeywords(topics: string[]): string[] {
+  const words = topics
+    .join(" ")
+    .toLowerCase()
+    .split(/[^a-z0-9+]+/)
+    .filter((word) => word.length > 2 && !STOPWORDS.has(word));
+
+  return Array.from(new Set(words));
+}
+
 /**
  * Deduplicates and ranks raw candidates with a cheap heuristic so we only
  * spend LLM calls on the most promising results. Automated posts are dropped
  * outright rather than ranked, since no score threshold reliably excludes them.
+ *
+ * Results must also mention the topic: some sources (notably Stack Exchange)
+ * match loosely and otherwise return entirely unrelated questions.
  */
-export function preFilterCandidates(candidates: Candidate[], maxCount: number): Candidate[] {
+export function preFilterCandidates(
+  candidates: Candidate[],
+  maxCount: number,
+  topics: string[] = []
+): Candidate[] {
+  const keywords = topicKeywords(topics);
+
+  const onTopic = (candidate: Candidate): boolean => {
+    if (keywords.length === 0) return true;
+    const text = `${candidate.title} ${candidate.snippet}`.toLowerCase();
+    return keywords.some((keyword) => text.includes(keyword));
+  };
+
   return dedupeByUrl(candidates)
-    .filter((candidate) => !looksAutomated(candidate))
+    .filter((candidate) => !looksAutomated(candidate) && onTopic(candidate))
     .map((candidate) => ({ candidate, score: heuristicScore(candidate) }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score)

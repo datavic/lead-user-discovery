@@ -44,7 +44,7 @@ export async function runDiscovery(topics: string[]): Promise<DiscoverResponse> 
     return { candidates: [], themes: [], sourceNotes };
   }
 
-  const topCandidates = preFilterCandidates(allCandidates, MAX_CANDIDATES_TO_CLASSIFY);
+  const topCandidates = preFilterCandidates(allCandidates, MAX_CANDIDATES_TO_CLASSIFY, topics);
   const classified = await classifyCandidates(topCandidates);
 
   const candidates: ScoredCandidate[] = classified

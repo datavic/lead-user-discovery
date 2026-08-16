@@ -2,14 +2,26 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import latestSweep from "@/data/latest.json";
 import SearchForm from "@/components/SearchForm";
 import ThemeClusters from "@/components/ThemeClusters";
 import ResultCard from "@/components/ResultCard";
 import { DiscoverResponse } from "@/lib/types";
 
+// Results from the nightly sweep (.github/workflows/sweep.yml), committed to
+// the repo. Rendering these means a visitor sees real findings immediately
+// rather than waiting out a rate-limited live search.
+const SWEEP: DiscoverResponse & { ranAt: string } = {
+  ranAt: latestSweep.ranAt,
+  candidates: latestSweep.candidates as unknown as DiscoverResponse["candidates"],
+  themes: latestSweep.themes,
+  // The sweep file records these as `notes`; the UI reads `sourceNotes`.
+  sourceNotes: latestSweep.notes ?? [],
+};
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<DiscoverResponse | null>(null);
+  const [data, setData] = useState<DiscoverResponse | null>(SWEEP);
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
 
@@ -23,12 +35,25 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, extraTopics }),
       });
-      const json = await res.json();
+
+      // A timed-out serverless function returns an HTML error page, so parsing
+      // the body blind produces a confusing "not valid JSON" error.
+      const text = await res.text();
+      let json: any;
+      try {
+        json = JSON.parse(text);
+      } catch {
+        throw new Error(
+          res.status === 504 || res.status === 500
+            ? "The live search timed out — free-tier rate limits make a full run take about a minute, which exceeds the hosting timeout. The results below are from the most recent nightly sweep."
+            : `Unexpected response from the server (${res.status}).`
+        );
+      }
+
       if (!res.ok) throw new Error(json.error || "Search failed");
       setData(json);
     } catch (err: any) {
       setError(err.message);
-      setData(null);
     } finally {
       setLoading(false);
     }
@@ -38,10 +63,10 @@ export default function Home() {
     <main>
       <h1>Lead User Discovery</h1>
       <p className="subtitle">
-        Scans GitHub, Reddit, and Hacker News for people describing a problem they solved by building
-        their own fix, then uses an LLM to classify genuine lead-user signals — pioneers facing needs
-        ahead of the mainstream who expect high benefit from a solution (Eric von Hippel, Lead User
-        Theory).{" "}
+        Scans Reddit, Hacker News, GitHub, Bluesky and Stack Exchange for people describing a problem
+        they solved by building their own fix, then uses an LLM to classify genuine lead-user signals
+        — pioneers facing needs ahead of the mainstream who expect high benefit from a solution (Eric
+        von Hippel, Lead User Theory).{" "}
         <Link href="/about" className="about-link">
           Where does this data come from?
         </Link>
@@ -74,7 +99,15 @@ export default function Home() {
       )}
 
       {!hasSearched && !loading && (
-        <div className="empty">Enter a topic above and run a search to get started.</div>
+        <div className="sweep-note">
+          Showing the nightly sweep from{" "}
+          {new Date(SWEEP.ranAt).toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })}
+          . Run a search above for a live scan.
+        </div>
       )}
     </main>
   );
