@@ -30,7 +30,9 @@ export async function runDiscovery(topics: string[]): Promise<DiscoverResponse> 
       // used for GitHub/Reddit match nothing there. Search the bare topics and
       // let the heuristic prefilter + LLM do the narrowing instead.
       fetchHackerNews(topics),
-      fetchBluesky(queries),
+      // Bluesky ANDs every term too, so a topic combined with a quoted
+      // self-solution phrase matches nothing. Search the bare topics.
+      fetchBluesky(topics),
       fetchStackExchange(topics),
     ]);
 
@@ -112,8 +114,8 @@ async function fetchHackerNews(topics: string[]): Promise<Candidate[]> {
   return results.flat();
 }
 
-async function fetchBluesky(queries: string[]): Promise<Candidate[]> {
-  const results = await Promise.all(queries.map((q) => searchBluesky(q, PER_SOURCE_LIMIT)));
+async function fetchBluesky(topics: string[]): Promise<Candidate[]> {
+  const results = await Promise.all(topics.map((t) => searchBluesky(t, 25)));
   return results.flat();
 }
 
