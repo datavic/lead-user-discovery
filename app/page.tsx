@@ -6,6 +6,7 @@ import latestSweep from "@/data/latest.json";
 import SearchForm from "@/components/SearchForm";
 import ThemeClusters from "@/components/ThemeClusters";
 import ResultsTable from "@/components/ResultsTable";
+import SignalHighlights from "@/components/SignalHighlights";
 import { DiscoverResponse, ScoredCandidate, ThemeCluster } from "@/lib/types";
 
 type SweptCandidate = ScoredCandidate & { topic: string; isNew?: boolean };
@@ -117,10 +118,10 @@ export default function Home() {
     <main>
       <h1>Lead User Discovery</h1>
       <p className="subtitle">
-        Scans Reddit, Hacker News, GitHub, Bluesky and Stack Exchange for people describing a problem
-        they solved by building their own fix, then uses an LLM to classify genuine lead-user signals
-        — pioneers facing needs ahead of the mainstream who expect high benefit from a solution (Eric
-        von Hippel, Lead User Theory).{" "}
+        Finds people who hit a problem before the market did and built their own fix anyway. It
+        sweeps public communities nightly, discards the noise, and scores what is left on how
+        concretely they solved it and how far ahead of the mainstream they are — Eric von
+        Hippel&apos;s Lead User method, run automatically.{" "}
         <Link href="/about" className="about-link">
           Where does this data come from?
         </Link>
@@ -160,6 +161,8 @@ export default function Home() {
           </div>
         </details>
       )}
+
+      {view.candidates.length > 0 && <SignalHighlights candidates={view.candidates} />}
 
       {view.themes.length > 0 && <ThemeClusters themes={view.themes} />}
 

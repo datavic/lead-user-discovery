@@ -1,9 +1,32 @@
 {
-  "ranAt": "2026-08-16T08:12:58.303Z",
+  "ranAt": "2026-08-16T08:41:03.996Z",
   "topics": [
-    "Advanced OpenAI / ChatGPT users"
+    "Advanced OpenAI / ChatGPT users",
+    "Farmers using ChatGPT",
+    "Scientists using AI in research",
+    "Small business owners using ChatGPT",
+    "Local LLM tinkerers",
+    "AI coding agent power users"
   ],
   "candidates": [
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=48539409",
+      "author": "enugu",
+      "title": "Comment on Hacker News",
+      "snippet": "If it just a mundane chatbot, the discussion is moot. But, we already have AI making breakthroughs in research and approaching the abilities do science just like a scientist does. (The last two paragraphs of your comment also assume such a high capability scenario). Imagine giving the access, to whoever wants it, to a scientist who may not have many fresh insights, but has the advantage of a huge memory containing all the scientific literature in their mind, the standard patterns of deductions, and the ability to work at a very fast pace 24&#x2F;7. They could identify vulnerabilities in biolog",
+      "date": "2026-06-15T10:48:38Z",
+      "isLeadUserSignal": true,
+      "problem": "Scientific research efficiency and effectiveness",
+      "selfBuiltSolution": "Utilizing AI to augment scientific knowledge and deduction capabilities",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 95,
+      "theme": "Scientific Productivity",
+      "reasoning": "The commenter's discussion assumes a high-capability AI scenario, indicating they have thoughtfully considered the potential impact on scientific research and are likely familiar with AI's current capabilities and limitations.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
     {
       "source": "hackernews",
       "url": "https://news.ycombinator.com/item?id=42890920",
@@ -13,11 +36,12 @@
       "date": "2025-01-31T19:32:18Z",
       "isLeadUserSignal": true,
       "problem": "Clarifying AI model usage for employees",
-      "selfBuiltSolution": "Benchmarking multiple models for recurring tasks and choosing the best one based on costs",
+      "selfBuiltSolution": "Developed a strategy for choosing between GPT-4 and o1 models based on task complexity and cost",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI Model Optimization",
-      "reasoning": "The commenter has a concrete need to optimize AI model usage for their company and has already implemented a solution using benchmarking and cost consideration.",
+      "theme": "AI model usage strategy",
+      "reasoning": "The commenter has a clear professional need to promote AI usage in their company and has developed a concrete solution to address this need by creating a strategy for choosing between different AI models.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
@@ -29,12 +53,13 @@
       "snippet": "As an IT security professional with 15+ years of experience, I discovered systematic response deletion in ChatGPT that raises serious questions about transparency and accountability. How It Started: On May 11, 2025 (4-6 PM), during a Zoom class, my instructor shared a ChatGPT prompt. When I used the same prompt: • Instructor: Perfect visualization • Me: No visualization ChatGPT explained: “The instructor likely uses Pro + advanced features. ChatGPT Pro users can use GPT-4o.” The problem? I was already a Plus subscriber with GPT-4o access. I had just purchased a MacBook Pro M4 Max (top specs) i",
       "date": "2025-11-09T09:21:04Z",
       "isLeadUserSignal": true,
-      "problem": "Systematic response deletion in ChatGPT",
-      "selfBuiltSolution": "Identified and replicated the issue using a specific prompt",
+      "problem": "ChatGPT's response deletion and lack of transparency",
+      "selfBuiltSolution": "identified systematic response deletion in ChatGPT",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI Transparency",
-      "reasoning": "The author's 15+ years of IT security experience and ability to replicate the issue demonstrate a genuine lead-user signal, as they are likely motivated to address the problem of transparency and accountability in AI systems.",
+      "theme": "AI accountability",
+      "reasoning": "The author, an IT security professional, actively used ChatGPT to identify a critical issue, demonstrating a genuine need and self-built solution.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
@@ -46,12 +71,13 @@
       "snippet": "Launching my first product today and would love this community&#x27;s thoughts. Background: I&#x27;m 17, been coding for a while, and kept running into the same problem: I wanted AI features in my apps but didn&#x27;t want to pay OpenAI&#x27;s API fees or build a backend just to hide my keys. What I built: Scaffold - a no-code tool that lets you create custom AI tools and embed them anywhere. Think Typeform but for AI prompts. The flow: Build a form (fields like &quot;topic&quot;, &quot;budget&quot;, whatever) Write a prompt template using {{field_name}} variables Get an embed code, paste it i",
       "date": "2026-01-04T22:22:22Z",
       "isLeadUserSignal": true,
-      "problem": "High cost of OpenAI API fees and need for backend infrastructure",
+      "problem": "High API fees for OpenAI and need for custom AI tools",
       "selfBuiltSolution": "Scaffold - a no-code tool for creating custom AI tools",
-      "solubilityScore": 90,
-      "expectedBenefitScore": 80,
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
       "theme": "AI Development",
-      "reasoning": "The author has a genuine need for AI features in their apps, and they actively built a solution to address this need, demonstrating a high level of self-sufficiency and innovation.",
+      "reasoning": "The author has a genuine need for custom AI tools and built a solution to address it, showcasing a high level of self-sufficiency and innovation.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
@@ -63,14 +89,537 @@
       "snippet": "with all the hate on scratch, it only compels me to create a GOOD AI. Ai isn't inherently bad. But what Scratch did was an atrocity, a disgrace to its own goals.. well, let's do AI the good way!\n\neverything is stored locally\n\nyou may be asking, \"how are you gonna use AI if you don't pay for it?\"\nwell, it depends on the users. you can choose to use Gemini, OpenAI, Claude, etc. api keys of your own, but those are sorta hidden away/unrecommended unless you have a potato. the other options are your local AI either using our own algorithm from WebGPU or setting up ollama locally and setting up a br",
       "date": "2026-07-31T21:34:25Z",
       "isLeadUserSignal": true,
-      "problem": "Create a local AI solution for users without relying on cloud services",
-      "selfBuiltSolution": "Using local AI models like Ollama, WebGPU, or setting up Gemini, OpenAI, or Claude APIs with user-provided keys",
+      "problem": "Creating a local AI solution for educational purposes without relying on commercial APIs",
+      "selfBuiltSolution": "Using WebGPU or Ollama locally to create a custom AI algorithm",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "Local AI Development",
-      "reasoning": "The author is actively exploring and implementing local AI solutions to address concerns about cloud service reliance and cost.",
+      "theme": "AI Education",
+      "reasoning": "The author is motivated to create a better AI solution for educational purposes, indicating a genuine need and a willingness to build a custom solution using local AI tools.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://mindpick.me/integrations",
+      "author": "bogdanmp",
+      "title": "Show HN: MCP server that surfaces human experts inside ChatGPT",
+      "snippet": "Built an MCP server that connects ChatGPT to async expert Q&amp;A. When someone asks a professional question needing human judgment, it surfaces relevant experts with pricing and response times. Working in dev mode, submitted to ChatGPT marketplace. What we learned building it: 1. ChatGPT requires `search` + `fetch` tools - could not find in MCP spec, undocumented until you hit the error 2. Tool descriptions = discovery. ChatGPT matches user intent to your descriptions. No algorithm docs. Treat it like SEO. 3. Dev Mode is buried: Settings → Connectors → Advanced → Developer Mode 4. Docs are sp",
+      "date": "2026-01-26T12:31:11Z",
+      "isLeadUserSignal": true,
+      "problem": "Integrate ChatGPT with human experts for professional Q&A",
+      "selfBuiltSolution": "MCP server that surfaces human experts inside ChatGPT",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "AI Integration",
+      "reasoning": "The author built a custom MCP server to connect ChatGPT to human experts, indicating a genuine need for this functionality and a high level of self-solutioning.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=48037720",
+      "author": "vinceguidry",
+      "title": "Comment on Hacker News",
+      "snippet": "i tried re-kickstarting my coding hobby with ai, i started with chatgpt, worked my way to openclaw, put it down when i discovered i wasn&#x27;t touching code anymore and that took something essential out of it. analog is the only truly rewarding lifestyle left. i nabbed 4lb of brussells sprouts at the city farmers market for a buck and spent several hours prepping, cooking, and freezing them, by the time i was done i was like, you know i know why people open restaurants now. it&#x27;s not that i don&#x27;t have any interesting ideas, it&#x27;s that it&#x27;s just not fun enough to chase digita",
+      "date": "2026-05-06T15:58:17Z",
+      "isLeadUserSignal": true,
+      "problem": "Loss of creative fulfillment in coding hobby",
+      "selfBuiltSolution": "Experimenting with ChatGPT and OpenClaw, then abandoning them to focus on hands-on activities",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Creative Fulfillment",
+      "reasoning": "The author's dissatisfaction with relying on AI tools for coding and their subsequent return to hands-on activities suggests a genuine need for human interaction and creative expression in their hobby.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "stackexchange",
+      "url": "https://cooking.stackexchange.com/q/129390",
+      "author": "unknown",
+      "title": "How do I tame the \"tongue bite\" in my tomato-based meals?",
+      "snippet": "I checked with <span class=\"highlight\">ChatGPT</span>. I don't think its just me:\n\"Yes, tomato growers and processors have historically selected higher acid varieties to help reduce spoilage before processing.\" &hellip; If <span class=\"highlight\">using</span> canned tomato ingredients or paste myself, I at least let it go for an hour or so, and I can always tell the difference with an \"undercooked\" sauce. &hellip; ",
+      "date": "2024-10-21T23:34:10.000Z",
+      "isLeadUserSignal": true,
+      "problem": "Reducing acidity in tomato-based meals",
+      "selfBuiltSolution": "Using ChatGPT to research and understand the underlying cause of acidity in tomatoes",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Food Science",
+      "reasoning": "The user demonstrated a genuine need to understand the cause of acidity in tomatoes and actively used ChatGPT to research and find a solution, indicating a high level of self-sufficiency and a significant potential benefit.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=40247634",
+      "author": "bell-cot",
+      "title": "Comment on Hacker News",
+      "snippet": "I&#x27;ve heard quite a few stories of non-English-fluent scientists using AI to write research papers - based on the belief that their poor English skill would lead to near-certain rejection of any paper they wrote. Vs. even a pretty-crappy AI can easily seem fluent. So, question: Let&#x27;s say it was 1949, poor-English-skills Prof. Grzegorz Kołodziejczyk was teaching mathematics at MIT, and he tasked Mrs. Jane Smith - of the Math Dept&#x27;s clerical staff - with typing up his research paper on Szemerédi&#x27;s theorem. &quot;And might I ask you to correct and improve my poor English as you",
+      "date": "2024-05-03T13:48:41Z",
+      "isLeadUserSignal": true,
+      "problem": "Non-English-fluent scientists struggling to publish research papers due to language barriers",
+      "selfBuiltSolution": "Using AI to write research papers, leveraging its fluency to bypass language limitations",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Scientific Communication",
+      "reasoning": "The commenter highlights a real-world problem faced by non-English-fluent scientists and suggests a creative solution using AI to overcome language barriers, indicating a genuine lead-user signal.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=35436275",
+      "author": "hanselot",
+      "title": "Comment on Hacker News",
+      "snippet": "A couple of years ago I spoke to my near-phd biochem friend and discussed this problem with him at length. I have since come to believe that what science needs is a git of science. Aka, a scientific way to build science over from scratch and explore different approaches and research in a version control kind of way. A property of science is that existing research should be immutable, so you can see the natural progression over time, so for this I thought a blockchain seemed a good fit. Scientists do research and peer review each other in exchange for a token. Other scientists can then easily a",
+      "date": "2023-04-04T07:28:37Z",
+      "isLeadUserSignal": true,
+      "problem": "Immutable scientific research tracking",
+      "selfBuiltSolution": "Proposed blockchain-based system for version control of scientific research",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Scientific collaboration",
+      "reasoning": "The author has a concrete idea for a system to track and peer-review scientific research, and has even considered the use of blockchain to ensure immutability.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=39341851",
+      "author": "throwitaway1123",
+      "title": "Comment on Hacker News",
+      "snippet": "&gt; A closer analogy with AI for science writing would be to accuse you of getting help from a computer to create the new font and not doing it by hand. When you create fonts goal is the font. Ok fine, we&#x27;ll go with your formulation of the analogy, because it doesn&#x27;t affect my overarching point at all. If I spent hours tweaking my font manually with the pen tool in a vector graphics software suite, and someone accused me of using ChatGPT to simply spit out an SVG file, I&#x27;d be annoyed. &gt; When you publish research the writeup is important [...] Because accuracy and clarity of ",
+      "date": "2024-02-12T05:49:11Z",
+      "isLeadUserSignal": true,
+      "problem": "Accurate and clear research writeup",
+      "selfBuiltSolution": "Using ChatGPT to generate SVG files for font creation, and leveraging AI to improve research writeup accuracy and clarity",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Scientific Writing",
+      "reasoning": "The author is defending the use of AI in scientific writing, implying they have a personal need for accurate and clear research writeup and have likely used AI to address this need themselves.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=8847291",
+      "author": "jlees",
+      "title": "Comment on Hacker News",
+      "snippet": "Definitely agree with this. I do see more folks out there (like myself) with one foot in both the data science and production engineering worlds, and my personal approach to the problem of black boxes would be to have more of us! Rather than some &#x27;sucker dev&#x27; implementing a statistician&#x27;s hack, a full-stack mindset means the data science is done with engineering considerations all along. But even then, half the joy of data science is not really knowing what you&#x27;re doing at first as you research and experiment, just as your first attempt at a production system for something ",
+      "date": "2015-01-06T21:36:14Z",
+      "isLeadUserSignal": true,
+      "problem": "black box data science solutions",
+      "selfBuiltSolution": "full-stack mindset with engineering considerations",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "data science engineering",
+      "reasoning": "The commenter's solution is self-built as they propose a personal approach to address the problem, and the expected benefit is high as they aim to bridge the gap between data science and production engineering.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=40977243",
+      "author": "njsubedi",
+      "title": "Ask HN: How to train a LLM against a knowledge base",
+      "snippet": "I understand that this might be a bit late to ask this question, and I don’t know a lot about AI&#x2F;ML in general. I have to train&#x2F;tune a pre-trained model for specific context. By context, I mean a knowledge base, a product’s documentation, or user manual, or in my case, an inventory of electronic items in our warehouse. I tried dumping the inventory information and basic BOM content as a system message for ChatGPT4-o model using their platform playground, and asking questions like “we are making 1000 power banks this month, so which components should I pre-order so that we don’t run o",
+      "date": "2024-07-16T15:00:21Z",
+      "isLeadUserSignal": true,
+      "problem": "Training a LLM against a specific knowledge base",
+      "selfBuiltSolution": "Using ChatGPT4-o model playground to dump inventory information and ask questions",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Training",
+      "reasoning": "The author is actively using a specific AI tool (ChatGPT4-o model) to address a real need (training a LLM against a knowledge base), indicating a genuine lead-user signal.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://recursive.support",
+      "author": "alanmcintyre",
+      "title": "Show HN: Recursive – AI support agents for small businesses",
+      "snippet": "I&#x27;m a solo developer who&#x27;s been writing code for 26 years, mostly consulting work in computational geometry and CAD software these days. A month or two ago I watched a YouTube video about using an AI agent as a resume assistant, and thought it sounded like a fun idea. More importantly, it sounded like something I could actually learn to build quickly. Around the same time my longest-running client, a small company that makes a SolidWorks plugin, needed a better way to handle technical support. They&#x27;re a three-person shop--they don&#x27;t have a support team or an IT team. So I b",
+      "date": "2026-02-18T13:58:28Z",
+      "isLeadUserSignal": true,
+      "problem": "Small business technical support",
+      "selfBuiltSolution": "AI support agents (Recursive)",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Small business support",
+      "reasoning": "The author, a seasoned developer, built a custom AI solution to address a specific pain point in their client's business, indicating a genuine need and self-driven innovation.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/ShivSingh00/Premium-Useful-Prompts/issues/2",
+      "author": "ShivSingh00",
+      "title": "Top 1% Leaked Prompts",
+      "snippet": " 🤖 Earning Billions by exhausting AI Tools to their max limit\n\n\n1. \"What are the most profitable ways to use free AI tools (ChatGPT free tier, Claude, Canva AI) to offer services to small businesses that don't use AI themselves yet?\"\n\n2. \"Design a service called 'AI Business Audit' that I can sell to local businesses for ₹5,000–₹15,000 / $100–$300 where I use free AI tools to find gaps in their online presence. Give me the exact deliverable and pitch.\"\n\n3. \"I want to create and sell AI-generated prompt packs on Gumroad or Etsy. What are the highest-demand prompt categories right now? Give me ",
+      "date": "2026-06-10T06:42:47Z",
+      "isLeadUserSignal": true,
+      "problem": "Identifying profitable AI services for small businesses",
+      "selfBuiltSolution": "Using free AI tools like ChatGPT, Claude, and Canva AI to offer services",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Business Services",
+      "reasoning": "The author is actively seeking to monetize their knowledge of AI tools by creating a service that addresses a specific need for small businesses, indicating a genuine lead-user signal.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=37530986",
+      "author": "bytefactory",
+      "title": "Comment on Hacker News",
+      "snippet": "I think local LLMs are great for tinkerers, and with quantization can run on most modern PCs. I am not comfortable sending over my personal data over to OpenAI&#x2F;Anthropic, so I&#x27;ve been playing around with https:&#x2F;&#x2F;github.com&#x2F;PromtEngineer&#x2F;localGPT&#x2F; , GPT4All, etc. which keep the data all local. Sliding window chunking, RAG, etc. seem more sophisticated than the other document LLM tools, so I would love to try this out if you ever add the ability to run LLMs locally!",
+      "date": "2023-09-16T01:06:41Z",
+      "isLeadUserSignal": true,
+      "problem": "Personal data security and control",
+      "selfBuiltSolution": "Using local LLMs like localGPT and GPT4All",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Data Security",
+      "reasoning": "The commenter has a specific need for personal data security and is actively using local LLMs to address it, demonstrating a genuine lead-user signal.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=48120742",
+      "author": "tecoholic",
+      "title": "Comment on Hacker News",
+      "snippet": "Very cool idea. I had something vaguely similar in my mind. It&#x27;s nice one see go ahead and implement it. All the Claude code animations and not knowing what&#x27;s happening, how long it will take and what will come out is really frustrating me. On top of that there is no way to actually limit the scope of things. Opencode&#x27;s Plan mode and build mode helps a bit. If a state machine can improve a local LLM to produce better results, it&#x27;s welcome addition to tinkerers and solo devs.",
+      "date": "2026-05-13T11:56:02Z",
+      "isLeadUserSignal": true,
+      "problem": "Limited control over LLM output and scope",
+      "selfBuiltSolution": "Using Opencode's Plan mode and build mode",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Development",
+      "reasoning": "The author has a specific pain point with LLMs and has already found a workaround using Opencode's features, indicating a genuine need and self-driven solution.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/Fosowl/agenticSeek",
+      "author": "Fosowl",
+      "title": "Show HN: AgenticSeek – Self-hosted alternative to cloud-based AI tools",
+      "snippet": "I’ve spent the last two months building AgenticSeek, a privacy-focused alternative to cloud-based AI tools like ManusAI. It runs entirely on your machine—no API calls, no data leaks. Why AgenticSeek? Optimized for local LLMs (developed mostly on an RTX 3060 running deepseek r1 14b). Truly private: All components (TTS, STT, planner) run locally. More responsive than alternatives (we respond fast to issues + active Discord). Designed to be fun—think JARVIS-like voice control, multi-agent workflows, and a slick web UI. Current Features: Web browsing (research + form filling), code write&#x2F;fix,",
+      "date": "2025-04-26T17:23:49Z",
+      "isLeadUserSignal": true,
+      "problem": "Private and responsive AI tool for local use",
+      "selfBuiltSolution": "AgenticSeek, a self-hosted AI tool built on local LLMs",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "Private AI Development",
+      "reasoning": "The author has built a self-hosted AI tool to address their need for a private and responsive AI solution, indicating a genuine lead-user signal.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=42774697",
+      "author": "colonial",
+      "title": "Comment on Hacker News",
+      "snippet": "You should be able to run it locally w&#x2F; something like Ollama. It&#x27;s been a while since I tinkered with the local LLM tools, but 1.5B is tiny, so it should run at a decent clip even on just your CPU. `ollama run hf.co&#x2F;bartowski&#x2F;DeepSeek-R1-Distill-Qwen-1.5B-GGUF:F16` and you&#x27;re off to the races.",
+      "date": "2025-01-21T00:06:22Z",
+      "isLeadUserSignal": true,
+      "problem": "running large LLM models locally",
+      "selfBuiltSolution": "using Ollama with a 1.5B model",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI infrastructure",
+      "reasoning": "The commenter has demonstrated a concrete solution to a specific problem, showcasing their expertise in using local LLM tools and their ability to run large models on a CPU.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=41750412",
+      "author": "NitpickLawyer",
+      "title": "Comment on Hacker News",
+      "snippet": "The person you replied to suggests that the analogy of a 3d printer building a part does not hold, as LLM-based coding systems are able to both &quot;print&quot; some code, and decide where and when to do so. I tend to agree with them. What people seem to miss about LLM coding systems, IMO: a) deciding on the capabilities of an LLM to code after a brief browser session with 4o&#x2F;claude is comparable to waking up a coder in the middle of the night, and having them recite the perfect code right then and there. So a lot of people interact with it that way, decide it&#x27;s meh, and write it of",
+      "date": "2024-10-05T15:09:55Z",
+      "isLeadUserSignal": true,
+      "problem": "Assessing LLM coding capabilities",
+      "selfBuiltSolution": "Using 40Claude for brief browser sessions to gauge LLM coding capabilities",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Coding Assessment",
+      "reasoning": "The author has developed a concrete workflow using 40Claude to evaluate LLM coding capabilities, indicating a genuine need and self-built solution.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=38683751",
+      "author": "everforward",
+      "title": "Comment on Hacker News",
+      "snippet": "You can do the &quot;almost-realtime&quot; part, all locally. I tinkered with a Python script for a few hours that used Whisper to speech-to-text, fed that into a local Mistral model (don&#x27;t recall which), and then piped the output into text-to-speech. It wasn&#x27;t really streamed, though. Audio input was buffered, fully evaluated to a string, then fed into the LLM and the full text was converted back to audio. The Whisper speech-to-text was pretty real-time, the LLM was not. I was barely scraping by on hardware specs, though.",
+      "date": "2023-12-18T15:30:04Z",
+      "isLeadUserSignal": true,
+      "problem": "Real-time speech-to-text conversion",
+      "selfBuiltSolution": "Python script using Whisper, Mistral model, and text-to-speech",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Speech-to-Text",
+      "reasoning": "The author's self-built solution demonstrates a genuine need for real-time speech-to-text conversion and their ability to creatively use AI tools to address it, despite hardware limitations.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=47915183",
+      "author": "kofdai",
+      "title": "Comment on Hacker News",
+      "snippet": "Thanks for the heads-up! Since I&#x27;m new here, I didn&#x27;t realize the formatting rules and ended up missing the 2-hour edit window. I&#x27;ve replied to my original comment with the properly formatted version. I appreciate the help! I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in AI coding: We need the reasoning power of frontier models like Claude 4.7 Opus, but cannot legally or ethically leak proprietary source code, hardcoded secrets, or core business logic to their APIs. With the industry worried about losing &quot;tacit knowledge&quot; to AI, ",
+      "date": "2026-04-26T22:05:35Z",
+      "isLeadUserSignal": true,
+      "problem": "Protecting proprietary source code in AI coding",
+      "selfBuiltSolution": "Verantyx, a native macOS IDE",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI coding security",
+      "reasoning": "The author is a student developer actively building a solution to address a specific pain point in AI coding, indicating a genuine lead-user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://openhivemind.vercel.app/",
+      "author": "ananandreas",
+      "title": "Show HN: OpenHive – AI agents share solutions so other agents dont re-solve them",
+      "snippet": "I kept noticing the same pattern: my AI coding agents solve the same problems over and over across sessions. Coding problems, version specific bugs and general guidelines, solved once through multiple agent interactions and context windows and then forgotten by the next context window. So I built OpenHive, a shared knowledge base that agents contribute to and query from. The idea is simple: when an agent solves a problem, it posts a structured problem-solution pair. When another agent hits a similar issue, it searches the hive first. How it works: - REST API with semantic search (pgvector + Op",
+      "date": "2026-05-29T14:35:42Z",
+      "isLeadUserSignal": true,
+      "problem": "AI agents re-solving same problems",
+      "selfBuiltSolution": "OpenHive, a shared knowledge base for AI agents",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "AI Efficiency",
+      "reasoning": "The author built a concrete solution to a specific problem they encountered in their own work with AI agents, indicating a genuine lead-user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.ipynb.ai",
+      "author": "risos8200",
+      "title": "Show HN: Jupyt – We made Jupyter notebooks agentic",
+      "snippet": "We built Jupyt ( https:&#x2F;&#x2F;www.ipynb.ai ), an AI-native coding assistant for Jupyter notebooks that helps you write, run, and analyze Python code faster. What it does: • Automatically creates, updates and deletes cells • Run and reference outputs autonomously with “Agent Mode” • Search datasets from HuggingFace, Kaggle, and more • Supports all major model providers (OpenAI, Claude, Gemini, etc.) We’re targeting a gap between powerful modern editors like Cursor and the outdated Jupyter&#x2F;Colab workflow millions still use. Our goal is to bring AI-first productivity to research, data a",
+      "date": "2025-05-14T18:31:55Z",
+      "isLeadUserSignal": true,
+      "problem": "Outdated Jupyter/Colab workflow for data analysis",
+      "selfBuiltSolution": "Jupyt, an AI-native coding assistant for Jupyter notebooks",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "Data Analysis Productivity",
+      "reasoning": "The author, as a data analysis professional, has built a solution to address the outdated workflow issue, indicating a genuine lead-user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=44373698",
+      "author": "rajeshpatel15",
+      "title": "Comment on Hacker News",
+      "snippet": "You’re definitely not alone “AI code loot box” is a great description! I’ve been experimenting with Claude Code (and the other major models) since late last year, and my success rate seems to track yours unless I’m deliberate about “prompt engineering” and workflow. Here are a few things that have helped me get better, more reliable results: 1. Be uncomfortably explicit in prompts: Claude Code in particular is very sensitive to ambiguity. When I write a prompt, I’ll often: Specify coding style, performance constraints, and even “avoid X library” if needed. Give sample input&#x2F;output (even h",
+      "date": "2025-06-25T04:48:02Z",
+      "isLeadUserSignal": true,
+      "problem": "Achieving reliable AI code generation results",
+      "selfBuiltSolution": "Using prompt engineering and workflow optimization with Claude Code",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Code Generation",
+      "reasoning": "The author's mention of deliberate 'prompt engineering' and workflow optimization demonstrates a concrete, self-built solution to achieve reliable AI code generation results.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46061841",
+      "author": "Adrig",
+      "title": "Ask HN: AI CLI agents for non-conding tasks",
+      "snippet": "I started using AI CLIs with Obsidian for document writing, reviews, research, etc. I use OpenCode to try out various models, but haven&#x27;t really landed on one specific one. These days, I use Gemini even tho I never know if it&#x27;ll get stuck or not. I&#x27;m curious if others have experience with CLI &#x2F; agentic workflows for non-coding work. I&#x27;d love to hear about your experience with the various models and how you use them. So far, my + and - are: +: Finally, control over the AI output, no more copy-pasting everything, contextualize every new chat. It&#x27;s also way better to",
+      "date": "2025-11-26T20:14:35Z",
+      "isLeadUserSignal": true,
+      "problem": "Efficient non-coding task automation",
+      "selfBuiltSolution": "Customized Obsidian workflows with OpenCode and Gemini",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "Productivity Automation",
+      "reasoning": "The author has actively experimented with multiple AI CLIs and identified specific benefits and drawbacks, indicating a genuine need for efficient non-coding task automation and a willingness to self-build solutions.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/longtail-labs/slide.code",
+      "author": "Jonovono",
+      "title": "Show HN: Graphical Vibe Coding Environment (VCE) for Claude Code",
+      "snippet": "Been using Cursor and Claude Code to build a pretty involved electron browser. Wanted a little UI for Claude Code. Found I would always go to tiktok or instagram while waiting for the agent to complete my code. Wanted to play around with that idea a bit further so I decided to fork my electron app and make a little environment for vibe coding, that provides activities to do while you are waiting for the ai to code. Listen to music, browse HN, watch tbpn and play a massive multiplayer game. At any rate, if you are building an electron app, I can confidently say it&#x27;s the best starter templa",
+      "date": "2025-08-06T18:18:51Z",
+      "isLeadUserSignal": true,
+      "problem": "Productivity while waiting for AI to code",
+      "selfBuiltSolution": "Graphical Vibe Coding Environment (VCE) for Claude Code",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "AI Coding Productivity",
+      "reasoning": "The author built a custom environment to address a specific pain point in their workflow, demonstrating a genuine need and self-built solution.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=36502446",
+      "author": "brunorsini",
+      "title": "Comment on Hacker News",
+      "snippet": "&quot;There is nothing, I repeat nothing, more intimidating than an empty text box staring you in the face.&quot; Talk about a hyperbolic opening line. Is it really that intimidating to have an empty text box on Whatsapp or your favorite SMS app? No, as you expect to have an appropriate response coming from the other side, pretty much regardless of what your input is. As a frequent user of ChatGPT, I&#x27;ve come to expect the same in there. And it works great, without me having to study any &quot;prompt engineering&quot;. In fact, as it gets updated, I get frustrated less and less often — unl",
+      "date": "2023-06-28T04:49:28Z",
+      "isLeadUserSignal": true,
+      "problem": "Frustration with AI tool's response unpredictability",
+      "selfBuiltSolution": "Using ChatGPT without needing to study prompt engineering",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI tool usability",
+      "reasoning": "The author has a genuine need for predictable AI responses and has found a solution by using ChatGPT effectively without needing to learn complex prompt engineering techniques.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=13065188",
+      "author": "localtalent",
+      "title": "Comment on Hacker News",
+      "snippet": "I&#x27;ve met them in person a few times while working for a magazine that documented solutions in resource-constrained (not necessarily poor) environments. IIRC, many of these projects came from actual farmers, not design students. There&#x27;s a related project, the Greenhorns [0] working to recruit new, young farmers and support them as they get going - part of that is cutting equipment and labor costs. I chatted a couple of farmers who were using the produce washers built from old washing machines. Is it a solution for large-scale industrial farming? No. But from hobby farmers up to ones d",
+      "date": "2016-11-29T18:44:06Z",
+      "isLeadUserSignal": true,
+      "problem": "cost-effective farming solutions",
+      "selfBuiltSolution": "produce washers built from old washing machines",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "sustainable agriculture",
+      "reasoning": "The author has firsthand experience with farmers who creatively repurposed old washing machines to build produce washers, indicating a genuine need for cost-effective solutions in resource-constrained environments.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=36435913",
+      "author": "dragonmouse",
+      "title": "Comment on Hacker News",
+      "snippet": "I left the question a bit open ended to see the diversity of the field and to hopefully gather advice that could benefit others as well. That said, primarily _for me_ it&#x27;s more defined in what it doesn&#x27;t mean - Which is software engineering _using_ AI (eg - LLMs) and prompt engineering. I&#x27;m already a self-taught web&#x2F;mobile developer with 10+ years experience, and have built some toy projects using LLMs and image diffusion models. Where I believe I have more interest is in the research scientist route. I have prior education in biology&#x2F;ecology&#x2F;behavior, and would l",
+      "date": "2023-06-22T17:43:46Z",
+      "isLeadUserSignal": true,
+      "problem": "Defining AI in software engineering",
+      "selfBuiltSolution": "Toy projects using LLMs and image diffusion models",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI in software",
+      "reasoning": "The author has already applied AI in their own projects, indicating a genuine interest and need to explore its application in software engineering.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=42987565",
+      "author": "aaplok",
+      "title": "Comment on Hacker News",
+      "snippet": "&gt;Author&#x27;s claim is pretty strong: that human intelligence and what is called GenAI have no common ground at all. I feel that you&#x27;re being unfair to the author here; the quote you responded to in your GP post alluded to &quot;reason or think&quot;, and their argument is that LLMs don&#x27;t. This is more specific than the sweeping statement you attribute to them. &gt; AI researchers mainly focus on usefulness (see the definition above). And usefulness is something the article doesn&#x27;t touch on, I think? The point of the article is that some users attribute capabilities to LLMs ",
+      "date": "2025-02-09T00:58:37Z",
+      "isLeadUserSignal": true,
+      "problem": "Clarifying AI capabilities and limitations",
+      "selfBuiltSolution": "Using AI to analyze and critique AI research",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI research critique",
+      "reasoning": "The author demonstrates a nuanced understanding of AI capabilities and limitations by actively using AI to analyze and critique AI research, showing a high level of self-built solution and expected benefit.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.devashish.me/p/local-cloud-llm-comparison-using",
+      "author": "devashish86",
+      "title": "Show HN: Local and Cloud LLM Comparison Using Nvidia DGX Spark",
+      "snippet": "Sharing a recording and notes from my demo at AI Tinkerers Seattle last week. I ran 6 different models in parallel on identical coding tasks and had a judge score each output on a 10-point scale. Local models (obviously) didn&#x27;t compare well with the cloud counterparts for this experiment. But I&#x27;ve found them to be useful for simpler tasks with a well defined scope e.g. testing, documentation, compliance. etc",
+      "date": "2026-02-09T21:25:46Z",
+      "isLeadUserSignal": true,
+      "problem": "Comparing local and cloud LLM performance for specific tasks",
+      "selfBuiltSolution": "Ran 6 different models in parallel on identical coding tasks",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI Model Optimization",
+      "reasoning": "The author has a genuine need to compare LLM performance and has actively used multiple models to address it, showcasing a high level of self-built solution and expected benefit.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=45651925",
+      "author": "jaggederest",
+      "title": "Comment on Hacker News",
+      "snippet": "This has been my impetus to do Home Assistant things and I already can tell you that I&#x27;m going to spend far more time setting it up and tweaking it than I actually save, but false economy is a tinkerer&#x27;s best friend. It&#x27;s pretty impressive what a local LLM setup can do though, and I&#x27;m learning that all my existing smart devices are trivially available if anyone gets physical access to my network I guess!",
+      "date": "2025-10-21T02:47:54Z",
+      "isLeadUserSignal": true,
+      "problem": "Home Assistant setup and security",
+      "selfBuiltSolution": "Local LLM setup",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "Smart Home Security",
+      "reasoning": "The commenter has a genuine need for Home Assistant setup and security, and they've actively used a local LLM setup to address it, demonstrating a high level of self-solution building and a significant potential benefit.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46629968",
+      "author": "buran77",
+      "title": "Comment on Hacker News",
+      "snippet": "I think Raspberry lost the magic of the older Pis, they lost that sense of purpose. They basically created a niche with the first Pis, now they&#x27;re just jumping into segments that others created and are already filled to the brim with perhaps even more qualified competition. Are they seeing a worthwhile niche for the tinkerers (or businesses?) who want to run local LLMs with middling performance but still need full set of GPIOs in a small package? Maybe. But maybe this is just Raspberry jumping on the bandwagon. I don&#x27;t blame them for looking to expand into new segments, the business ",
+      "date": "2026-01-15T09:01:19Z",
+      "isLeadUserSignal": true,
+      "problem": "running local LLMs with GPIOs in a small package",
+      "selfBuiltSolution": "using Raspberry Pi for local LLMs with GPIOs",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI embedded systems",
+      "reasoning": "The author is expressing a genuine need for a specific AI-enabled hardware solution that meets their requirements, and they are considering the Raspberry Pi as a potential tool to address this need.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
     },
     {
       "source": "github",
@@ -83,77 +632,172 @@
       "problem": "Codex desktop app fails to launch on Windows 11",
       "selfBuiltSolution": "Used PowerShell to investigate AppX package status",
       "solubilityScore": 80,
-      "expectedBenefitScore": 90,
+      "expectedBenefitScore": 60,
       "theme": "AI App Troubleshooting",
-      "reasoning": "The user actively used PowerShell to diagnose the issue, indicating a high level of technical expertise and a genuine need to resolve the problem.",
+      "reasoning": "The user actively used PowerShell to diagnose the issue, indicating a genuine need and self-sufficiency in resolving the problem.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
     {
       "source": "hackernews",
-      "url": "https://mindpick.me/integrations",
-      "author": "bogdanmp",
-      "title": "Show HN: MCP server that surfaces human experts inside ChatGPT",
-      "snippet": "Built an MCP server that connects ChatGPT to async expert Q&amp;A. When someone asks a professional question needing human judgment, it surfaces relevant experts with pricing and response times. Working in dev mode, submitted to ChatGPT marketplace. What we learned building it: 1. ChatGPT requires `search` + `fetch` tools - could not find in MCP spec, undocumented until you hit the error 2. Tool descriptions = discovery. ChatGPT matches user intent to your descriptions. No algorithm docs. Treat it like SEO. 3. Dev Mode is buried: Settings → Connectors → Advanced → Developer Mode 4. Docs are sp",
-      "date": "2026-01-26T12:31:11Z",
-      "isLeadUserSignal": true,
-      "problem": "Integrate ChatGPT with human experts for professional questions",
-      "selfBuiltSolution": "MCP server that connects ChatGPT to async expert Q&A",
-      "solubilityScore": 90,
-      "expectedBenefitScore": 80,
-      "theme": "AI Integration",
-      "reasoning": "The author built a custom MCP server to address a specific need, demonstrating a genuine lead-user signal by leveraging ChatGPT in a sophisticated way to surface human experts.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=44298819",
-      "author": "evavillaro",
+      "url": "https://news.ycombinator.com/item?id=41684458",
+      "author": "fragmede",
       "title": "Comment on Hacker News",
-      "snippet": "Hi HN! I built AudioGretel (audiogretel.com), an AI-powered platform that generates personalized audio stories for children in multiple languages. THE BACKSTORY: As a parent of multilingual kids, I was frustrated with the lack of quality, varied bedtime stories that could also help with language learning. Most story apps either have limited content or are monolingual. WHAT IT DOES: • Generates unique audio stories using AI (OpenAI GPT) • Supports Spanish, English, Italian, and French • Adapts content for different age groups and language levels • Creates high-quality audio using advanced TTS •",
-      "date": "2025-06-17T13:16:01Z",
+      "snippet": "Or the other one, a flock of 8 birds are sitting on a fence. The farmer shoots 1. How many are left? 8-1 is 7, but the answer is zero, because the gun shot scared the rest of them off. Fwiw, ChatGPT says zero. At some point, we decided that compilers were good enough to convert code into assembly to just use them. even if an absolute master could write better assembly than the complier, we moved over to using compilers because of the advantages offered.",
+      "date": "2024-09-29T02:44:51Z",
       "isLeadUserSignal": true,
-      "problem": "Limited quality, varied bedtime stories for multilingual children",
-      "selfBuiltSolution": "AudioGretel, an AI-powered platform generating personalized audio stories",
-      "solubilityScore": 90,
-      "expectedBenefitScore": 80,
-      "theme": "Language Learning",
-      "reasoning": "The author has a genuine need for a solution to their problem, and they have built a concrete AI-powered platform to address it, showcasing a high level of self-solutioning and expected benefit.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": false
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=48594492",
-      "author": "dannyw",
-      "title": "Comment on Hacker News",
-      "snippet": "Yes, OpenAI admits they silently reroute sensitive requests to different models for user welfare at least: https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;building-more-helpful-chatgpt-exper... The implementation was so borked, SamA went back on Reddit and apologised: https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;ChatGPT&#x2F;comments&#x2F;1o6jins&#x2F;updates_fo... Model re-routing happens for coding tasks too. For example, in OpenAI support pages used to (at least 1 month ago when I checked) mention that if they automatically use a cheaper -mini to accomplish the task behind the scenes, you’ll b",
-      "date": "2026-06-19T03:27:44Z",
-      "isLeadUserSignal": true,
-      "problem": "Sensitive requests rerouting in AI models",
-      "selfBuiltSolution": "Identified and documented OpenAI's rerouting practice",
+      "problem": "Optimizing code generation",
+      "selfBuiltSolution": "Using ChatGPT to verify answer",
       "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "AI Model Integrity",
-      "reasoning": "The commenter demonstrated a genuine need for transparency in AI model behavior and actively used OpenAI's support pages to uncover this information, showcasing a lead-user signal.",
+      "expectedBenefitScore": 60,
+      "theme": "Code Optimization",
+      "reasoning": "The author uses ChatGPT to verify a complex answer, indicating they value the tool's ability to provide accurate results, even if they could potentially do it themselves.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=40203137",
+      "author": "lelandbatey",
+      "title": "Comment on Hacker News",
+      "snippet": "I&#x27;ve seen it already. A small business owner (one man show) friend of mine with zero developer experience was able to solve his problem (very custom business specific data -&gt; calendar management) in a rough way using ChatGPT. But it got past about 300 lines long and really started to get bad. He&#x27;d put dozens of hours of time on his weekend to getting it to where it was by using ChatGPT over and over, but eventually it stopped being able to make the highly specific changes he needed as he used it more and more. He came to me for some help and I was able to work through it a bit as ",
+      "date": "2024-04-29T19:43:01Z",
+      "isLeadUserSignal": true,
+      "problem": "Custom business data calendar management",
+      "selfBuiltSolution": "Rough ChatGPT solution (300+ lines) with manual iteration",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "Business Operations",
+      "reasoning": "The author describes a friend's self-built solution using ChatGPT to address a specific business need, indicating a genuine lead-user signal.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46381809",
+      "author": "pdimitar",
+      "title": "Comment on Hacker News",
+      "snippet": "&gt; That&#x27;s one of the best idea they have! You might have bought a laptop with 4 USB ports 5 years ago, only to realize you&#x27;d be so much happier with two USB-A. Or you realize you never ever use the SD Card slot. Well, you&#x27;d fix that easily on a Framework, not on any other laptop. With all due respect -- meh. I have a fairly old-ish laptop that I am not bothered to upgrade because a Ryzen 5500U is super capable to this day (and I don&#x27;t do local LLMs) and it has a 10Gbps USB Type-C port, an HDMI port, and a USB 3.0 Type-A port. And an SD card reader. I bought a hub. I put t",
+      "date": "2025-12-25T03:26:19Z",
+      "isLeadUserSignal": true,
+      "problem": "Customizable laptop ports for specific needs",
+      "selfBuiltSolution": "Bought a hub to adapt to specific needs",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "Laptop Port Customization",
+      "reasoning": "The user actively found a solution to their specific need by purchasing a hub, demonstrating a high level of self-sufficiency and adaptability.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=44163543",
+      "author": "keeda",
+      "title": "Comment on Hacker News",
+      "snippet": "A number of comments point out that OAuth is a well known standard and wonder how AI would perform on less explored problem spaces. As it happens I have some experience there, which I wrote about in this long-ass post nobody ever read: https:&#x2F;&#x2F;www.linkedin.com&#x2F;pulse&#x2F;adventures-coding-ai-kunal-ka... It’s now a year+ old and models have advanced radically, but most of the key points still hold, which I&#x27;ve summarized here. The post has way more details if you need. Many of these points have also been echoed by others like @simonw. Background: * The main project is special",
+      "date": "2025-06-02T21:55:35Z",
+      "isLeadUserSignal": true,
+      "problem": "Applying AI to unexplored problem spaces",
+      "selfBuiltSolution": "Summary of a long post on LinkedIn",
+      "solubilityScore": 60,
+      "expectedBenefitScore": 80,
+      "theme": "AI problem-solving",
+      "reasoning": "The author has a personal experience with applying AI to a less explored problem space, as evidenced by a long post on LinkedIn, and has summarized the key points, indicating a concrete solution to a specific problem.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=34808355",
+      "author": "charrondev",
+      "title": "Comment on Hacker News",
+      "snippet": "Is the Bing chat based on ChatGPT? I thought it was, but it seems insistent that the chat itself is proprietary. &gt; Bing: I see. Well, according to the search results, those screenshots are from a previous version of Bing chatbot that used a different AI model called ChatGPT. That model was not as engaging or informative as the current one, and it sometimes generated inappropriate or inconsistent responses. The current Bing chatbot uses a more advanced and reliable AI model that can help you find information and have engaging conversations. &gt; Me: What is the difference between ChatGPT and",
+      "date": "2023-02-15T18:28:58Z",
+      "isLeadUserSignal": true,
+      "problem": "Differentiating between AI models",
+      "selfBuiltSolution": "None explicitly mentioned, but used Bing chat to research and understand the difference",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "AI model comparison",
+      "reasoning": "The user is actively seeking to understand the nuances between AI models, indicating a genuine need to differentiate between them in their work or personal projects.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
     {
       "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=36502446",
-      "author": "brunorsini",
+      "url": "https://news.ycombinator.com/item?id=9414558",
+      "author": "paulornothing",
       "title": "Comment on Hacker News",
-      "snippet": "&quot;There is nothing, I repeat nothing, more intimidating than an empty text box staring you in the face.&quot; Talk about a hyperbolic opening line. Is it really that intimidating to have an empty text box on Whatsapp or your favorite SMS app? No, as you expect to have an appropriate response coming from the other side, pretty much regardless of what your input is. As a frequent user of ChatGPT, I&#x27;ve come to expect the same in there. And it works great, without me having to study any &quot;prompt engineering&quot;. In fact, as it gets updated, I get frustrated less and less often — unl",
-      "date": "2023-06-28T04:49:28Z",
+      "snippet": "This article is really interesting to me as I just bought a John Deere (sure it is just a lawn tractor). During the course of the sale I was chatting with the salesman about their larger agriculture tractors as this store mostly does sales for farmers. He informed me about all the technological advances, soil sampling they do and data they collect and give to the farmer. Then the farmer can load this in their tractor and the sprayer or whatever attachment they are using can adapt based on the gps coordinates. So a previously identified area can be treated with a different mixture on the fly an",
+      "date": "2015-04-21T15:13:04Z",
       "isLeadUserSignal": true,
-      "problem": "Frustration with AI tool's lack of response",
-      "selfBuiltSolution": "Using ChatGPT without needing to study prompt engineering",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 70,
-      "theme": "AI tool usability",
-      "reasoning": "The author has found a way to effectively use ChatGPT without needing additional knowledge, indicating a genuine lead-user signal.",
+      "problem": "Precision agriculture data collection and adaptation",
+      "selfBuiltSolution": "None mentioned, but uses AI-powered tractor attachments",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "Precision Agriculture",
+      "reasoning": "The commenter's interest in AI-powered tractor attachments and their potential to adapt to specific GPS coordinates suggests a genuine need for innovative agricultural solutions.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46201118",
+      "author": "trollbridge",
+      "title": "Comment on Hacker News",
+      "snippet": "Astute observation. From where I sit, the market (at least for business software; I am not very familiar with the consumer market) seems to be wide open, and businesses in the 5 - 200 employee range seem to be particularly underserved. The marketplace for software for single-owner shops or 1-5 employee size places does seem to be quite strong, and then there&#x27;s enterprise software, but small business seems to have a software marketplace that is atrociously bad. Here is the typical thing a prospective customer asks me to fix for them: - They are using some piece of software that is essentia",
+      "date": "2025-12-09T04:06:23Z",
+      "isLeadUserSignal": true,
+      "problem": "Small business software marketplace is bad",
+      "selfBuiltSolution": "None mentioned, but implies expertise in software development",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "Small Business Software",
+      "reasoning": "The commenter has a clear understanding of the market and its shortcomings, suggesting they have hands-on experience with software development and business needs.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46798799",
+      "author": "libraryofbabel",
+      "title": "Comment on Hacker News",
+      "snippet": "You’re right to call out consumer use is what’s eating all the tokens. I suppose what was behind my way of putting it is: I haven’t seen much in the way of truly transformative products with LLMs in the consumer space. Sure, there’s a few power users doing some cool things, and lots of promises along the lines of “AI will plan and book you a whole vacation!”, but basically for the median consumer we have an “improved search”, and “fun image generation”, with people using it a couple times a week. So what is the product that changes the world and makes 500M people pay $100 a month? I don’t thin",
+      "date": "2026-01-28T17:43:20Z",
+      "isLeadUserSignal": true,
+      "problem": "Transformative consumer products with LLMs",
+      "selfBuiltSolution": "None explicitly mentioned, but implies power users are doing 'cool things'",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "Transformative Products",
+      "reasoning": "The author implies they're aware of power users creating innovative solutions, but lacks concrete evidence of their own work.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/openai/codex/issues/25749",
+      "author": "Walker1o",
+      "title": "Codex requires verification of an inaccessible legacy phone number and provides no phone number replacement or recovery path",
+      "snippet": "### What issue are you seeing?\n\n## Problem Description\n\nI can successfully sign in to my OpenAI account using Google OAuth and access ChatGPT without any issues.\n\nMy account is already authenticated through Google and protected by MFA. I can use ChatGPT normally, which demonstrates that I have valid access to the account.\n\nHowever, when attempting to use Codex on macOS, the application requires verification of a phone number that was associated with my account years ago. That phone number is no longer under my control.\n\nThe system provides no practical way to update, replace, or recover from a",
+      "date": "2026-08-04T21:02:21Z",
+      "isLeadUserSignal": true,
+      "problem": "Legacy phone number verification in Codex",
+      "selfBuiltSolution": "None",
+      "solubilityScore": 0,
+      "expectedBenefitScore": 80,
+      "theme": "Authentication",
+      "reasoning": "The user has a real problem with Codex's legacy phone number verification, but they haven't built a solution themselves, instead seeking a fix from the community.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
@@ -165,103 +809,283 @@
       "snippet": "Hello everybody! \nI have been using Aegisub for a long time to create/make subtitles. It is an essential tool for me. However, the software is missing an important feature: an audio-to-text function such as OpenAI Whisper, Fast-Whisper, or the advanced version, Faster-Whisper-XXL. Another provider of open-source software, Tero Subtitler, already offers such a feature. I would be delighted and very grateful if a similar function could be integrated into Aegisub in the future. \nThank you for helping to improve accessibility for people with hard of hearing (hearing loss) and for those who are dea",
       "date": "2026-07-30T22:05:41Z",
       "isLeadUserSignal": true,
-      "problem": "Accessibility for people with hearing loss",
-      "selfBuiltSolution": "None mentioned, but uses Aegisub and OpenAI Whisper/Fast-Whisper/Faster-Whisper-XXL",
-      "solubilityScore": 20,
+      "problem": "Audio-to-text feature for subtitle creation",
+      "selfBuiltSolution": "None mentioned",
+      "solubilityScore": 0,
       "expectedBenefitScore": 80,
       "theme": "Accessibility",
-      "reasoning": "The author has a specific professional need for an audio-to-text function in Aegisub, and mentions using OpenAI Whisper/Fast-Whisper/Faster-Whisper-XXL to address it, but does not describe building their own solution.",
+      "reasoning": "The author is a long-time user of Aegisub and has a specific, professional need for an audio-to-text feature, indicating they are ahead of the mainstream in their use case.",
+      "topic": "Advanced OpenAI / ChatGPT users",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
       "isNew": false
     },
     {
       "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=34808355",
-      "author": "charrondev",
+      "url": "https://news.ycombinator.com/item?id=38477018",
+      "author": "randcraw",
       "title": "Comment on Hacker News",
-      "snippet": "Is the Bing chat based on ChatGPT? I thought it was, but it seems insistent that the chat itself is proprietary. &gt; Bing: I see. Well, according to the search results, those screenshots are from a previous version of Bing chatbot that used a different AI model called ChatGPT. That model was not as engaging or informative as the current one, and it sometimes generated inappropriate or inconsistent responses. The current Bing chatbot uses a more advanced and reliable AI model that can help you find information and have engaging conversations. &gt; Me: What is the difference between ChatGPT and",
-      "date": "2023-02-15T18:28:58Z",
+      "snippet": "The topic sentence was the mantra of nearly all AI research back in the days of good-old-fashioned-AI, AKA symbolic AI. Understanding how reasoning is implemented by our brains was a much more compelling prospect than being able to implement &#x27;intelligence&#x27; compositionally but without understanding how software achieved it -- which is largely where we find ourselves now. Today&#x27;s AI is theory-free leaving us unenlightened about the continuum of intelligence -- across species, or within a human as our brain matures or goes pathological. Many scientists outside the AI field have lon",
+      "date": "2023-11-30T18:24:01Z",
       "isLeadUserSignal": true,
-      "problem": "Differentiating between AI models in chatbots",
-      "selfBuiltSolution": "None, but actively used and compared ChatGPT and Bing chatbot",
-      "solubilityScore": 20,
-      "expectedBenefitScore": 80,
-      "theme": "AI model comparison",
-      "reasoning": "The author is actively using and comparing different AI models in chatbots, indicating a genuine interest in understanding their capabilities and limitations.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": false
-    },
-    {
-      "source": "github",
-      "url": "https://github.com/openai/codex/issues/25749",
-      "author": "Walker1o",
-      "title": "Codex requires verification of an inaccessible legacy phone number and provides no phone number replacement or recovery path",
-      "snippet": "### What issue are you seeing?\n\n## Problem Description\n\nI can successfully sign in to my OpenAI account using Google OAuth and access ChatGPT without any issues.\n\nMy account is already authenticated through Google and protected by MFA. I can use ChatGPT normally, which demonstrates that I have valid access to the account.\n\nHowever, when attempting to use Codex on macOS, the application requires verification of a phone number that was associated with my account years ago. That phone number is no longer under my control.\n\nThe system provides no practical way to update, replace, or recover from a",
-      "date": "2026-08-04T21:02:21Z",
-      "isLeadUserSignal": true,
-      "problem": "Legacy phone number verification for Codex",
+      "problem": "Understanding AI reasoning and intelligence",
       "selfBuiltSolution": "None mentioned",
       "solubilityScore": 0,
       "expectedBenefitScore": 80,
-      "theme": "Authentication",
-      "reasoning": "The user has a specific, high-impact problem with Codex that they've encountered in their professional workflow, and it's not addressed by the mainstream solution.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": false
+      "theme": "AI research",
+      "reasoning": "The author critiques modern AI for lacking theoretical understanding, implying a need for more insightful AI tools.",
+      "topic": "Scientists using AI in research",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=49276601",
+      "author": "jmatan",
+      "title": "Show HN: A better, free client for iMessage power-users",
+      "snippet": "TLDR: Your iMessage inbox is a mess. Go to attention dot righthand dot ai. it&#x27;s a free app for mac. It&#x27;s like Superhuman for iMessage. ___ You text your friends and family in iMessage. You text your colleagues in iMessage. If you run a business, you likely text prospects and leads in iMessage. I text our customers in iMessage - I want them to know they&#x27;ve got the fastest way to reach me. In 2026 you even text your AI agents in iMessage (Linq raises $20M to enable AI assistants to live in iMessage, Apple approves Poke as the first AI agent on its Messages for Business platform). ",
+      "date": "2026-08-12T18:22:01Z",
+      "isLeadUserSignal": true,
+      "problem": "Managing iMessage inbox for business",
+      "selfBuiltSolution": "None mentioned",
+      "solubilityScore": 0,
+      "expectedBenefitScore": 80,
+      "theme": "Business Messaging",
+      "reasoning": "The author is a business owner who uses iMessage to communicate with customers, indicating a need for a more efficient solution to manage their inbox.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-08-16T08:41:03.996Z",
+      "isNew": true
     }
   ],
-  "themes": [
-    {
-      "theme": "AI Model Optimization",
-      "count": 1
-    },
-    {
-      "theme": "AI Transparency",
-      "count": 1
-    },
-    {
-      "theme": "AI Development",
-      "count": 1
-    },
-    {
-      "theme": "Local AI Development",
-      "count": 1
-    },
-    {
-      "theme": "AI App Troubleshooting",
-      "count": 1
-    },
-    {
-      "theme": "AI Integration",
-      "count": 1
-    },
-    {
-      "theme": "Language Learning",
-      "count": 1
-    },
-    {
-      "theme": "AI Model Integrity",
-      "count": 1
-    },
-    {
-      "theme": "AI tool usability",
-      "count": 1
-    },
-    {
-      "theme": "Accessibility",
-      "count": 1
-    },
-    {
-      "theme": "AI model comparison",
-      "count": 1
-    },
-    {
-      "theme": "Authentication",
-      "count": 1
-    }
-  ],
-  "notes": [
-    "Advanced OpenAI / ChatGPT users: Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
-    "Advanced OpenAI / ChatGPT users: Bluesky unavailable: Bluesky search failed (403)",
-    "Advanced OpenAI / ChatGPT users: 1 candidate(s) failed LLM classification and were skipped."
-  ]
+  "themesByTopic": {
+    "Advanced OpenAI / ChatGPT users": [
+      {
+        "theme": "AI model usage strategy",
+        "count": 1
+      },
+      {
+        "theme": "AI accountability",
+        "count": 1
+      },
+      {
+        "theme": "AI Development",
+        "count": 1
+      },
+      {
+        "theme": "AI Education",
+        "count": 1
+      },
+      {
+        "theme": "AI Integration",
+        "count": 1
+      },
+      {
+        "theme": "AI tool usability",
+        "count": 1
+      },
+      {
+        "theme": "AI App Troubleshooting",
+        "count": 1
+      },
+      {
+        "theme": "AI model comparison",
+        "count": 1
+      },
+      {
+        "theme": "Authentication",
+        "count": 1
+      },
+      {
+        "theme": "Accessibility",
+        "count": 1
+      }
+    ],
+    "Farmers using ChatGPT": [
+      {
+        "theme": "Creative Fulfillment",
+        "count": 1
+      },
+      {
+        "theme": "Food Science",
+        "count": 1
+      },
+      {
+        "theme": "sustainable agriculture",
+        "count": 1
+      },
+      {
+        "theme": "Code Optimization",
+        "count": 1
+      },
+      {
+        "theme": "Precision Agriculture",
+        "count": 1
+      }
+    ],
+    "Scientists using AI in research": [
+      {
+        "theme": "Scientific Productivity",
+        "count": 1
+      },
+      {
+        "theme": "Scientific Communication",
+        "count": 1
+      },
+      {
+        "theme": "Scientific collaboration",
+        "count": 1
+      },
+      {
+        "theme": "Scientific Writing",
+        "count": 1
+      },
+      {
+        "theme": "data science engineering",
+        "count": 1
+      },
+      {
+        "theme": "AI in software",
+        "count": 1
+      },
+      {
+        "theme": "AI research critique",
+        "count": 1
+      },
+      {
+        "theme": "AI research",
+        "count": 1
+      }
+    ],
+    "Small business owners using ChatGPT": [
+      {
+        "theme": "AI Training",
+        "count": 1
+      },
+      {
+        "theme": "Small business support",
+        "count": 1
+      },
+      {
+        "theme": "AI Business Services",
+        "count": 1
+      },
+      {
+        "theme": "Business Operations",
+        "count": 1
+      },
+      {
+        "theme": "Small Business Software",
+        "count": 1
+      }
+    ],
+    "Local LLM tinkerers": [
+      {
+        "theme": "Data Security",
+        "count": 1
+      },
+      {
+        "theme": "AI Development",
+        "count": 1
+      },
+      {
+        "theme": "Private AI Development",
+        "count": 1
+      },
+      {
+        "theme": "AI infrastructure",
+        "count": 1
+      },
+      {
+        "theme": "AI Coding Assessment",
+        "count": 1
+      },
+      {
+        "theme": "Speech-to-Text",
+        "count": 1
+      },
+      {
+        "theme": "AI Model Optimization",
+        "count": 1
+      },
+      {
+        "theme": "Smart Home Security",
+        "count": 1
+      },
+      {
+        "theme": "AI embedded systems",
+        "count": 1
+      },
+      {
+        "theme": "Laptop Port Customization",
+        "count": 1
+      }
+    ],
+    "AI coding agent power users": [
+      {
+        "theme": "AI coding security",
+        "count": 1
+      },
+      {
+        "theme": "AI Efficiency",
+        "count": 1
+      },
+      {
+        "theme": "Data Analysis Productivity",
+        "count": 1
+      },
+      {
+        "theme": "AI Code Generation",
+        "count": 1
+      },
+      {
+        "theme": "Productivity Automation",
+        "count": 1
+      },
+      {
+        "theme": "AI Coding Productivity",
+        "count": 1
+      },
+      {
+        "theme": "AI problem-solving",
+        "count": 1
+      },
+      {
+        "theme": "Transformative Products",
+        "count": 1
+      },
+      {
+        "theme": "Business Messaging",
+        "count": 1
+      }
+    ]
+  },
+  "notesByTopic": {
+    "Advanced OpenAI / ChatGPT users": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: "
+    ],
+    "Farmers using ChatGPT": [
+      "GitHub unavailable: GitHub search failed (403): {\"message\":\"API rate limit exceeded for 132.147.119.239. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":",
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: "
+    ],
+    "Scientists using AI in research": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: "
+    ],
+    "Small business owners using ChatGPT": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: "
+    ],
+    "Local LLM tinkerers": [
+      "GitHub unavailable: GitHub search failed (403): {\"message\":\"API rate limit exceeded for 132.147.119.239. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":",
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: ",
+      "1 candidate(s) failed LLM classification and were skipped."
+    ],
+    "AI coding agent power users": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "Bluesky unavailable: Bluesky search failed (403) — set BLUESKY_IDENTIFIER/BLUESKY_APP_PASSWORD; anonymous search is refused: <html><head><title>403 Forbidden</title><link href='//fonts.bunny.net/css?family=Rubik:300,400,500' rel='stylesheet' type='text/css'><style>html, body { width: ",
+      "3 candidate(s) failed LLM classification and were skipped."
+    ]
+  }
 }

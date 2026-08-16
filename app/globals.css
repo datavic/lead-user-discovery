@@ -52,11 +52,15 @@ main {
 }
 
 h1 {
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  margin: 0 0 10px;
-  font-weight: 650;
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px;
+  font-weight: 680;
+  background: linear-gradient(180deg, #ffffff, #b9c0d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 h2 {
@@ -71,9 +75,9 @@ h2 {
 .subtitle {
   color: var(--muted);
   margin: 0 0 26px;
-  font-size: 15px;
-  line-height: 1.65;
-  max-width: 72ch;
+  font-size: 16.5px;
+  line-height: 1.7;
+  max-width: 66ch;
 }
 
 a {
@@ -618,12 +622,10 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   white-space: nowrap;
 }
 
-.brand-mark {
-  width: 9px;
-  height: 9px;
-  border-radius: 3px;
-  background: var(--accent);
-  box-shadow: 0 0 12px rgba(107, 147, 255, 0.7);
+.logo-mark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
 .site-nav {
@@ -710,12 +712,12 @@ main {
   align-items: baseline;
   gap: 10px;
   flex-wrap: wrap;
-  color: var(--faint);
-  font-size: 11px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .panel-hint {
@@ -756,4 +758,147 @@ main {
   border-radius: 999px;
   padding: 3px 11px;
   white-space: nowrap;
+}
+
+/* ---- Signal highlights ---- */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(165deg, var(--panel-hi), var(--panel) 60%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hi);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.highlight-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.highlight-author {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 550;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: linear-gradient(140deg, var(--accent), #8f6bff);
+  color: #08090d;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-built {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.highlight-problem {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--faint);
+}
+
+.highlight-key {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.highlight-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.highlight-scores {
+  display: flex;
+  gap: 10px;
+}
+
+.meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meter-track {
+  width: 34px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(139, 144, 160, 0.22);
+  overflow: hidden;
+}
+
+.meter-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--good));
+}
+
+.meter-value {
+  font-size: 11.5px;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.highlight-new {
+  position: absolute;
+  top: -8px;
+  right: 16px;
+  background: var(--good);
+  color: #08090d;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 9px;
+  border-radius: 999px;
 }

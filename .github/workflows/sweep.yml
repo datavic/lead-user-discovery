@@ -49,7 +49,21 @@ jobs:
           git add data/
           if git diff --staged --quiet; then
             echo "No change in findings today."
-          else
-            git commit -m "Sweep $(date -u +%Y-%m-%d): refresh lead user findings"
-            git push
+            exit 0
           fi
+
+          git commit -m "Sweep $(date -u +%Y-%m-%d): refresh lead user findings"
+
+          # A sweep takes many minutes, so main may have moved while it ran.
+          # Rebase onto whatever landed and retry rather than failing the run.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected; rebasing onto origin/main (attempt $attempt)."
+            git pull --rebase --autostash origin main
+          done
+
+          echo "Could not push after 3 attempts." >&2
+          exit 1

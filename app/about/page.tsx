@@ -13,9 +13,9 @@ const SOURCES: SourceRow[] = [
     name: "Reddit",
     reaches: "Non-technical practitioners — the broadest source of people describing their own workflows",
     method:
-      "Public Atom feed (search.rss). Works from a residential connection, but Reddit blocks datacenter IPs, so the nightly sweep currently gets nothing from it — moving to the OAuth API is the top priority below",
-    auth: "None today; OAuth app needed for server-side use",
-    status: "partial",
+      "Reddit blocks datacenter IP ranges, so the anonymous feed returns nothing from a scheduled server. Restoring it needs an OAuth app — tracked on the roadmap",
+    auth: "OAuth app required",
+    status: "planned",
   },
   {
     name: "Hacker News",
@@ -96,7 +96,6 @@ const ROADMAP: Phase[] = [
     title: "Next",
     status: "partial",
     items: [
-      "Reddit via the OAuth API — the anonymous feed is blocked from datacenter IPs, which currently starves the sweep of its best source",
       "Sharper Stack Exchange queries; its search matches too loosely to be trusted raw",
       "Trend view: how themes shift week over week, so a rising need is visible before it peaks",
     ],
@@ -105,6 +104,7 @@ const ROADMAP: Phase[] = [
     title: "Later",
     status: "planned",
     items: [
+      "Reddit via an OAuth app — it reaches non-technical practitioners no other source does, but needs credentials Reddit only issues through a manual approval flow",
       "YouTube comments — where practitioners narrate hands-on work, but the volume needs quota planning",
       "Outreach tracking: who has been contacted, who replied, what they said",
       "Network mapping to find people cited by several other lead users",
