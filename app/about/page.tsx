@@ -13,9 +13,10 @@ const SOURCES: SourceRow[] = [
   {
     name: "Reddit",
     reaches: "Non-technical practitioners — the broadest source of people describing their own workflows",
-    method: "Public Atom feed (search.rss), queried with topic + self-solution phrases",
-    auth: "None",
-    status: "live",
+    method:
+      "Public Atom feed (search.rss). Works from a residential connection, but Reddit blocks datacenter IPs, so the nightly sweep currently gets nothing from it — moving to the OAuth API is the top priority below",
+    auth: "None today; OAuth app needed for server-side use",
+    status: "partial",
   },
   {
     name: "Hacker News",
@@ -34,9 +35,9 @@ const SOURCES: SourceRow[] = [
   {
     name: "Bluesky",
     reaches: "Scientists, academics and journalists — the audience that left Twitter",
-    method: "Public AppView post search",
-    auth: "None",
-    status: "live",
+    method: "Public AppView post search. Currently returning 403 from every environment tested; likely needs an authenticated session rather than anonymous access",
+    auth: "App password needed",
+    status: "partial",
   },
   {
     name: "Stack Exchange",
@@ -158,9 +159,16 @@ export default function About() {
 
       <h2>How often it runs</h2>
       <p className="section-note">
-        Searches run on demand — every result you see was fetched when you pressed Discover, not read
-        from a cache. A scheduled daily sweep is planned, which will track how themes shift over time
-        and surface newly-appearing lead users rather than re-reporting the same ones.
+        A sweep runs automatically every day at 06:00 UTC. It executes the full pipeline, records
+        which URLs it has never seen before, and commits the results — so the table on the home page
+        is already populated when you arrive, and anything marked <em>new</em> appeared in the most
+        recent run. Because each sweep is a commit, the repository history doubles as a record of
+        every run.
+      </p>
+      <p className="section-note">
+        Running a search yourself scans live instead. That path is slower — free-tier LLM rate limits
+        mean a full pass takes about a minute, which can exceed the hosting timeout — so the nightly
+        results are the reliable view.
       </p>
 
       <h2>How a result is judged</h2>

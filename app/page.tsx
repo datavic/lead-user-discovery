@@ -19,6 +19,27 @@ const SWEEP: DiscoverResponse & { ranAt: string } = {
   sourceNotes: latestSweep.notes ?? [],
 };
 
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+
+function Stat({
+  value,
+  label,
+  tone,
+}: {
+  value: number | string;
+  label: string;
+  tone?: "accent" | "good";
+}) {
+  return (
+    <div className="stat">
+      <div className={`stat-value ${tone || ""}`}>{value}</div>
+      <div className="stat-label">{label}</div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<DiscoverResponse | null>(SWEEP);
@@ -72,21 +93,52 @@ export default function Home() {
         </Link>
       </p>
 
+      {data && (
+        <div className="stats">
+          <Stat value={data.candidates.length} label="Lead-user signals" tone="accent" />
+          <Stat value={data.themes.length} label="Distinct themes" />
+          <Stat
+            value={new Set(data.candidates.map((c) => c.source)).size}
+            label="Sources contributing"
+          />
+          <Stat
+            value={hasSearched ? "Live" : formatDate(SWEEP.ranAt)}
+            label={hasSearched ? "Scan type" : "Last nightly sweep"}
+            tone="good"
+          />
+        </div>
+      )}
+
       <SearchForm onSearch={handleSearch} loading={loading} />
 
       {error && <div className="error">{error}</div>}
 
       {data && data.sourceNotes.length > 0 && (
-        <div className="notes">
-          {data.sourceNotes.map((note, i) => (
-            <div key={i}>{note}</div>
-          ))}
-        </div>
+        <details className="diagnostics">
+          <summary>
+            Source diagnostics ({data.sourceNotes.length})
+          </summary>
+          <div className="diagnostics-body">
+            {data.sourceNotes.map((note, i) => (
+              <div key={i}>{note}</div>
+            ))}
+          </div>
+        </details>
       )}
 
-      {data && <ThemeClusters themes={data.themes} />}
+      {data && data.themes.length > 0 && (
+        <>
+          <h2>Themes</h2>
+          <ThemeClusters themes={data.themes} />
+        </>
+      )}
 
-      {data && data.candidates.length > 0 && <ResultsTable candidates={data.candidates} />}
+      {data && data.candidates.length > 0 && (
+        <>
+          <h2>Signals</h2>
+          <ResultsTable candidates={data.candidates} />
+        </>
+      )}
 
       {data && data.candidates.length === 0 && !loading && (
         <div className="empty">No lead-user signals found for this topic. Try a broader term.</div>
