@@ -28,11 +28,26 @@ export async function searchHackerNews(query: string, limit = 15): Promise<Candi
         ? `https://news.ycombinator.com/item?id=${hit.objectID}`
         : hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`,
       author: hit.author || "unknown",
-      title: hit.title || (isComment ? "Comment on Hacker News" : "Hacker News post"),
+      // Comments carry no title of their own. Falling back to a constant made
+      // every comment row read "Comment on Hacker News", so derive a label
+      // from the opening words instead.
+      title: hit.title || summarise(plain) || (isComment ? "Comment on Hacker News" : "Hacker News post"),
       snippet: plain,
       date: hit.created_at || null,
     };
   });
+}
+
+/** First sentence (or opening clause) of a comment, for use as a title. */
+function summarise(text: string): string {
+  if (!text) return "";
+
+  const sentence = text.split(/(?<=[.!?])\s/)[0] || text;
+  if (sentence.length <= 90) return sentence.trim();
+
+  const truncated = sentence.slice(0, 90);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return `${truncated.slice(0, lastSpace > 40 ? lastSpace : 90).trim()}…`;
 }
 
 function stripHtml(input: string): string {
