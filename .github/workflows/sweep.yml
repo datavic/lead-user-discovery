@@ -21,7 +21,7 @@ concurrency:
 jobs:
   sweep:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v5
@@ -39,8 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-          SWEEP_TOPICS: ${{ vars.SWEEP_TOPICS || 'Advanced OpenAI / ChatGPT users' }}
-          MAX_CANDIDATES_TO_CLASSIFY: "25"
+          MAX_CANDIDATES_TO_CLASSIFY: "12"
         run: npx tsx scripts/sweep.ts
 
       - name: Commit results

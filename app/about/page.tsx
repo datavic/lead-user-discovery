@@ -34,9 +34,9 @@ const SOURCES: SourceRow[] = [
   {
     name: "Bluesky",
     reaches: "Scientists, academics and journalists — the audience that left Twitter",
-    method: "Public AppView post search. Currently returning 403 from every environment tested; likely needs an authenticated session rather than anonymous access",
-    auth: "App password needed",
-    status: "partial",
+    method: "Authenticated post search (app.bsky.feed.searchPosts). The anonymous AppView refuses search, so a session is created from an app password",
+    auth: "App password",
+    status: "live",
   },
   {
     name: "Stack Exchange",
@@ -97,7 +97,6 @@ const ROADMAP: Phase[] = [
     status: "partial",
     items: [
       "Reddit via the OAuth API — the anonymous feed is blocked from datacenter IPs, which currently starves the sweep of its best source",
-      "Bluesky authenticated search, for the scientists and academics who left Twitter",
       "Sharper Stack Exchange queries; its search matches too loosely to be trusted raw",
       "Trend view: how themes shift week over week, so a rising need is visible before it peaks",
     ],

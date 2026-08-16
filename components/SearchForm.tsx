@@ -3,22 +3,22 @@
 import { useState } from "react";
 import { AnalogousMarket } from "@/lib/types";
 
-const PRESETS = [
-  "Advanced OpenAI / ChatGPT users",
-  "Farmers using ChatGPT",
-  "Scientists using AI in research",
-  "Small business owners using ChatGPT",
-  "Local LLM tinkerers",
-  "AI coding agent power users",
-];
-
 interface Props {
-  onSearch: (topic: string, extraTopics: string[]) => void;
+  topics: string[];
+  activeTopic: string;
+  onSelectTopic: (topic: string) => void;
+  onLiveScan: (topic: string, extraTopics: string[]) => void;
   loading: boolean;
 }
 
-export default function SearchForm({ onSearch, loading }: Props) {
-  const [topic, setTopic] = useState("");
+export default function SearchForm({
+  topics,
+  activeTopic,
+  onSelectTopic,
+  onLiveScan,
+  loading,
+}: Props) {
+  const [query, setQuery] = useState("");
   const [includeAnalogous, setIncludeAnalogous] = useState(false);
   const [analogousLoading, setAnalogousLoading] = useState(false);
   const [analogousMarkets, setAnalogousMarkets] = useState<AnalogousMarket[]>([]);
@@ -57,69 +57,81 @@ export default function SearchForm({ onSearch, loading }: Props) {
   function handleIncludeToggle(checked: boolean) {
     setIncludeAnalogous(checked);
     if (checked && analogousMarkets.length === 0) {
-      fetchAnalogous(topic);
+      fetchAnalogous(query || activeTopic);
     }
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!topic.trim()) return;
-    onSearch(topic.trim(), Array.from(selectedMarkets));
+    if (!query.trim()) return;
+    onLiveScan(query.trim(), Array.from(selectedMarkets));
   }
 
   return (
-    <form className="panel" onSubmit={handleSubmit}>
-      <div className="row">
-        <input
-          type="text"
-          placeholder="Topic, e.g. advanced OpenAI users"
-          value={topic}
-          onChange={(e) => setTopic(e.target.value)}
-        />
-        <button type="submit" disabled={loading || !topic.trim()}>
-          {loading ? "Searching…" : "Discover"}
-        </button>
-      </div>
-
-      <div className="chip-row">
-        {PRESETS.map((preset) => (
-          <button
-            key={preset}
-            type="button"
-            className={`chip ${topic === preset ? "active" : ""}`}
-            onClick={() => setTopic(preset)}
-          >
-            {preset}
-          </button>
-        ))}
-      </div>
-
-      <label className="checkbox-row">
-        <input
-          type="checkbox"
-          checked={includeAnalogous}
-          onChange={(e) => handleIncludeToggle(e.target.checked)}
-        />
-        Include analogous markets (adjacent domains facing the same bottleneck)
-      </label>
-
-      {includeAnalogous && (
+    <div className="panel">
+      <div className="panel-section">
+        <div className="panel-label">
+          Swept nightly — switch instantly
+        </div>
         <div className="chip-row">
-          {analogousLoading && <span className="notes">Finding analogous markets…</span>}
-          {analogousError && <span className="error">{analogousError}</span>}
-          {analogousMarkets.map((market) => (
+          {topics.map((topic) => (
             <button
-              key={market.domain}
+              key={topic}
               type="button"
-              title={market.rationale}
-              className={`chip ${selectedMarkets.has(market.domain) ? "active" : ""}`}
-              onClick={() => toggleMarket(market.domain)}
+              className={`chip ${activeTopic === topic ? "active" : ""}`}
+              onClick={() => onSelectTopic(topic)}
             >
-              {market.domain}
+              {topic}
             </button>
           ))}
         </div>
-      )}
-    </form>
+      </div>
+
+      <form className="panel-section bordered" onSubmit={handleSubmit}>
+        <div className="panel-label">
+          Scan a different topic live
+          <span className="panel-hint">takes about a minute; may time out on free hosting</span>
+        </div>
+
+        <div className="row">
+          <input
+            type="text"
+            placeholder="e.g. beekeepers using ChatGPT"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button type="submit" disabled={loading || !query.trim()}>
+            {loading ? "Scanning…" : "Run live scan"}
+          </button>
+        </div>
+
+        <label className="checkbox-row">
+          <input
+            type="checkbox"
+            checked={includeAnalogous}
+            onChange={(e) => handleIncludeToggle(e.target.checked)}
+          />
+          Include analogous markets (adjacent domains facing the same bottleneck)
+        </label>
+
+        {includeAnalogous && (
+          <div className="chip-row">
+            {analogousLoading && <span className="panel-hint">Finding analogous markets…</span>}
+            {analogousError && <span className="error-inline">{analogousError}</span>}
+            {analogousMarkets.map((market) => (
+              <button
+                key={market.domain}
+                type="button"
+                title={market.rationale}
+                className={`chip ${selectedMarkets.has(market.domain) ? "active" : ""}`}
+                onClick={() => toggleMarket(market.domain)}
+              >
+                {market.domain}
+              </button>
+            ))}
+          </div>
+        )}
+      </form>
+    </div>
   );
 }
