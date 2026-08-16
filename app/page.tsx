@@ -116,22 +116,26 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Lead User Discovery</h1>
-      <p className="subtitle">
-        Finds people who hit a problem before the market did and built their own fix anyway. It
-        sweeps public communities nightly, discards the noise, and scores what is left on how
-        concretely they solved it and how far ahead of the mainstream they are — Eric von
-        Hippel&apos;s Lead User method, run automatically.{" "}
-        <Link href="/about" className="about-link">
-          Where does this data come from?
-        </Link>
-      </p>
+      <div className="hero">
+        <div className="hero-copy">
+          <h1>Lead User Discovery</h1>
+          <p className="subtitle">
+            Finds people who hit a problem before the market did and built their own fix anyway. It
+            sweeps public communities nightly, discards the noise, and scores what is left on how
+            concretely they solved it and how far ahead of the mainstream they are — Eric von
+            Hippel&apos;s Lead User method, run automatically.{" "}
+            <Link href="/about" className="about-link">
+              Where does this data come from?
+            </Link>
+          </p>
+        </div>
 
-      <div className="stats">
-        <Stat value={totalSignals} label="Signals swept" tone="accent" />
-        <Stat value={SWEPT_TOPICS.length} label="Topics tracked" />
-        <Stat value={newSignals} label="New in last sweep" tone="good" />
-        <Stat value={formatDate(SWEEP.ranAt)} label="Last sweep" />
+        <div className="stats">
+          <Stat value={totalSignals} label="Signals swept" tone="accent" />
+          <Stat value={SWEPT_TOPICS.length} label="Topics tracked" />
+          <Stat value={newSignals} label="New in last sweep" tone="good" />
+          <Stat value={formatDate(SWEEP.ranAt)} label="Last sweep" />
+        </div>
       </div>
 
       <SearchForm
