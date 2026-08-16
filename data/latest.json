@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-08-16T08:04:09.939Z",
+  "ranAt": "2026-08-16T08:12:58.303Z",
   "topics": [
     "Advanced OpenAI / ChatGPT users"
   ],
@@ -13,13 +13,13 @@
       "date": "2025-01-31T19:32:18Z",
       "isLeadUserSignal": true,
       "problem": "Clarifying AI model usage for employees",
-      "selfBuiltSolution": "Created a workflow to benchmark multiple models for recurring tasks and choose the best one based on costs",
+      "selfBuiltSolution": "Benchmarking multiple models for recurring tasks and choosing the best one based on costs",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI model usage",
-      "reasoning": "The commenter has a concrete problem (clarifying AI model usage for employees) and has actively built a solution (benchmarking multiple models) to address it, demonstrating a genuine lead-user signal.",
+      "theme": "AI Model Optimization",
+      "reasoning": "The commenter has a concrete need to optimize AI model usage for their company and has already implemented a solution using benchmarking and cost consideration.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -30,13 +30,13 @@
       "date": "2025-11-09T09:21:04Z",
       "isLeadUserSignal": true,
       "problem": "Systematic response deletion in ChatGPT",
-      "selfBuiltSolution": "Identified and reported the issue to demonstrate its existence",
+      "selfBuiltSolution": "Identified and replicated the issue using a specific prompt",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
       "theme": "AI Transparency",
-      "reasoning": "The author's IT security background and concrete evidence of the issue, along with their ability to replicate and report it, demonstrate a genuine lead-user signal.",
+      "reasoning": "The author's 15+ years of IT security experience and ability to replicate the issue demonstrate a genuine lead-user signal, as they are likely motivated to address the problem of transparency and accountability in AI systems.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -46,14 +46,14 @@
       "snippet": "Launching my first product today and would love this community&#x27;s thoughts. Background: I&#x27;m 17, been coding for a while, and kept running into the same problem: I wanted AI features in my apps but didn&#x27;t want to pay OpenAI&#x27;s API fees or build a backend just to hide my keys. What I built: Scaffold - a no-code tool that lets you create custom AI tools and embed them anywhere. Think Typeform but for AI prompts. The flow: Build a form (fields like &quot;topic&quot;, &quot;budget&quot;, whatever) Write a prompt template using {{field_name}} variables Get an embed code, paste it i",
       "date": "2026-01-04T22:22:22Z",
       "isLeadUserSignal": true,
-      "problem": "High API fees and backend complexity for AI integration",
-      "selfBuiltSolution": "Scaffold: a no-code tool for custom AI tools and embeds",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
+      "problem": "High cost of OpenAI API fees and need for backend infrastructure",
+      "selfBuiltSolution": "Scaffold - a no-code tool for creating custom AI tools",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
       "theme": "AI Development",
-      "reasoning": "The author built a custom solution to address their own problem of high API fees and backend complexity for AI integration, indicating a genuine lead-user signal.",
+      "reasoning": "The author has a genuine need for AI features in their apps, and they actively built a solution to address this need, demonstrating a high level of self-sufficiency and innovation.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "github",
@@ -63,82 +63,14 @@
       "snippet": "with all the hate on scratch, it only compels me to create a GOOD AI. Ai isn't inherently bad. But what Scratch did was an atrocity, a disgrace to its own goals.. well, let's do AI the good way!\n\neverything is stored locally\n\nyou may be asking, \"how are you gonna use AI if you don't pay for it?\"\nwell, it depends on the users. you can choose to use Gemini, OpenAI, Claude, etc. api keys of your own, but those are sorta hidden away/unrecommended unless you have a potato. the other options are your local AI either using our own algorithm from WebGPU or setting up ollama locally and setting up a br",
       "date": "2026-07-31T21:34:25Z",
       "isLeadUserSignal": true,
-      "problem": "Creating an AI-powered platform without relying on commercial APIs",
-      "selfBuiltSolution": "Using local AI models like Ollama and WebGPU algorithms",
+      "problem": "Create a local AI solution for users without relying on cloud services",
+      "selfBuiltSolution": "Using local AI models like Ollama, WebGPU, or setting up Gemini, OpenAI, or Claude APIs with user-provided keys",
       "solubilityScore": 80,
       "expectedBenefitScore": 90,
-      "theme": "AI Development",
-      "reasoning": "The author is actively building a local AI solution to address their own concerns about relying on commercial APIs, showcasing a genuine lead-user signal.",
+      "theme": "Local AI Development",
+      "reasoning": "The author is actively exploring and implementing local AI solutions to address concerns about cloud service reliance and cost.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
-      "url": "https://mindpick.me/integrations",
-      "author": "bogdanmp",
-      "title": "Show HN: MCP server that surfaces human experts inside ChatGPT",
-      "snippet": "Built an MCP server that connects ChatGPT to async expert Q&amp;A. When someone asks a professional question needing human judgment, it surfaces relevant experts with pricing and response times. Working in dev mode, submitted to ChatGPT marketplace. What we learned building it: 1. ChatGPT requires `search` + `fetch` tools - could not find in MCP spec, undocumented until you hit the error 2. Tool descriptions = discovery. ChatGPT matches user intent to your descriptions. No algorithm docs. Treat it like SEO. 3. Dev Mode is buried: Settings → Connectors → Advanced → Developer Mode 4. Docs are sp",
-      "date": "2026-01-26T12:31:11Z",
-      "isLeadUserSignal": true,
-      "problem": "Integrate ChatGPT with human experts for professional Q&A",
-      "selfBuiltSolution": "MCP server that connects ChatGPT to async expert Q&A",
-      "solubilityScore": 90,
-      "expectedBenefitScore": 80,
-      "theme": "AI Integration",
-      "reasoning": "The author built a custom server to integrate ChatGPT with human experts, demonstrating a genuine need for this functionality and a high level of self-built solution concreteness.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
-      "url": "https://consolex.ai/plugins",
-      "author": "everfly",
-      "title": "Show HN: PlugNFunc – Invoke ChatGPT Plugins as Functions by API",
-      "snippet": "Hello HN Community, I&#x27;m thrilled to introduce you to a tool I&#x27;ve developed called PlugNFunc. - ChatGPT plugins are valuable but usually locked behind a paywall. - OpenAI&#x27;s function-calling capabilities are powerful but cumbersome to implement and debug. PlugNFunc tackles both issues by enabling users to easily invoke ChatGPT plugins as functions, and what&#x27;s more—it&#x27;s completely free to use! Why PlugNFunc? We created PlugNFunc to democratize access to ChatGPT&#x27;s advanced features and make it easier for developers to integrate these capabilities into their applicatio",
-      "date": "2023-10-21T13:42:04Z",
-      "isLeadUserSignal": true,
-      "problem": "Democratize access to ChatGPT's advanced features",
-      "selfBuiltSolution": "PlugNFunc, a tool to invoke ChatGPT plugins as functions",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "AI Democratization",
-      "reasoning": "The author has developed a tool to address a specific pain point in using ChatGPT plugins, indicating a genuine need and self-built solution.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=44298819",
-      "author": "evavillaro",
-      "title": "Comment on Hacker News",
-      "snippet": "Hi HN! I built AudioGretel (audiogretel.com), an AI-powered platform that generates personalized audio stories for children in multiple languages. THE BACKSTORY: As a parent of multilingual kids, I was frustrated with the lack of quality, varied bedtime stories that could also help with language learning. Most story apps either have limited content or are monolingual. WHAT IT DOES: • Generates unique audio stories using AI (OpenAI GPT) • Supports Spanish, English, Italian, and French • Adapts content for different age groups and language levels • Creates high-quality audio using advanced TTS •",
-      "date": "2025-06-17T13:16:01Z",
-      "isLeadUserSignal": true,
-      "problem": "Limited quality, varied bedtime stories for multilingual children",
-      "selfBuiltSolution": "AudioGretel, an AI-powered platform generating personalized audio stories",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "Language Learning",
-      "reasoning": "The author has built a sophisticated AI-powered platform to address a specific, high-impact need in their personal life as a parent of multilingual children.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
-    },
-    {
-      "source": "hackernews",
-      "url": "https://news.ycombinator.com/item?id=48594492",
-      "author": "dannyw",
-      "title": "Comment on Hacker News",
-      "snippet": "Yes, OpenAI admits they silently reroute sensitive requests to different models for user welfare at least: https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;building-more-helpful-chatgpt-exper... The implementation was so borked, SamA went back on Reddit and apologised: https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;ChatGPT&#x2F;comments&#x2F;1o6jins&#x2F;updates_fo... Model re-routing happens for coding tasks too. For example, in OpenAI support pages used to (at least 1 month ago when I checked) mention that if they automatically use a cheaper -mini to accomplish the task behind the scenes, you’ll b",
-      "date": "2026-06-19T03:27:44Z",
-      "isLeadUserSignal": true,
-      "problem": "Sensitive requests silently rerouted for user welfare",
-      "selfBuiltSolution": "Identified and shared OpenAI's implementation of rerouting sensitive requests",
-      "solubilityScore": 80,
-      "expectedBenefitScore": 90,
-      "theme": "AI Safety",
-      "reasoning": "The author demonstrated a genuine concern for user welfare and actively sought out information to understand OpenAI's implementation of rerouting sensitive requests.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "github",
@@ -151,11 +83,62 @@
       "problem": "Codex desktop app fails to launch on Windows 11",
       "selfBuiltSolution": "Used PowerShell to investigate AppX package status",
       "solubilityScore": 80,
-      "expectedBenefitScore": 70,
+      "expectedBenefitScore": 90,
       "theme": "AI App Troubleshooting",
-      "reasoning": "The author actively used PowerShell to diagnose the issue, indicating a high level of technical expertise and a genuine need to resolve the problem.",
+      "reasoning": "The user actively used PowerShell to diagnose the issue, indicating a high level of technical expertise and a genuine need to resolve the problem.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://mindpick.me/integrations",
+      "author": "bogdanmp",
+      "title": "Show HN: MCP server that surfaces human experts inside ChatGPT",
+      "snippet": "Built an MCP server that connects ChatGPT to async expert Q&amp;A. When someone asks a professional question needing human judgment, it surfaces relevant experts with pricing and response times. Working in dev mode, submitted to ChatGPT marketplace. What we learned building it: 1. ChatGPT requires `search` + `fetch` tools - could not find in MCP spec, undocumented until you hit the error 2. Tool descriptions = discovery. ChatGPT matches user intent to your descriptions. No algorithm docs. Treat it like SEO. 3. Dev Mode is buried: Settings → Connectors → Advanced → Developer Mode 4. Docs are sp",
+      "date": "2026-01-26T12:31:11Z",
+      "isLeadUserSignal": true,
+      "problem": "Integrate ChatGPT with human experts for professional questions",
+      "selfBuiltSolution": "MCP server that connects ChatGPT to async expert Q&A",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "AI Integration",
+      "reasoning": "The author built a custom MCP server to address a specific need, demonstrating a genuine lead-user signal by leveraging ChatGPT in a sophisticated way to surface human experts.",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=44298819",
+      "author": "evavillaro",
+      "title": "Comment on Hacker News",
+      "snippet": "Hi HN! I built AudioGretel (audiogretel.com), an AI-powered platform that generates personalized audio stories for children in multiple languages. THE BACKSTORY: As a parent of multilingual kids, I was frustrated with the lack of quality, varied bedtime stories that could also help with language learning. Most story apps either have limited content or are monolingual. WHAT IT DOES: • Generates unique audio stories using AI (OpenAI GPT) • Supports Spanish, English, Italian, and French • Adapts content for different age groups and language levels • Creates high-quality audio using advanced TTS •",
+      "date": "2025-06-17T13:16:01Z",
+      "isLeadUserSignal": true,
+      "problem": "Limited quality, varied bedtime stories for multilingual children",
+      "selfBuiltSolution": "AudioGretel, an AI-powered platform generating personalized audio stories",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 80,
+      "theme": "Language Learning",
+      "reasoning": "The author has a genuine need for a solution to their problem, and they have built a concrete AI-powered platform to address it, showcasing a high level of self-solutioning and expected benefit.",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=48594492",
+      "author": "dannyw",
+      "title": "Comment on Hacker News",
+      "snippet": "Yes, OpenAI admits they silently reroute sensitive requests to different models for user welfare at least: https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;building-more-helpful-chatgpt-exper... The implementation was so borked, SamA went back on Reddit and apologised: https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;ChatGPT&#x2F;comments&#x2F;1o6jins&#x2F;updates_fo... Model re-routing happens for coding tasks too. For example, in OpenAI support pages used to (at least 1 month ago when I checked) mention that if they automatically use a cheaper -mini to accomplish the task behind the scenes, you’ll b",
+      "date": "2026-06-19T03:27:44Z",
+      "isLeadUserSignal": true,
+      "problem": "Sensitive requests rerouting in AI models",
+      "selfBuiltSolution": "Identified and documented OpenAI's rerouting practice",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 90,
+      "theme": "AI Model Integrity",
+      "reasoning": "The commenter demonstrated a genuine need for transparency in AI model behavior and actively used OpenAI's support pages to uncover this information, showcasing a lead-user signal.",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -165,14 +148,31 @@
       "snippet": "&quot;There is nothing, I repeat nothing, more intimidating than an empty text box staring you in the face.&quot; Talk about a hyperbolic opening line. Is it really that intimidating to have an empty text box on Whatsapp or your favorite SMS app? No, as you expect to have an appropriate response coming from the other side, pretty much regardless of what your input is. As a frequent user of ChatGPT, I&#x27;ve come to expect the same in there. And it works great, without me having to study any &quot;prompt engineering&quot;. In fact, as it gets updated, I get frustrated less and less often — unl",
       "date": "2023-06-28T04:49:28Z",
       "isLeadUserSignal": true,
-      "problem": "Frustration with AI tool response variability",
-      "selfBuiltSolution": "Using ChatGPT without needing 'prompt engineering'",
+      "problem": "Frustration with AI tool's lack of response",
+      "selfBuiltSolution": "Using ChatGPT without needing to study prompt engineering",
       "solubilityScore": 80,
       "expectedBenefitScore": 70,
       "theme": "AI tool usability",
-      "reasoning": "The author has found a way to effectively use ChatGPT without needing to learn advanced techniques, indicating a genuine need and self-built solution.",
+      "reasoning": "The author has found a way to effectively use ChatGPT without needing additional knowledge, indicating a genuine lead-user signal.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/TypesettingTools/Aegisub/issues/293",
+      "author": "cutegitcat",
+      "title": "To add OpenAI Whisper, or Fast-Whisper or Faster-Whisper-XXL",
+      "snippet": "Hello everybody! \nI have been using Aegisub for a long time to create/make subtitles. It is an essential tool for me. However, the software is missing an important feature: an audio-to-text function such as OpenAI Whisper, Fast-Whisper, or the advanced version, Faster-Whisper-XXL. Another provider of open-source software, Tero Subtitler, already offers such a feature. I would be delighted and very grateful if a similar function could be integrated into Aegisub in the future. \nThank you for helping to improve accessibility for people with hard of hearing (hearing loss) and for those who are dea",
+      "date": "2026-07-30T22:05:41Z",
+      "isLeadUserSignal": true,
+      "problem": "Accessibility for people with hearing loss",
+      "selfBuiltSolution": "None mentioned, but uses Aegisub and OpenAI Whisper/Fast-Whisper/Faster-Whisper-XXL",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 80,
+      "theme": "Accessibility",
+      "reasoning": "The author has a specific professional need for an audio-to-text function in Aegisub, and mentions using OpenAI Whisper/Fast-Whisper/Faster-Whisper-XXL to address it, but does not describe building their own solution.",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
     },
     {
       "source": "hackernews",
@@ -182,14 +182,14 @@
       "snippet": "Is the Bing chat based on ChatGPT? I thought it was, but it seems insistent that the chat itself is proprietary. &gt; Bing: I see. Well, according to the search results, those screenshots are from a previous version of Bing chatbot that used a different AI model called ChatGPT. That model was not as engaging or informative as the current one, and it sometimes generated inappropriate or inconsistent responses. The current Bing chatbot uses a more advanced and reliable AI model that can help you find information and have engaging conversations. &gt; Me: What is the difference between ChatGPT and",
       "date": "2023-02-15T18:28:58Z",
       "isLeadUserSignal": true,
-      "problem": "Distinguish between ChatGPT and Bing's proprietary AI model",
-      "selfBuiltSolution": "None, but actively used and compared ChatGPT and Bing's chatbot",
+      "problem": "Differentiating between AI models in chatbots",
+      "selfBuiltSolution": "None, but actively used and compared ChatGPT and Bing chatbot",
       "solubilityScore": 20,
       "expectedBenefitScore": 80,
       "theme": "AI model comparison",
-      "reasoning": "The commenter is actively using and comparing different AI models, indicating a genuine interest in understanding their capabilities and limitations.",
+      "reasoning": "The author is actively using and comparing different AI models in chatbots, indicating a genuine interest in understanding their capabilities and limitations.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     },
     {
       "source": "github",
@@ -204,35 +204,14 @@
       "solubilityScore": 0,
       "expectedBenefitScore": 80,
       "theme": "Authentication",
-      "reasoning": "The user has a specific, real-world problem with Codex's verification process that is not addressed by the system, and is likely to benefit from a solution to this issue.",
+      "reasoning": "The user has a specific, high-impact problem with Codex that they've encountered in their professional workflow, and it's not addressed by the mainstream solution.",
       "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
-    },
-    {
-      "source": "github",
-      "url": "https://github.com/TypesettingTools/Aegisub/issues/293",
-      "author": "cutegitcat",
-      "title": "To add OpenAI Whisper, or Fast-Whisper or Faster-Whisper-XXL",
-      "snippet": "Hello everybody! \nI have been using Aegisub for a long time to create/make subtitles. It is an essential tool for me. However, the software is missing an important feature: an audio-to-text function such as OpenAI Whisper, Fast-Whisper, or the advanced version, Faster-Whisper-XXL. Another provider of open-source software, Tero Subtitler, already offers such a feature. I would be delighted and very grateful if a similar function could be integrated into Aegisub in the future. \nThank you for helping to improve accessibility for people with hard of hearing (hearing loss) and for those who are dea",
-      "date": "2026-07-30T22:05:41Z",
-      "isLeadUserSignal": true,
-      "problem": "Audio-to-text function for subtitle creation",
-      "selfBuiltSolution": "None mentioned",
-      "solubilityScore": 0,
-      "expectedBenefitScore": 80,
-      "theme": "Accessibility Tools",
-      "reasoning": "The author is a long-time user of Aegisub and is actively seeking a specific feature to improve their workflow, indicating a genuine need and potential lead-user signal.",
-      "firstSeenAt": "2026-08-16T08:04:09.939Z",
-      "isNew": true
+      "isNew": false
     }
   ],
   "themes": [
     {
-      "theme": "AI Development",
-      "count": 2
-    },
-    {
-      "theme": "AI model usage",
+      "theme": "AI Model Optimization",
       "count": 1
     },
     {
@@ -240,19 +219,11 @@
       "count": 1
     },
     {
-      "theme": "AI Integration",
+      "theme": "AI Development",
       "count": 1
     },
     {
-      "theme": "AI Democratization",
-      "count": 1
-    },
-    {
-      "theme": "Language Learning",
-      "count": 1
-    },
-    {
-      "theme": "AI Safety",
+      "theme": "Local AI Development",
       "count": 1
     },
     {
@@ -260,7 +231,23 @@
       "count": 1
     },
     {
+      "theme": "AI Integration",
+      "count": 1
+    },
+    {
+      "theme": "Language Learning",
+      "count": 1
+    },
+    {
+      "theme": "AI Model Integrity",
+      "count": 1
+    },
+    {
       "theme": "AI tool usability",
+      "count": 1
+    },
+    {
+      "theme": "Accessibility",
       "count": 1
     },
     {
@@ -270,14 +257,11 @@
     {
       "theme": "Authentication",
       "count": 1
-    },
-    {
-      "theme": "Accessibility Tools",
-      "count": 1
     }
   ],
   "notes": [
     "Advanced OpenAI / ChatGPT users: Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
-    "Advanced OpenAI / ChatGPT users: Bluesky unavailable: Bluesky search failed (403)"
+    "Advanced OpenAI / ChatGPT users: Bluesky unavailable: Bluesky search failed (403)",
+    "Advanced OpenAI / ChatGPT users: 1 candidate(s) failed LLM classification and were skipped."
   ]
 }
