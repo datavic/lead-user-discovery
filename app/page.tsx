@@ -5,7 +5,7 @@ import Link from "next/link";
 import latestSweep from "@/data/latest.json";
 import SearchForm from "@/components/SearchForm";
 import ThemeClusters from "@/components/ThemeClusters";
-import ResultCard from "@/components/ResultCard";
+import ResultsTable from "@/components/ResultsTable";
 import { DiscoverResponse } from "@/lib/types";
 
 // Results from the nightly sweep (.github/workflows/sweep.yml), committed to
@@ -86,13 +86,7 @@ export default function Home() {
 
       {data && <ThemeClusters themes={data.themes} />}
 
-      {data && data.candidates.length > 0 && (
-        <div className="results">
-          {data.candidates.map((candidate) => (
-            <ResultCard key={candidate.url} candidate={candidate} />
-          ))}
-        </div>
-      )}
+      {data && data.candidates.length > 0 && <ResultsTable candidates={data.candidates} />}
 
       {data && data.candidates.length === 0 && !loading && (
         <div className="empty">No lead-user signals found for this topic. Try a broader term.</div>

@@ -74,6 +74,52 @@ const STATUS_LABEL: Record<SourceRow["status"], string> = {
   planned: "Work in progress",
 };
 
+interface Phase {
+  title: string;
+  status: "live" | "partial" | "planned";
+  items: string[];
+}
+
+const ROADMAP: Phase[] = [
+  {
+    title: "Shipped",
+    status: "live",
+    items: [
+      "Multi-source mining across Reddit, Hacker News, GitHub, Bluesky and Stack Exchange",
+      "LLM classification scoring solubility and expected benefit, with theme clustering",
+      "Noise filtering: automated digests, bot accounts, crossposts and off-topic matches removed",
+      "Nightly sweep running unattended on a schedule, with results committed and served instantly",
+      "Analogous-market suggestions for adjacent domains facing the same bottleneck",
+    ],
+  },
+  {
+    title: "Next",
+    status: "partial",
+    items: [
+      "Reddit via the OAuth API — the anonymous feed is blocked from datacenter IPs, which currently starves the sweep of its best source",
+      "Bluesky authenticated search, for the scientists and academics who left Twitter",
+      "Sharper Stack Exchange queries; its search matches too loosely to be trusted raw",
+      "Trend view: how themes shift week over week, so a rising need is visible before it peaks",
+    ],
+  },
+  {
+    title: "Later",
+    status: "planned",
+    items: [
+      "YouTube comments — where practitioners narrate hands-on work, but the volume needs quota planning",
+      "Outreach tracking: who has been contacted, who replied, what they said",
+      "Network mapping to find people cited by several other lead users",
+      "Non-English sources, which are the largest blind spot in current coverage",
+    ],
+  },
+];
+
+const PHASE_LABEL: Record<Phase["status"], string> = {
+  live: "Done",
+  partial: "In progress",
+  planned: "Planned",
+};
+
 export default function About() {
   return (
     <main>
@@ -138,6 +184,23 @@ export default function About() {
           stand out from one-offs.
         </li>
       </ol>
+
+      <h2>Roadmap</h2>
+      <div className="roadmap">
+        {ROADMAP.map((phase) => (
+          <div key={phase.title} className={`roadmap-phase ${phase.status}`}>
+            <div className="roadmap-head">
+              <strong>{phase.title}</strong>
+              <span className={`status-pill ${phase.status}`}>{PHASE_LABEL[phase.status]}</span>
+            </div>
+            <ul className="roadmap-items">
+              {phase.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
 
       <h2>Limits worth knowing</h2>
       <ul className="method-list">
