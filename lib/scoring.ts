@@ -1,5 +1,6 @@
 import { Candidate, Classification } from "@/lib/types";
 import { chatJSON } from "@/lib/llm";
+import { ALL_MARKET_FIRST_PERSON, ALL_MARKET_PHRASES, findMarket } from "@/lib/markets";
 
 // Interleaved so the first MAX_QUERIES phrases (see app/api/discover/route.ts)
 // always include a mix of AI-usage and generic self-solution signals, even
@@ -24,6 +25,12 @@ export const SELF_SOLUTION_PHRASES = [
 ];
 
 export function buildSearchQueries(topic: string): string[] {
+  const market = findMarket(topic);
+
+  // A market's practitioners write in their own language; appending English
+  // phrases to a market topic returns regional news bots instead of people.
+  if (market) return market.phrases;
+
   return SELF_SOLUTION_PHRASES.map((phrase) => `${topic} "${phrase}"`);
 }
 
@@ -73,7 +80,8 @@ function looksAutomated(candidate: Candidate): boolean {
 }
 
 function heuristicScore(candidate: Candidate): number {
-  const text = `${candidate.title} ${candidate.snippet}`.toLowerCase();
+  const raw = `${candidate.title} ${candidate.snippet}`;
+  const text = raw.toLowerCase();
   let score = 0;
 
   // The phrase must actually appear in the retrieved text. Previously any
@@ -82,8 +90,17 @@ function heuristicScore(candidate: Candidate): number {
     if (text.includes(phrase.toLowerCase())) score += 3;
   }
 
+  // Native equivalents, so APAC practitioners are not scored as noise.
+  for (const phrase of ALL_MARKET_PHRASES) {
+    if (raw.includes(phrase)) score += 3;
+  }
+
   for (const marker of FIRST_PERSON_MARKERS) {
     if (marker.test(text)) score += 1;
+  }
+
+  for (const marker of ALL_MARKET_FIRST_PERSON) {
+    if (raw.includes(marker)) score += 1;
   }
 
   // Enough substance to judge, but length itself is no longer a reward —
@@ -123,7 +140,11 @@ export function preFilterCandidates(
   maxCount: number,
   topics: string[] = []
 ): Candidate[] {
-  const keywords = topicKeywords(topics);
+  // For a market topic the query was already a native-language phrase, so the
+  // results are on-topic by construction. Matching the label's English words
+  // ("Japan", "practitioners") against Japanese text would reject every one.
+  const isMarketSearch = topics.some((topic) => findMarket(topic));
+  const keywords = isMarketSearch ? [] : topicKeywords(topics);
 
   const onTopic = (candidate: Candidate): boolean => {
     if (keywords.length === 0) return true;
