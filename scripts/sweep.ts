@@ -9,6 +9,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { runDiscovery } from "../lib/discover";
+import { chatJSON } from "../lib/llm";
 import { PRESET_TOPICS } from "../lib/topics";
 import { ScoredCandidate, ThemeCluster } from "../lib/types";
 
@@ -50,6 +51,8 @@ async function main() {
     }
   }
 
+  await assertLlmReachable();
+
   const candidates: SweptCandidate[] = [];
   const themesByTopic: Record<string, ThemeCluster[]> = {};
   const notesByTopic: Record<string, string[]> = {};
@@ -79,6 +82,23 @@ async function main() {
       b.solubilityScore + b.expectedBenefitScore - (a.solubilityScore + a.expectedBenefitScore)
   );
 
+  // A sweep that finds nothing at all is a broken sweep, not an empty day.
+  // When Groq retired the configured model, every classification failed and
+  // this script cheerfully committed an empty file and exited 0 — the site
+  // went blank for three days while the workflow stayed green. Refuse to
+  // overwrite good data with nothing, and make the run fail loudly instead.
+  if (candidates.length === 0) {
+    const diagnostics = Object.entries(notesByTopic)
+      .flatMap(([topic, notes]) => notes.map((note) => `  ${topic}: ${note}`))
+      .join("\n");
+
+    throw new Error(
+      `Sweep produced zero signals across all ${topics.length} topics — refusing to publish an ` +
+        `empty result over the previous data. This usually means the LLM is unreachable or the ` +
+        `configured model no longer exists.\n\nDiagnostics:\n${diagnostics}`
+    );
+  }
+
   const output: SweepFile = { ranAt, topics, candidates, themesByTopic, notesByTopic };
 
   mkdirSync(DATA_DIR, { recursive: true });
@@ -89,7 +109,28 @@ async function main() {
   console.log(`\n[sweep] total ${candidates.length} signals (${newCount} new) across ${topics.length} topics`);
 }
 
+/**
+ * One trivial call before doing ten minutes of work, so a retired model or a
+ * bad key fails in seconds with a message that names the cause.
+ */
+async function assertLlmReachable() {
+  try {
+    await chatJSON<{ ok: boolean }>([
+      { role: "system", content: 'Reply only with the JSON object {"ok":true}.' },
+      { role: "user", content: "ping" },
+    ]);
+    console.log("[sweep] LLM reachable");
+  } catch (err: any) {
+    throw new Error(
+      `LLM preflight failed, aborting before any source is queried: ${err?.message}\n\n` +
+        `If the model no longer exists, list current ones with:\n` +
+        `  curl -s -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/models\n` +
+        `then update GROQ_DEFAULT_MODEL in lib/llm.ts (and GROQ_MODEL if set).`
+    );
+  }
+}
+
 main().catch((err) => {
-  console.error(err);
+  console.error(`\n[sweep] FAILED: ${err?.message || err}`);
   process.exit(1);
 });

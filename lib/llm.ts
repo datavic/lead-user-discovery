@@ -14,6 +14,11 @@ export class LlmNotConfiguredError extends Error {
   }
 }
 
+// Groq retires models with little notice — llama-3.1-8b-instant vanished and
+// silently broke every classification for three days. Keep the default in one
+// place so the next replacement is a single edit.
+const GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b";
+
 function getLlmConfig(): LlmConfig {
   const preferred = (process.env.LLM_PROVIDER || "").toLowerCase();
 
@@ -25,7 +30,7 @@ function getLlmConfig(): LlmConfig {
       provider: "groq",
       apiKey: groqKey,
       baseUrl: "https://api.groq.com/openai/v1",
-      model: process.env.GROQ_MODEL || "llama-3.1-8b-instant",
+      model: process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL,
     };
   }
 
@@ -43,7 +48,7 @@ function getLlmConfig(): LlmConfig {
       provider: "groq",
       apiKey: groqKey,
       baseUrl: "https://api.groq.com/openai/v1",
-      model: process.env.GROQ_MODEL || "llama-3.1-8b-instant",
+      model: process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL,
     };
   }
 

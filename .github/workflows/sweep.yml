@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-          MAX_CANDIDATES_TO_CLASSIFY: "12"
+          MAX_CANDIDATES_TO_CLASSIFY: "30"
         run: npx tsx scripts/sweep.ts
 
       - name: Commit results
