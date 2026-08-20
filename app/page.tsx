@@ -29,14 +29,17 @@ const SWEPT_TOPICS = SWEEP.topics ?? [];
  * first topic meant a visitor could land on a nearly empty table purely
  * because of that day's yield.
  */
-function richestTopic(): string {
-  const counts = new Map<string, number>();
-  for (const candidate of SWEEP.candidates || []) {
-    counts.set(candidate.topic, (counts.get(candidate.topic) || 0) + 1);
-  }
+const TOPIC_COUNTS: Record<string, number> = (SWEEP.candidates || []).reduce(
+  (acc, candidate) => {
+    acc[candidate.topic] = (acc[candidate.topic] || 0) + 1;
+    return acc;
+  },
+  {} as Record<string, number>
+);
 
+function richestTopic(): string {
   return (
-    SWEPT_TOPICS.slice().sort((a, b) => (counts.get(b) || 0) - (counts.get(a) || 0))[0] ||
+    SWEPT_TOPICS.slice().sort((a, b) => (TOPIC_COUNTS[b] || 0) - (TOPIC_COUNTS[a] || 0))[0] ||
     SWEPT_TOPICS[0] ||
     ""
   );
@@ -158,6 +161,7 @@ export default function Home() {
 
       <SearchForm
         topics={SWEPT_TOPICS}
+        topicCounts={TOPIC_COUNTS}
         activeTopic={view.isLive ? "" : activeTopic}
         onSelectTopic={selectTopic}
         onLiveScan={handleLiveScan}
@@ -193,7 +197,8 @@ export default function Home() {
       ) : (
         !loading && (
           <div className="empty">
-            No lead-user signals recorded for this topic yet — the next nightly sweep may find some.
+            No signals for this topic in the last sweep. The people who discuss it are mostly on
+            platforms this tool cannot reach yet — see the roadmap on the About page.
           </div>
         )
       )}

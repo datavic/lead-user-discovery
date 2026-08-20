@@ -5,6 +5,7 @@ import { AnalogousMarket } from "@/lib/types";
 
 interface Props {
   topics: string[];
+  topicCounts: Record<string, number>;
   activeTopic: string;
   onSelectTopic: (topic: string) => void;
   onLiveScan: (topic: string, extraTopics: string[]) => void;
@@ -13,6 +14,7 @@ interface Props {
 
 export default function SearchForm({
   topics,
+  topicCounts,
   activeTopic,
   onSelectTopic,
   onLiveScan,
@@ -74,16 +76,23 @@ export default function SearchForm({
           Swept nightly — switch instantly
         </div>
         <div className="chip-row">
-          {topics.map((topic) => (
-            <button
-              key={topic}
-              type="button"
-              className={`chip ${activeTopic === topic ? "active" : ""}`}
-              onClick={() => onSelectTopic(topic)}
-            >
-              {topic}
-            </button>
-          ))}
+          {topics.map((topic) => {
+            const count = topicCounts[topic] ?? 0;
+            return (
+              <button
+                key={topic}
+                type="button"
+                // Show the yield up front: a chip that leads to an empty table
+                // should look empty before it is clicked, not after.
+                className={`chip ${activeTopic === topic ? "active" : ""} ${count === 0 ? "empty-topic" : ""}`}
+                onClick={() => onSelectTopic(topic)}
+                title={count === 0 ? "No signals in the last sweep" : `${count} signals`}
+              >
+                {topic}
+                <span className="chip-count">{count}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 

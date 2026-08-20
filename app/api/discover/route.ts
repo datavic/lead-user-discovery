@@ -5,6 +5,8 @@ import { DiscoverResponse } from "@/lib/types";
 import { isLlmConfigured } from "@/lib/llm";
 import { runDiscovery } from "@/lib/discover";
 
+const LIVE_MAX_CANDIDATES = Number(process.env.LIVE_MAX_CANDIDATES || 6);
+
 export async function POST(req: NextRequest) {
   if (!isLlmConfigured()) {
     return NextResponse.json(
@@ -23,6 +25,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "A search topic is required." }, { status: 400 });
   }
 
-  const result = await runDiscovery(topics);
+  // An interactive request must finish inside the hosting timeout, so it
+  // classifies far fewer candidates than the nightly sweep does.
+  const result = await runDiscovery(topics, { maxCandidates: LIVE_MAX_CANDIDATES });
   return NextResponse.json<DiscoverResponse>(result);
 }

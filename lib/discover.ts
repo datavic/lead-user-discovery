@@ -16,7 +16,20 @@ const RSS_QUERY_LIMIT = 2;
  * left, then group by theme. Shared by the interactive search and the
  * scheduled sweep so both report identical results.
  */
-export async function runDiscovery(topics: string[]): Promise<DiscoverResponse> {
+export interface DiscoverOptions {
+  /**
+   * Cap on how many candidates reach the LLM. The nightly sweep can afford the
+   * full budget; an interactive request cannot, because free-tier rate limits
+   * make a full pass outlast the hosting timeout.
+   */
+  maxCandidates?: number;
+}
+
+export async function runDiscovery(
+  topics: string[],
+  options: DiscoverOptions = {}
+): Promise<DiscoverResponse> {
+  const maxCandidates = options.maxCandidates ?? MAX_CANDIDATES_TO_CLASSIFY;
   const queries = topics.flatMap((topic) => buildSearchQueries(topic)).slice(0, MAX_QUERIES);
 
   const sourceNotes: string[] = [];
@@ -46,7 +59,7 @@ export async function runDiscovery(topics: string[]): Promise<DiscoverResponse> 
     return { candidates: [], themes: [], sourceNotes };
   }
 
-  const topCandidates = preFilterCandidates(allCandidates, MAX_CANDIDATES_TO_CLASSIFY, topics);
+  const topCandidates = preFilterCandidates(allCandidates, maxCandidates, topics);
   const classified = await classifyCandidates(topCandidates);
 
   const candidates: ScoredCandidate[] = classified
