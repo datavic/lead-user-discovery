@@ -8,6 +8,8 @@ import { runDiscovery } from "@/lib/discover";
 const LIVE_MAX_CANDIDATES = Number(process.env.LIVE_MAX_CANDIDATES || 8);
 // Well inside the hosting timeout, leaving room for classification afterwards.
 const LIVE_SOURCE_TIMEOUT_MS = 8_000;
+// Sources (8s) + classification (12s) stays clear of the ~25s hosting limit.
+const LIVE_CLASSIFY_BUDGET_MS = 12_000;
 
 export async function POST(req: NextRequest) {
   if (!isLlmConfigured()) {
@@ -32,6 +34,7 @@ export async function POST(req: NextRequest) {
   const result = await runDiscovery(topics, {
     maxCandidates: LIVE_MAX_CANDIDATES,
     sourceTimeoutMs: LIVE_SOURCE_TIMEOUT_MS,
+    classifyBudgetMs: LIVE_CLASSIFY_BUDGET_MS,
   });
   return NextResponse.json<DiscoverResponse>(result);
 }

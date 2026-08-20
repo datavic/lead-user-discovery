@@ -99,13 +99,13 @@ export default function SearchForm({
       <form className="panel-section bordered" onSubmit={handleSubmit}>
         <div className="panel-label">
           Scan a different topic live
-          <span className="panel-hint">takes about a minute; may time out on free hosting</span>
+          <span className="panel-hint">scans a narrower slice than the nightly sweep, in about ten seconds</span>
         </div>
 
         <div className="row">
           <input
             type="text"
-            placeholder="e.g. beekeepers using ChatGPT"
+            placeholder="e.g. self-hosted AI tools"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />

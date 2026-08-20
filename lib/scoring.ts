@@ -168,17 +168,35 @@ export async function classifyCandidate(candidate: Candidate): Promise<Classific
 // let chatJSON's backoff absorb the rest.
 const CONCURRENCY_LIMIT = 2;
 
-export async function classifyCandidates(candidates: Candidate[]): Promise<
-  { candidate: Candidate; classification: Classification | null; error?: string }[]
-> {
+export async function classifyCandidates(
+  candidates: Candidate[],
+  /**
+   * Wall-clock budget for the whole batch. When the provider starts rate
+   * limiting, each retry backs off and the batch can outlast an interactive
+   * request's timeout — returning partial results beats returning a 504, so
+   * remaining candidates are abandoned rather than the request failing.
+   */
+  deadlineMs?: number
+): Promise<{ candidate: Candidate; classification: Classification | null; error?: string }[]> {
   const results: { candidate: Candidate; classification: Classification | null; error?: string }[] =
     new Array(candidates.length);
 
+  const expiry = deadlineMs ? Date.now() + deadlineMs : Infinity;
+
   let index = 0;
+  let abandoned = 0;
+
   async function worker() {
     while (index < candidates.length) {
       const current = index++;
       const candidate = candidates[current];
+
+      if (Date.now() >= expiry) {
+        abandoned++;
+        results[current] = { candidate, classification: null, error: "skipped: time budget reached" };
+        continue;
+      }
+
       try {
         const classification = await classifyCandidate(candidate);
         results[current] = { candidate, classification };
@@ -192,6 +210,10 @@ export async function classifyCandidates(candidates: Candidate[]): Promise<
 
   const workers = Array.from({ length: Math.min(CONCURRENCY_LIMIT, candidates.length) }, () => worker());
   await Promise.all(workers);
+
+  if (abandoned > 0) {
+    console.warn(`[classify] abandoned ${abandoned} candidate(s) after the time budget`);
+  }
 
   return results;
 }

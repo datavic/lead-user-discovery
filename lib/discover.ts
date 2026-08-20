@@ -32,6 +32,9 @@ export interface DiscoverOptions {
    * holding up every other source.
    */
   sourceTimeoutMs?: number;
+
+  /** Wall-clock budget for classification; leftover candidates are skipped. */
+  classifyBudgetMs?: number;
 }
 
 function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
@@ -79,7 +82,7 @@ export async function runDiscovery(
   }
 
   const topCandidates = preFilterCandidates(allCandidates, maxCandidates, topics);
-  const classified = await classifyCandidates(topCandidates);
+  const classified = await classifyCandidates(topCandidates, options.classifyBudgetMs);
 
   const candidates: ScoredCandidate[] = classified
     .filter((entry) => entry.classification && entry.classification.isLeadUserSignal)
