@@ -5,7 +5,9 @@ import { DiscoverResponse } from "@/lib/types";
 import { isLlmConfigured } from "@/lib/llm";
 import { runDiscovery } from "@/lib/discover";
 
-const LIVE_MAX_CANDIDATES = Number(process.env.LIVE_MAX_CANDIDATES || 6);
+const LIVE_MAX_CANDIDATES = Number(process.env.LIVE_MAX_CANDIDATES || 8);
+// Well inside the hosting timeout, leaving room for classification afterwards.
+const LIVE_SOURCE_TIMEOUT_MS = 8_000;
 
 export async function POST(req: NextRequest) {
   if (!isLlmConfigured()) {
@@ -27,6 +29,9 @@ export async function POST(req: NextRequest) {
 
   // An interactive request must finish inside the hosting timeout, so it
   // classifies far fewer candidates than the nightly sweep does.
-  const result = await runDiscovery(topics, { maxCandidates: LIVE_MAX_CANDIDATES });
+  const result = await runDiscovery(topics, {
+    maxCandidates: LIVE_MAX_CANDIDATES,
+    sourceTimeoutMs: LIVE_SOURCE_TIMEOUT_MS,
+  });
   return NextResponse.json<DiscoverResponse>(result);
 }

@@ -23,6 +23,24 @@ export interface DiscoverOptions {
    * make a full pass outlast the hosting timeout.
    */
   maxCandidates?: number;
+
+  /**
+   * Per-source deadline. Sources rate-limit and retry with backoff — Reddit's
+   * RSS fallback alone can spend 30s per query — which is what made
+   * interactive scans exceed the hosting timeout even with few candidates.
+   * A source that misses the deadline is reported as unavailable rather than
+   * holding up every other source.
+   */
+  sourceTimeoutMs?: number;
+}
+
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timed out after ${Math.round(ms / 1000)}s`)), ms)
+    ),
+  ]);
 }
 
 export async function runDiscovery(
@@ -30,6 +48,7 @@ export async function runDiscovery(
   options: DiscoverOptions = {}
 ): Promise<DiscoverResponse> {
   const maxCandidates = options.maxCandidates ?? MAX_CANDIDATES_TO_CLASSIFY;
+  const sourceTimeoutMs = options.sourceTimeoutMs ?? 120_000;
   const queries = topics.flatMap((topic) => buildSearchQueries(topic)).slice(0, MAX_QUERIES);
 
   const sourceNotes: string[] = [];
@@ -37,16 +56,16 @@ export async function runDiscovery(
 
   const [githubResults, redditResults, hnResults, blueskyResults, seResults] =
     await Promise.allSettled([
-      fetchGithub(queries),
-      fetchReddit(queries),
+      withTimeout(fetchGithub(queries), sourceTimeoutMs, "GitHub"),
+      withTimeout(fetchReddit(queries), sourceTimeoutMs, "Reddit"),
       // HN's Algolia index ANDs every term, so the quoted self-solution phrases
       // used for GitHub/Reddit match nothing there. Search the bare topics and
       // let the heuristic prefilter + LLM do the narrowing instead.
-      fetchHackerNews(topics),
+      withTimeout(fetchHackerNews(topics), sourceTimeoutMs, "Hacker News"),
       // Bluesky ANDs every term too, so a topic combined with a quoted
       // self-solution phrase matches nothing. Search the bare topics.
-      fetchBluesky(topics),
-      fetchStackExchange(topics),
+      withTimeout(fetchBluesky(topics), sourceTimeoutMs, "Bluesky"),
+      withTimeout(fetchStackExchange(topics), sourceTimeoutMs, "Stack Exchange"),
     ]);
 
   collectResults(githubResults, "GitHub", allCandidates, sourceNotes);
