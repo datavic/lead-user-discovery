@@ -24,6 +24,24 @@ const SWEEP = latestSweep as unknown as {
 
 const SWEPT_TOPICS = SWEEP.topics ?? [];
 
+/**
+ * Open on whichever topic the last sweep found most for. Defaulting to the
+ * first topic meant a visitor could land on a nearly empty table purely
+ * because of that day's yield.
+ */
+function richestTopic(): string {
+  const counts = new Map<string, number>();
+  for (const candidate of SWEEP.candidates || []) {
+    counts.set(candidate.topic, (counts.get(candidate.topic) || 0) + 1);
+  }
+
+  return (
+    SWEPT_TOPICS.slice().sort((a, b) => (counts.get(b) || 0) - (counts.get(a) || 0))[0] ||
+    SWEPT_TOPICS[0] ||
+    ""
+  );
+}
+
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
@@ -47,7 +65,7 @@ function Stat({
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
-  const [activeTopic, setActiveTopic] = useState(SWEPT_TOPICS[0] || "");
+  const [activeTopic, setActiveTopic] = useState(richestTopic);
   const [liveResult, setLiveResult] = useState<(DiscoverResponse & { topic: string }) | null>(null);
   const [error, setError] = useState<string | null>(null);
 
