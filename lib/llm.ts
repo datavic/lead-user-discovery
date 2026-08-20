@@ -97,7 +97,13 @@ function retryDelayMs(res: Response, body: string, attempt: number): number {
   return 1000 * 2 ** attempt;
 }
 
-export async function chatJSON<T>(messages: ChatMessage[]): Promise<T> {
+/**
+ * @param expiryMs Absolute timestamp (Date.now() based) past which no further
+ * retry is attempted. Without it a rate-limited call can keep backing off well
+ * beyond an interactive request's timeout, which is what produced 504s even
+ * when the caller thought it had budgeted its time.
+ */
+export async function chatJSON<T>(messages: ChatMessage[], expiryMs?: number): Promise<T> {
   const config = getLlmConfig();
 
   let res!: Response;
@@ -128,7 +134,17 @@ export async function chatJSON<T>(messages: ChatMessage[]): Promise<T> {
     }
 
     const text = await res.text().catch(() => "");
-    await new Promise((resolve) => setTimeout(resolve, retryDelayMs(res, text, attempt)));
+    const delay = retryDelayMs(res, text, attempt);
+
+    // Don't start a wait that would run past the caller's deadline.
+    if (expiryMs !== undefined && Date.now() + delay >= expiryMs) {
+      throw new Error(
+        `LLM request to ${config.provider} rate-limited (${res.status}) and the retry would ` +
+          `exceed the time budget`
+      );
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, delay));
   }
 
   const data = await res.json();

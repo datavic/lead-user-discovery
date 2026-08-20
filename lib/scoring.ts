@@ -154,13 +154,19 @@ Respond ONLY with a JSON object matching this shape: \
 "expectedBenefitScore": number (0-100, how much they stand to gain / how far ahead of the mainstream need this is), \
 "theme": string (a short 2-4 word category for this need), "reasoning": string (one sentence)}.`;
 
-export async function classifyCandidate(candidate: Candidate): Promise<Classification> {
+export async function classifyCandidate(
+  candidate: Candidate,
+  expiryMs?: number
+): Promise<Classification> {
   const userPrompt = `Source: ${candidate.source}\nTitle: ${candidate.title}\nText: ${candidate.snippet}`;
 
-  return chatJSON<Classification>([
-    { role: "system", content: CLASSIFICATION_SYSTEM_PROMPT },
-    { role: "user", content: userPrompt },
-  ]);
+  return chatJSON<Classification>(
+    [
+      { role: "system", content: CLASSIFICATION_SYSTEM_PROMPT },
+      { role: "user", content: userPrompt },
+    ],
+    expiryMs
+  );
 }
 
 // Groq's free tier allows ~6k tokens/minute and each classification costs
@@ -198,7 +204,7 @@ export async function classifyCandidates(
       }
 
       try {
-        const classification = await classifyCandidate(candidate);
+        const classification = await classifyCandidate(candidate, isFinite(expiry) ? expiry : undefined);
         results[current] = { candidate, classification };
       } catch (err: any) {
         const message = err?.message || "classification failed";
