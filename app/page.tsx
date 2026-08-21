@@ -49,6 +49,52 @@ function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
+/**
+ * An empty result has very different causes — a source failing, a live scan's
+ * narrower reach, or genuinely nothing on the platforms covered. Saying the
+ * wrong one sends people chasing the wrong problem.
+ */
+function EmptyState({ isLive, notes }: { isLive: boolean; notes: string[] }) {
+  const unavailable = notes
+    .filter((note) => note.includes("unavailable"))
+    .map((note) => note.split(" unavailable")[0]);
+
+  if (unavailable.length > 0) {
+    return (
+      <div className="empty">
+        <strong>No signals — but {unavailable.join(" and ")} could not be reached</strong>
+        <span>
+          {unavailable.includes("Bluesky")
+            ? "Bluesky is the only source searched by language, so results in a non-English query depend on it. This scan was effectively blind."
+            : "These results are incomplete; the sources that failed may well hold signals."}
+        </span>
+      </div>
+    );
+  }
+
+  if (isLive) {
+    return (
+      <div className="empty">
+        <strong>No signals found for this scan</strong>
+        <span>
+          A live scan covers a narrower slice than the nightly sweep — fewer queries and a short
+          time budget. The topic may still have signals in a full sweep.
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="empty">
+      <strong>No signals for this topic in the last sweep</strong>
+      <span>
+        The people who discuss it are mostly on platforms this tool cannot reach yet — see the
+        roadmap on the About page.
+      </span>
+    </div>
+  );
+}
+
 function Stat({
   value,
   label,
@@ -195,12 +241,7 @@ export default function Home() {
       {view.candidates.length > 0 ? (
         <ResultsTable candidates={view.candidates} />
       ) : (
-        !loading && (
-          <div className="empty">
-            No signals for this topic in the last sweep. The people who discuss it are mostly on
-            platforms this tool cannot reach yet — see the roadmap on the About page.
-          </div>
-        )
+        !loading && <EmptyState isLive={view.isLive} notes={view.notes} />
       )}
     </main>
   );

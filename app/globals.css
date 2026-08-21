@@ -997,3 +997,17 @@ main {
   color: var(--good);
   padding: 0 3px;
 }
+
+.empty strong {
+  display: block;
+  color: var(--text);
+  font-size: 14.5px;
+  margin-bottom: 7px;
+}
+
+.empty span {
+  display: block;
+  max-width: 62ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
