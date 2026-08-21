@@ -20,7 +20,7 @@ const SOURCES: SourceRow[] = [
   {
     name: "Hacker News",
     reaches: "Founders, engineers and technical professionals",
-    method: "Algolia index, stories and comments, searched by bare topic",
+    method: "Algolia index, stories and comments. For a market topic it is queried in that market's language, since Hacker News exposes no location for its users",
     auth: "None",
     status: "live",
   },
@@ -34,7 +34,7 @@ const SOURCES: SourceRow[] = [
   {
     name: "Bluesky",
     reaches: "Scientists, academics and journalists — the audience that left Twitter",
-    method: "Authenticated post search (app.bsky.feed.searchPosts), optionally restricted by language so APAC markets are searched in Japanese, Korean, Indonesian, Vietnamese or Thai rather than English",
+    method: "Authenticated post search (app.bsky.feed.searchPosts), optionally restricted by language so APAC markets are searched in Mandarin, Japanese, Korean, Indonesian, Vietnamese or Thai rather than English",
     auth: "App password",
     status: "live",
   },
