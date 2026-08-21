@@ -11,6 +11,8 @@ export interface Market {
   /** Topic label shown in the UI and stored on each finding. */
   topic: string;
   language: string;
+  /** BCP-47 code used to restrict source searches to this market's language. */
+  lang: string;
   /** Native equivalents of "I built / I use ... to". */
   phrases: string[];
   /** Native first-person markers, the signal that someone is describing their own work. */
@@ -21,31 +23,86 @@ export const APAC_MARKETS: Market[] = [
   {
     topic: "Japan · practitioners using AI",
     language: "Japanese",
-    phrases: ["ChatGPTで作った", "ChatGPTを使って", "GPTで自動化", "ChatGPTに任せて"],
+    lang: "ja",
+    phrases: [
+      "ChatGPTで作った",
+      "ChatGPTを使って",
+      "GPTで自動化",
+      "ChatGPTに任せて",
+      "自分で作った",
+      "ChatGPTで効率化",
+      "GPTsを作って",
+      "ChatGPTで書いた",
+      "AIで自動化した",
+      "プロンプトを作った",
+    ],
     firstPerson: ["私", "僕", "自分", "うちの"],
   },
   {
     topic: "Korea · practitioners using AI",
     language: "Korean",
-    phrases: ["챗GPT로 만들었", "GPT로 자동화", "챗GPT를 써서", "직접 만들었"],
+    lang: "ko",
+    phrases: [
+      "챗GPT로 만들었",
+      "GPT로 자동화",
+      "챗GPT를 써서",
+      "직접 만들었",
+      "GPT로 만든",
+      "챗지피티로",
+      "프롬프트를 만들었",
+      "AI로 자동화",
+      "제가 만든",
+    ],
     firstPerson: ["제가", "내가", "저는", "우리"],
   },
   {
     topic: "Indonesia · practitioners using AI",
     language: "Indonesian",
-    phrases: ["pakai ChatGPT untuk", "bikin pakai ChatGPT", "saya buat sendiri", "pakai AI buat"],
+    lang: "id",
+    phrases: [
+      "pakai ChatGPT untuk",
+      "bikin pakai ChatGPT",
+      "saya buat sendiri",
+      "pakai AI buat",
+      "saya bikin",
+      "coba pakai ChatGPT",
+      "otomatisasi pakai AI",
+      "saya pakai ChatGPT",
+      "bikin sendiri pakai",
+    ],
     firstPerson: ["saya", "aku", "kami", "gue"],
   },
   {
     topic: "Vietnam · practitioners using AI",
     language: "Vietnamese",
-    phrases: ["dùng ChatGPT để", "tự làm bằng ChatGPT", "tôi đã tạo", "dùng AI để"],
+    lang: "vi",
+    phrases: [
+      "dùng ChatGPT để",
+      "tự làm bằng ChatGPT",
+      "tôi đã tạo",
+      "dùng AI để",
+      "mình dùng ChatGPT",
+      "mình tự làm",
+      "tự động hóa bằng AI",
+      "tôi xây dựng",
+      "mình đã tạo",
+    ],
     firstPerson: ["tôi", "mình", "chúng tôi"],
   },
   {
     topic: "Thailand · practitioners using AI",
     language: "Thai",
-    phrases: ["ใช้ ChatGPT ทำ", "ทำเองด้วย ChatGPT", "ผมใช้ ChatGPT", "ใช้ AI ช่วย"],
+    lang: "th",
+    phrases: [
+      "ใช้ ChatGPT ทำ",
+      "ทำเองด้วย ChatGPT",
+      "ผมใช้ ChatGPT",
+      "ใช้ AI ช่วย",
+      "ฉันใช้ ChatGPT",
+      "ทำเอง",
+      "เขียนเองด้วย AI",
+      "ใช้ ChatGPT ช่วย",
+    ],
     firstPerson: ["ผม", "ฉัน", "เรา", "ดิฉัน"],
   },
 ];

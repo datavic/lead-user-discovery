@@ -50,11 +50,17 @@ async function getAccessJwt(): Promise<string | null> {
   return data.accessJwt;
 }
 
-export async function searchBluesky(query: string, limit = 15): Promise<Candidate[]> {
+/**
+ * @param lang BCP-47 code (ja, ko, th, id, vi). Restricting by language is the
+ * single most effective way to reach a market's practitioners: an English
+ * query about a region returns its news accounts, not the people working there.
+ */
+export async function searchBluesky(query: string, limit = 15, lang?: string): Promise<Candidate[]> {
   const jwt = await getAccessJwt();
 
   const host = jwt ? AUTH_HOST : PUBLIC_APPVIEW;
-  const url = `${host}/xrpc/app.bsky.feed.searchPosts?q=${encodeURIComponent(query)}&limit=${limit}`;
+  const langParam = lang ? `&lang=${encodeURIComponent(lang)}` : "";
+  const url = `${host}/xrpc/app.bsky.feed.searchPosts?q=${encodeURIComponent(query)}&limit=${limit}${langParam}`;
 
   const headers: Record<string, string> = {
     "User-Agent": USER_AGENT,

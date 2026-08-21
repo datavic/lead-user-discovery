@@ -5,6 +5,7 @@ import { getRedditAccessToken, searchReddit, searchRedditRss } from "@/lib/sourc
 import { searchHackerNews } from "@/lib/sources/hackernews";
 import { searchBluesky } from "@/lib/sources/bluesky";
 import { SE_SITES, searchStackExchange } from "@/lib/sources/stackexchange";
+import { findMarket } from "@/lib/markets";
 
 const MAX_CANDIDATES_TO_CLASSIFY = Number(process.env.MAX_CANDIDATES_TO_CLASSIFY || 20);
 const MAX_QUERIES = 6;
@@ -67,7 +68,7 @@ export async function runDiscovery(
       withTimeout(fetchHackerNews(topics), sourceTimeoutMs, "Hacker News"),
       // Bluesky ANDs every term too, so a topic combined with a quoted
       // self-solution phrase matches nothing. Search the bare topics.
-      withTimeout(fetchBluesky(topics), sourceTimeoutMs, "Bluesky"),
+      withTimeout(fetchBluesky(topics, queries), sourceTimeoutMs, "Bluesky"),
       withTimeout(fetchStackExchange(topics), sourceTimeoutMs, "Stack Exchange"),
     ]);
 
@@ -149,8 +150,23 @@ async function fetchHackerNews(topics: string[]): Promise<Candidate[]> {
   return results.flat();
 }
 
-async function fetchBluesky(topics: string[]): Promise<Candidate[]> {
-  const results = await Promise.all(topics.map((t) => searchBluesky(t, 25)));
+async function fetchBluesky(topics: string[], queries: string[]): Promise<Candidate[]> {
+  const searches = topics.flatMap((topic) => {
+    const market = findMarket(topic);
+
+    // For a market, restrict by language and search its native phrasing: the
+    // language filter alone reaches practitioners an English query never sees.
+    if (market) {
+      return [
+        searchBluesky("ChatGPT", 25, market.lang),
+        ...market.phrases.slice(0, 4).map((phrase) => searchBluesky(phrase, 25, market.lang)),
+      ];
+    }
+
+    return [searchBluesky(topic, 25)];
+  });
+
+  const results = await Promise.all(searches);
   return results.flat();
 }
 

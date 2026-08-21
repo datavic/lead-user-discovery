@@ -34,7 +34,7 @@ const SOURCES: SourceRow[] = [
   {
     name: "Bluesky",
     reaches: "Scientists, academics and journalists — the audience that left Twitter",
-    method: "Authenticated post search (app.bsky.feed.searchPosts). The anonymous AppView refuses search, so a session is created from an app password",
+    method: "Authenticated post search (app.bsky.feed.searchPosts), optionally restricted by language so APAC markets are searched in Japanese, Korean, Indonesian, Vietnamese or Thai rather than English",
     auth: "App password",
     status: "live",
   },
@@ -90,6 +90,7 @@ const ROADMAP: Phase[] = [
       "Noise filtering: automated digests, bot accounts, crossposts and off-topic matches removed",
       "Nightly sweep running unattended on a schedule, with results committed and served instantly",
       "Analogous-market suggestions for adjacent domains facing the same bottleneck",
+      "Native-language search for five APAC markets — Japan, Korea, Indonesia, Vietnam and Thailand — with language-restricted queries and scoring that recognises non-English self-solution phrasing",
     ],
   },
   {
@@ -98,6 +99,8 @@ const ROADMAP: Phase[] = [
     items: [
       "Sharper Stack Exchange queries; its search matches too loosely to be trusted raw",
       "Trend view: how themes shift week over week, so a rising need is visible before it peaks",
+      "Widening non-English coverage: more native phrasing per market, more markets, and better yield where a language currently returns little (Korean is the weakest today)",
+      "Reaching the platforms that dominate APAC — Naver, Zhihu, Xiaohongshu, Line — where most regional practitioners actually post",
     ],
   },
   {
@@ -108,7 +111,6 @@ const ROADMAP: Phase[] = [
       "YouTube comments — where practitioners narrate hands-on work, but the volume needs quota planning",
       "Outreach tracking: who has been contacted, who replied, what they said",
       "Network mapping to find people cited by several other lead users",
-      "Non-English sources, which are the largest blind spot in current coverage",
     ],
   },
 ];
@@ -161,9 +163,10 @@ export default function About() {
         every run.
       </p>
       <p className="section-note">
-        Running a search yourself scans live instead. That path is slower — free-tier LLM rate limits
-        mean a full pass takes about a minute, which can exceed the hosting timeout — so the nightly
-        results are the reliable view.
+        Running a scan yourself queries the same sources live, but against a strict time budget:
+        every source has a few seconds to answer and classification is bounded, so a scan returns in
+        roughly ten seconds. It therefore covers a narrower slice than the nightly sweep, and returns
+        partial results rather than failing when a provider rate-limits.
       </p>
 
       <h2>How a result is judged</h2>
@@ -171,7 +174,9 @@ export default function About() {
         <li>
           <strong>Query construction.</strong> The topic is combined with problem-and-self-solution
           phrasing — &ldquo;I built my own&rdquo;, &ldquo;I use ChatGPT to&rdquo;, &ldquo;workaround
-          for&rdquo; — since lead users describe fixes, not just complaints.
+          for&rdquo; — since lead users describe fixes, not just complaints. For an APAC market the
+          query is that market&apos;s own language instead, and results are restricted to it:
+          searching a region in English returns its news accounts, not the people doing the work.
         </li>
         <li>
           <strong>Noise removal.</strong> Automated digests and bot accounts keyword-match well but
