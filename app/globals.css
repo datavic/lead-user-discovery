@@ -988,3 +988,12 @@ main {
   letter-spacing: 0.03em;
   vertical-align: 1px;
 }
+
+.panel-note strong {
+  color: var(--text);
+}
+
+.inline-native {
+  color: var(--good);
+  padding: 0 3px;
+}

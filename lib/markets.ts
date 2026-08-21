@@ -21,6 +21,22 @@ export interface Market {
 
 export const APAC_MARKETS: Market[] = [
   {
+    // Singapore's practitioners work in English, so the "native language" here
+    // is English — what localises the search is the place name, not the script.
+    topic: "Singapore · practitioners using AI",
+    language: "English",
+    lang: "en",
+    phrases: [
+      "Singapore ChatGPT",
+      "Singapore AI workflow",
+      "Singapore built with AI",
+      "SG startup ChatGPT",
+      "Singapore automated with AI",
+      "Singapore small business AI",
+    ],
+    firstPerson: ["I ", "my ", "we ", "our "],
+  },
+  {
     topic: "Japan · practitioners using AI",
     language: "Japanese",
     lang: "ja",

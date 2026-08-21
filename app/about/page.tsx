@@ -210,6 +210,24 @@ export default function About() {
         ))}
       </div>
 
+      <h2>How a market is determined</h2>
+      <p className="section-note">
+        None of these sources expose a reliable location for the people posting. Hacker News
+        publishes no location field at all; Bluesky and GitHub have optional free-text profile
+        fields that most people leave empty or fill in with a joke. So the tool does not claim to
+        know where anyone lives.
+      </p>
+      <p className="section-note">
+        What it uses instead is <strong>written language</strong>. A market topic is searched using
+        that market&apos;s own phrasing, and on Bluesky the results are additionally restricted to
+        that language, so someone writing about their ChatGPT workflow in Vietnamese is treated as a
+        signal for Vietnam. That is a proxy, not a fact: a Japanese speaker in London writes the
+        same Japanese. It is defensible for finding where a practice is emerging, and it should not
+        be read as a claim about residence. Singapore is the exception — its practitioners work in
+        English, so it is searched in English and place names carry the localisation instead, which
+        makes it the least precise of the markets.
+      </p>
+
       <h2>Limits worth knowing</h2>
       <ul className="method-list">
         <li>

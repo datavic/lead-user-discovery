@@ -77,8 +77,11 @@ export default function SearchForm({
           Swept nightly — switch instantly
         </div>
         <p className="panel-note">
-          Market topics are searched in the local language, not English — a region searched in
-          English returns its news accounts, not the people doing the work.
+          <strong>Searches in 6 languages:</strong> English, Japanese, Korean, Indonesian,
+          Vietnamese and Thai. Country topics are searched in that country&apos;s own language —
+          searching &ldquo;Japan ChatGPT&rdquo; in English mostly returns news outlets writing about
+          AI, while <span className="inline-native">ChatGPTで作った</span> (&ldquo;made with
+          ChatGPT&rdquo;) returns people describing what they actually built.
         </p>
         <div className="chip-row">
           {topics.map((topic) => {

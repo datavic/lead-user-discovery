@@ -146,7 +146,22 @@ async function fetchReddit(queries: string[]): Promise<Candidate[]> {
 }
 
 async function fetchHackerNews(topics: string[]): Promise<Candidate[]> {
-  const results = await Promise.all(topics.map((t) => searchHackerNews(t, 30)));
+  const searches = topics.flatMap((topic) => {
+    const market = findMarket(topic);
+
+    // Hacker News exposes no location for its users, so a market topic must be
+    // searched in that market's language — the written language is the only
+    // available signal that an author belongs to it. Searching the English
+    // label instead matched anything containing the country's name, which
+    // returned conference announcements and posts about other countries.
+    if (market) {
+      return market.phrases.slice(0, 4).map((phrase) => searchHackerNews(phrase, 20));
+    }
+
+    return [searchHackerNews(topic, 30)];
+  });
+
+  const results = await Promise.all(searches);
   return results.flat();
 }
 
@@ -171,9 +186,13 @@ async function fetchBluesky(topics: string[], queries: string[]): Promise<Candid
 }
 
 async function fetchStackExchange(topics: string[]): Promise<Candidate[]> {
+  // Skipped for market topics: these sites are English-language, so a native
+  // query finds nothing and the English label would match posts from anywhere.
+  const searchable = topics.filter((topic) => !findMarket(topic));
+
   // Anonymous quota is 300 requests/day and each site costs one, so search the
   // bare topics across the site list rather than every phrase variation.
-  const pairs = topics.flatMap((topic) => SE_SITES.map((site) => ({ topic, site })));
+  const pairs = searchable.flatMap((topic) => SE_SITES.map((site) => ({ topic, site })));
   const results = await Promise.all(
     pairs.map(({ topic, site }) => searchStackExchange(topic, site, PER_SOURCE_LIMIT))
   );
