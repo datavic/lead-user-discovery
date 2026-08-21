@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnalogousMarket } from "@/lib/types";
+import { findMarket } from "@/lib/markets";
 
 interface Props {
   topics: string[];
@@ -75,9 +76,14 @@ export default function SearchForm({
         <div className="panel-label">
           Swept nightly — switch instantly
         </div>
+        <p className="panel-note">
+          Market topics are searched in the local language, not English — a region searched in
+          English returns its news accounts, not the people doing the work.
+        </p>
         <div className="chip-row">
           {topics.map((topic) => {
             const count = topicCounts[topic] ?? 0;
+            const market = findMarket(topic);
             return (
               <button
                 key={topic}
@@ -86,9 +92,16 @@ export default function SearchForm({
                 // should look empty before it is clicked, not after.
                 className={`chip ${activeTopic === topic ? "active" : ""} ${count === 0 ? "empty-topic" : ""}`}
                 onClick={() => onSelectTopic(topic)}
-                title={count === 0 ? "No signals in the last sweep" : `${count} signals`}
+                title={
+                  market
+                    ? `Searched in ${market.language} · ${count} signals`
+                    : count === 0
+                      ? "No signals in the last sweep"
+                      : `${count} signals`
+                }
               >
                 {topic}
+                {market && <span className="chip-lang">{market.language}</span>}
                 <span className="chip-count">{count}</span>
               </button>
             );

@@ -968,3 +968,23 @@ main {
 .chip.empty-topic {
   opacity: 0.5;
 }
+
+.panel-note {
+  color: var(--faint);
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin: -4px 0 11px;
+  max-width: 78ch;
+}
+
+.chip-lang {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 1px 7px;
+  border-radius: 5px;
+  background: rgba(79, 185, 138, 0.14);
+  color: var(--good);
+  font-size: 10.5px;
+  letter-spacing: 0.03em;
+  vertical-align: 1px;
+}
