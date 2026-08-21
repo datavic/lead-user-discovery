@@ -77,8 +77,8 @@ export default function SearchForm({
           Swept nightly — switch instantly
         </div>
         <p className="panel-note">
-          <strong>Searches in 6 languages:</strong> English, Japanese, Korean, Indonesian,
-          Vietnamese and Thai. Country topics are searched in that country&apos;s own language —
+          <strong>Searches in 7 languages:</strong> English, Mandarin, Japanese, Korean,
+          Indonesian, Vietnamese and Thai. Country topics are searched in that country&apos;s own language —
           searching &ldquo;Japan ChatGPT&rdquo; in English mostly returns news outlets writing about
           AI, while <span className="inline-native">ChatGPTで作った</span> (&ldquo;made with
           ChatGPT&rdquo;) returns people describing what they actually built.

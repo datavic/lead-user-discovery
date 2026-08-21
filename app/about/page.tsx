@@ -90,7 +90,7 @@ const ROADMAP: Phase[] = [
       "Noise filtering: automated digests, bot accounts, crossposts and off-topic matches removed",
       "Nightly sweep running unattended on a schedule, with results committed and served instantly",
       "Analogous-market suggestions for adjacent domains facing the same bottleneck",
-      "Native-language search for five APAC markets — Japan, Korea, Indonesia, Vietnam and Thailand — with language-restricted queries and scoring that recognises non-English self-solution phrasing",
+      "Native-language search across seven APAC languages — English, Mandarin, Japanese, Korean, Indonesian, Vietnamese and Thai — with language-restricted queries and scoring that recognises non-English self-solution phrasing",
     ],
   },
   {
@@ -223,9 +223,12 @@ export default function About() {
         that language, so someone writing about their ChatGPT workflow in Vietnamese is treated as a
         signal for Vietnam. That is a proxy, not a fact: a Japanese speaker in London writes the
         same Japanese. It is defensible for finding where a practice is emerging, and it should not
-        be read as a claim about residence. Singapore is the exception — its practitioners work in
-        English, so it is searched in English and place names carry the localisation instead, which
-        makes it the least precise of the markets.
+        be read as a claim about residence. Two markets carry extra caveats. Singapore&apos;s
+        practitioners work in English, so it is searched in English with place names doing the
+        localising, making it the least precise. Mandarin covers both Traditional and Simplified
+        script and includes domestic models such as DeepSeek, since ChatGPT is unavailable in
+        mainland China — but reach still skews to Taiwan, Hong Kong and the diaspora, because
+        mainland practitioners mostly post on domestic platforms this tool cannot read.
       </p>
 
       <h2>Limits worth knowing</h2>

@@ -37,6 +37,29 @@ export const APAC_MARKETS: Market[] = [
     firstPerson: ["I ", "my ", "we ", "our "],
   },
   {
+    // Bluesky tags Traditional and Simplified alike as "zh", so phrasing covers
+    // both scripts. ChatGPT is unavailable in mainland China, so domestic
+    // models are included — omitting them would miss most of the practitioners
+    // writing in Simplified. Reach here skews to Taiwan, Hong Kong and the
+    // diaspora; mainland practitioners are largely on domestic platforms.
+    topic: "Mandarin · practitioners using AI",
+    language: "Mandarin",
+    lang: "zh",
+    phrases: [
+      "用ChatGPT做了",
+      "我自己寫了",
+      "自己做了一個",
+      "用AI做了一个",
+      "我自己写了",
+      "自己搭了一个",
+      "用ChatGPT寫了",
+      "拿AI來做",
+      "用DeepSeek做",
+      "自己弄了一個",
+    ],
+    firstPerson: ["我", "我們", "我们", "自己"],
+  },
+  {
     topic: "Japan · practitioners using AI",
     language: "Japanese",
     lang: "ja",
