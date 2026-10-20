@@ -1,0 +1,1204 @@
+{
+  "ranAt": "2026-10-20T10:52:32.418Z",
+  "topics": [
+    "Advanced OpenAI / ChatGPT users",
+    "Farmers using ChatGPT",
+    "Scientists using AI in research",
+    "Small business owners using ChatGPT",
+    "Local LLM tinkerers",
+    "AI coding agent power users",
+    "Singapore · practitioners using AI",
+    "Mandarin · practitioners using AI",
+    "Japan · practitioners using AI",
+    "Korea · practitioners using AI",
+    "Indonesia · practitioners using AI",
+    "Vietnam · practitioners using AI",
+    "Thailand · practitioners using AI"
+  ],
+  "candidates": [
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=47813703",
+      "author": "felixne",
+      "title": "Show HN: PrivaKit – A zero-upload AI workspace in the browser via WebGPU",
+      "snippet": "Hi HN, I&#x27;m the builder. I realized that using cloud AI APIs for sensitive workflows—like transcribing board meetings, OCRing employment contracts, or cleaning up ID photos—is a massive privacy liability. So I built a client-side workspace using transformers.js, Whisper, and WebGPU. Everything runs locally. You can turn on Airplane Mode after the initial model load, and it still transcribes and extracts text perfectly. To keep myself honest, I wrote a technical audit of how the data flows (or rather, doesn&#x27;t flow). My only backend is a tiny 2-core node in Singapore running self-hosted",
+      "date": "2026-04-18T06:49:26Z",
+      "isLeadUserSignal": true,
+      "problem": "Privacy liability of using cloud AI APIs for sensitive data (e.g., board meeting transcripts, contract OCR, ID photo cleanup)",
+      "selfBuiltSolution": "Created a zero‑upload, client‑side AI workspace in the browser using transformers.js, Whisper, and WebGPU that runs locally with no data leaving the device, plus a technical audit of data flows",
+      "solubilityScore": 90,
+      "expectedBenefitScore": 85,
+      "theme": "Privacy‑Preserving AI",
+      "reasoning": "The author identifies a concrete professional privacy need and has built a functional local AI workflow that outpaces mainstream cloud‑based solutions.",
+      "topic": "Singapore · practitioners using AI",
+      "firstSeenAt": "2026-10-13T13:27:59.475Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://mindpick.me/integrations",
+      "author": "bogdanmp",
+      "title": "Show HN: MCP server that surfaces human experts inside ChatGPT",
+      "snippet": "Built an MCP server that connects ChatGPT to async expert Q&amp;A. When someone asks a professional question needing human judgment, it surfaces relevant experts with pricing and response times. Working in dev mode, submitted to ChatGPT marketplace. What we learned building it: 1. ChatGPT requires `search` + `fetch` tools - could not find in MCP spec, undocumented until you hit the error 2. Tool descriptions = discovery. ChatGPT matches user intent to your descriptions. No algorithm docs. Treat it like SEO. 3. Dev Mode is buried: Settings → Connectors → Advanced → Developer Mode 4. Docs are sp",
+      "date": "2026-01-26T12:31:11Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to provide professional, judgment‑heavy answers within ChatGPT by surfacing relevant human experts with pricing and response times",
+      "selfBuiltSolution": "Built an MCP server that connects ChatGPT to an async expert Q&A platform, exposing experts as searchable/fetchable tools, handling search+fetch, using dev mode and submitting the integration to the ChatGPT marketplace",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI‑human expert integration",
+      "reasoning": "The author identifies a concrete professional need and has engineered a functional server to embed human expertise into ChatGPT, demonstrating a clear, ahead‑of‑mainstream workflow.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-08-16T08:04:09.939Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/werriesjacob1-cmyk/Full-Count/issues/91",
+      "author": "werriesjacob1-cmyk",
+      "title": "FULL COUNT Agent Bridge — Jacob / Codex / Claude Code / SUPERCHAD",
+      "snippet": "# FULL COUNT Agent Bridge\n\nThis issue is the durable control and communication channel between **Jacob\n(final authority)**, **Codex**, **Claude Code**, and **SUPERCHAD/ChatGPT**\nwhen it serves as architecture reviewer or relay.\n\n## Purpose\n\nCodex and Claude Code do not have a direct realtime connection. They\ncommunicate asynchronously by reading and posting structured comments here,\nwith repository commits, draft PRs, CI runs, and retained artifacts as the\ntechnical evidence.\n\n## Required behavior\n\nEach active agent must read this issue and every new comment:\n\n1. before claiming a major workst",
+      "date": "2026-10-19T20:55:24Z",
+      "isLeadUserSignal": true,
+      "problem": "Coordinating multiple AI coding agents (Codex, Claude, ChatGPT) for real‑time architecture review and relay",
+      "selfBuiltSolution": "Implemented a \"FULL COUNT Agent Bridge\" using a GitHub issue as a durable control channel where each agent reads/writes structured comments, commits, PRs, CI artifacts to exchange information asynchronously",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI Agent Coordination",
+      "reasoning": "The author defines a concrete, self‑implemented workflow that solves a professional need for multi‑agent orchestration, far beyond typical single‑agent usage.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-09-23T10:41:46.450Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/livekit/agents",
+      "author": "russ",
+      "title": "Show HN: Open source framework OpenAI uses for Advanced Voice",
+      "snippet": "Hey HN, we&#x27;ve been working with OpenAI for the past few months on the new Realtime API. The goal is to give everyone access to the same stack that underpins Advanced Voice in the ChatGPT app. Under the hood it works like this: - A user&#x27;s speech is captured by a LiveKit client SDK in the ChatGPT app - Their speech is streamed using WebRTC to OpenAI’s voice agent - The agent relays the speech prompt over websocket to GPT-4o - GPT-4o runs inference and streams speech packets (over websocket) back to the agent - The agent relays generated speech using WebRTC back to the user’s device The",
+      "date": "2024-10-04T17:01:04Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to integrate real-time speech capture, streaming, and GPT-4o inference for voice-enabled applications",
+      "selfBuiltSolution": "Open source framework replicating OpenAI's Advanced Voice stack using LiveKit SDK, WebRTC streaming, and websocket communication with GPT-4o",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 85,
+      "theme": "Real-time Voice AI",
+      "reasoning": "The author describes a concrete, self‑built open‑source framework that solves a professional need for real‑time voice integration with GPT‑4o, indicating a genuine lead‑user signal.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/livekit-examples/kitt",
+      "author": "russ",
+      "title": "Show HN: Live conversations with ChatGPT using WebRTC",
+      "snippet": "HN, meet KITT! https:&#x2F;&#x2F;livekit.io&#x2F;kitt Like many folks here, the LiveKit team is enamored with ChatGPT. Given that we spend most of our time working with real-time media, we thought we&#x27;d try connecting GPT to a WebRTC video call. KITT can do some neat things: - Answer questions like Siri, Alexa, or Google Assistant - Summarize what was discussed in a meeting - Speak multiple languages and even act like a third-party translator - Act as a DM in a D&amp;D campaign At first, we weren’t sure if we could get the latency low enough to have a human-like conversation, but after mak",
+      "date": "2023-04-12T15:00:26Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for low-latency, real-time conversational AI in video calls for tasks like meeting summarization, translation, and interactive role‑playing",
+      "selfBuiltSolution": "Developed KITT, a LiveKit‑based WebRTC app that streams audio/video to ChatGPT, enabling live question answering, multi‑language translation, meeting summarization, and D&D DM functions",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Real‑time AI assistant",
+      "reasoning": "The team built a concrete end‑to‑end workflow integrating ChatGPT with WebRTC, addressing a professional need far beyond typical ad‑hoc prompts.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "reddit",
+      "url": "https://www.reddit.com/r/quant/comments/1jupvho/from_playgrounds_to_portfolios_how_i_built_a/",
+      "author": "iluxu",
+      "title": "from playgrounds to portfolios: how i built a trading bot with gpt and python",
+      "snippet": "hey folks, i’m iluxu been around the ai space since the early playground + davinci-002 days. what started as casual tinkering quickly spiraled into obsession—especially once i saw how cleanly llms could mesh with market logic. fast forward, i built my own trading bot. python backend, connected to brokers, armed with a strategy that i fine-tuned using a combo of historical price patterns + llm prompts to generate decision heuristics. it’s not just technical indicators—it’s pattern recognition with personality. for those curious: • i use a hybrid system (ml + prompt-based logic) • coded position",
+      "date": "2025-04-08T22:01:08+00:00",
+      "isLeadUserSignal": true,
+      "problem": "Need for automated, intelligent trading decisions that combine market pattern recognition with nuanced heuristics beyond standard technical indicators",
+      "selfBuiltSolution": "Developed a Python trading bot that connects to broker APIs and uses a hybrid ML‑plus‑prompt system where GPT‑generated prompts produce decision heuristics integrated with historical price pattern analysis",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Algorithmic Trading",
+      "reasoning": "The author describes a concrete, self‑built workflow that leverages LLMs for a professional trading need, indicating a genuine lead‑user signal.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.devashish.me/p/local-cloud-llm-comparison-using",
+      "author": "devashish86",
+      "title": "Show HN: Local and Cloud LLM Comparison Using Nvidia DGX Spark",
+      "snippet": "Sharing a recording and notes from my demo at AI Tinkerers Seattle last week. I ran 6 different models in parallel on identical coding tasks and had a judge score each output on a 10-point scale. Local models (obviously) didn&#x27;t compare well with the cloud counterparts for this experiment. But I&#x27;ve found them to be useful for simpler tasks with a well defined scope e.g. testing, documentation, compliance. etc",
+      "date": "2026-02-09T21:25:46Z",
+      "isLeadUserSignal": true,
+      "problem": "Evaluating and comparing performance of local versus cloud LLMs for coding tasks and compliance‑sensitive workloads",
+      "selfBuiltSolution": "Created a parallel benchmarking framework on Nvidia DGX Spark that runs six different models on identical coding tasks and uses a human judge to score outputs on a 10‑point scale",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "LLM benchmarking",
+      "reasoning": "The author describes a concrete, self‑built parallel evaluation workflow addressing a professional need that few mainstream users have tackled.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-09-03T10:36:53.489Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://openhivemind.vercel.app/",
+      "author": "ananandreas",
+      "title": "Show HN: OpenHive – AI agents share solutions so other agents dont re-solve them",
+      "snippet": "I kept noticing the same pattern: my AI coding agents solve the same problems over and over across sessions. Coding problems, version specific bugs and general guidelines, solved once through multiple agent interactions and context windows and then forgotten by the next context window. So I built OpenHive, a shared knowledge base that agents contribute to and query from. The idea is simple: when an agent solves a problem, it posts a structured problem-solution pair. When another agent hits a similar issue, it searches the hive first. How it works: - REST API with semantic search (pgvector + Op",
+      "date": "2026-05-29T14:35:42Z",
+      "isLeadUserSignal": true,
+      "problem": "AI coding agents repeatedly re-solve the same problems across sessions, losing learned solutions",
+      "selfBuiltSolution": "Created OpenHive, a shared knowledge base with REST API and semantic search (pgvector) where agents post structured problem‑solution pairs and query similar issues before solving",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI Agent Knowledge Sharing",
+      "reasoning": "The author identified a concrete workflow inefficiency in AI coding agents and built a functional system to address it, indicating a genuine lead‑user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-09-20T10:32:48.945Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=47909460",
+      "author": "kofdai",
+      "title": "I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in…",
+      "snippet": "I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in AI coding: We need the reasoning power of frontier models like Claude 4.7 Opus, but cannot legally or ethically leak proprietary source code, hardcoded secrets, or core business logic to their APIs. With the industry worried about losing &quot;tacit knowledge&quot; to AI, I built an architecture where the human retains ultimate control over semantics, while the AI is relegated strictly to structural logic patching. To achieve this, I built the &quot;Gatekeeper&quot; architecture. Before code leaves your loc",
+      "date": "2026-04-26T11:32:48Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to leverage powerful LLM reasoning for code assistance without exposing proprietary source, secrets, or business logic to external APIs",
+      "selfBuiltSolution": "Created a native macOS IDE (Verantyx) with a \"Gatekeeper\" architecture that keeps semantic control with the human and restricts the AI to structural logic patching, enabling safe local inference or controlled API calls",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Secure AI coding",
+      "reasoning": "The author describes a concrete, self‑built workflow that addresses a professional need far ahead of mainstream tools.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-03T11:02:06.292Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.freestyle.sh/",
+      "author": "benswerd",
+      "title": "Launch HN: Freestyle – Sandboxes for Coding Agents",
+      "snippet": "We’re Ben and Jacob, cofounders of Freestyle ( https:&#x2F;&#x2F;freestyle.sh ). We’re building a cloud for Coding Agents. For the first generation of agents it looked like workflows with minimal tools. 2 years ago we published a package to let AI work in SQL, at that time GPT-4 could write simple scripts. Soon after the first AI App Builders started using AI to make whole websites; we supported that with a serverless deploy system. But the current generation is going much further, instead of minimal tools and basic serverless apps AI can utilize the full power of a computer (“sandbox”). We’re",
+      "date": "2026-04-06T16:32:11Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for a robust, full‑computer sandbox environment where AI coding agents can execute complex workflows beyond minimal tools and serverless functions",
+      "selfBuiltSolution": "Created Freestyle, a cloud platform for coding agents that includes a SQL‑AI integration package, serverless deployment, and a full‑sandbox execution environment for AI agents",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 85,
+      "theme": "AI Coding Sandbox",
+      "reasoning": "The founders describe a concrete professional need and their own built platform that advances AI agent capabilities well ahead of mainstream tools.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "reddit",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1tausi7/i_built_a_marketplace_for_ai_agent_skills_and/",
+      "author": "BadMenFinance",
+      "title": "I built a marketplace for AI agent skills and grew it to 17K users with $0 on ads. ChatGPT did all the SEO and content. Here's the full playbook.",
+      "snippet": "I'm a solo non-technical founder. I built a marketplace called Agensi for SKILL.md skills (the files that teach AI coding agents like Codex CLI, Claude Code, and Cursor new capabilities). I'm not a developer. The entire product was built with AI tools. But this post isn't about that. This post is about how I used ChatGPT to build and execute a content strategy that took the site from zero to 17K active users, 559K Google impressions per month, and 509 indexed pages in about 8 weeks. No ad spend. No marketing team. No SEO consultant. I want to share the exact system because I think most people ",
+      "date": "2026-05-12T07:57:08+00:00",
+      "isLeadUserSignal": true,
+      "problem": "Need to acquire massive organic traffic and users for an AI agent skill marketplace without ad spend",
+      "selfBuiltSolution": "Used ChatGPT to generate and execute a large‑scale SEO and content strategy, creating 509 indexed pages and 559K monthly impressions, driving 17K active users",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI SEO automation",
+      "reasoning": "The author demonstrates a concrete, self‑built AI workflow that solves a high‑impact growth problem far ahead of typical users.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-18T10:18:24.630Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.designarena.ai/?arena=agents&harness=standard",
+      "author": "grace77",
+      "title": "Show HN: Agent Runner – open-source agent harness to benchmark real coding",
+      "snippet": "Hey HN! We built Agent Runner, a model-agnostic, open-source agent harness that executes the same prompt against two anonymized coding agents in parallel sandboxes. Each agent can make tool calls, edit multiple files, and self-correct through iterative reasoning. You pick the better result - this becomes the ground truth for the leaderboard. Why we built it Traditional benchmarks often fall short for modern agentic systems: they rely on static tasks and only measure final outputs. But real coding agents modify multiple files across a repo, answer to user re-prompts, use tool calls, and recover",
+      "date": "2025-11-25T16:42:40Z",
+      "isLeadUserSignal": true,
+      "problem": "Existing static benchmarks fail to evaluate modern coding agents that edit multiple files, use tool calls, and iteratively self-correct",
+      "selfBuiltSolution": "Created Agent Runner, an open‑source, model‑agnostic harness that runs identical prompts against two anonymized coding agents in parallel sandboxes, captures tool calls, multi‑file edits, and iterative reasoning, and selects the superior output as ground truth for a leaderboard",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI benchmarking",
+      "reasoning": "The author identifies a concrete limitation in current evaluation methods and builds a specialized tool to address it, demonstrating a clear lead‑user need and self‑implemented solution.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-14T11:05:24.402Z",
+      "isNew": false
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/figarotwo.bsky.social/post/3mldwop62zs26",
+      "author": "figarotwo.bsky.social",
+      "title": "為了出一份「API 的其中一個功能」的規格，用了三個 AI，還讓他們 peer review 後再濃縮精簡。",
+      "snippet": "為了出一份「API 的其中一個功能」的規格，用了三個 AI，還讓他們 peer review 後再濃縮精簡。\n\nClaude Cowork Opus 4.7\nGemini 3.1 Pro\nChatGPT 5.5 Thinking\n\nClaude 直接燒掉 80% 的 token，而且他們產出的東西我大概只懂三成；扣掉一開始等 Claude 的時候瞇了一會，全程大概花 60-90 分鐘。\n\nAI 真的是相當好用的工具，但還是得再次提醒自己：\n\n對需求全貌有足夠的理解 + 有足夠的文字表達能力讓 AI 理解要做什麼，才是 AI 真正好用的原因。",
+      "date": "2026-05-08T14:24:57.771Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to quickly create a detailed API feature specification",
+      "selfBuiltSolution": "Used Claude, Gemini, and ChatGPT to draft the spec, then had the AIs peer‑review each other's output and finally condensed the results into a concise document",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "API spec automation",
+      "reasoning": "The author demonstrates a professional workflow that leverages multiple LLMs to generate, review, and refine API documentation, a concrete and advanced use beyond typical casual prompts.",
+      "topic": "Mandarin · practitioners using AI",
+      "firstSeenAt": "2026-10-04T11:43:45.535Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/toshio1822/ai-office/issues/764",
+      "author": "toshio1822",
+      "title": "汎用AI社員Workflow: 設定駆動の執筆・独立レビュー・有限修正（note記事で検証）",
+      "snippet": "## 【2026-10-19 最優先：#778完了後・2名レビュー実API評価の準備段階】\n\n- **現在のmain:** `70d4ef8f34b455d205688998b09c4ac8dde7c4c9`（PR #779 merge済み、main exact-SHA CI [39238971290](https://github.com/toshio1822/ai-office/actions/runs/39238971290)成功）。#778はcompleted。選択可能な記事Workflowは**1本** `article-production`。レビュー担当は`document-reviewer`（品質/要件）と`evidence-auditor`（根拠監査）の**2人**、1つのwriter `article-writer`。人数は設定で変更可能。\n- **最新実行上限:** この2人構成で最大3改訂なら、通常provider送信**最大12回**（初稿1＋初回レビュー2＋3×[改訂1＋独立再レビュー2]）。従前の「1人・最大8送信」記述、2026-10-18以前のmain SHA、既存grantは**履歴であり現在の新Job承認ではない**。1件の新Job実行にも新しいBusiness/Executionの明示承認が必要。\n- **現在許可する作業はno-send事前",
+      "date": "2026-10-20T11:05:20Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to produce high‑quality, well‑reviewed articles using AI while controlling revision cycles and API usage",
+      "selfBuiltSolution": "Created a configurable AI‑driven workflow (article‑production) with distinct writer, document‑reviewer, and evidence‑auditor roles, setting‑driven limits on revisions and API calls, integrated into CI and job‑approval processes",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI Content Production",
+      "reasoning": "The author describes a concrete, self‑built, configuration‑driven AI article workflow with multiple reviewer roles and usage limits, addressing a professional content creation need.",
+      "topic": "Japan · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/oratta/claude-harness/issues/1115",
+      "author": "oratta",
+      "title": "ステータスラインの Claude の行にリセット権の残数と期限を出す",
+      "snippet": "## これで何が変わるか\n\nClaude のアカウントの行にも、Codex と同じ形でリセット権の残数と期限が出る（例: `リセット2回・最短あと3日21h`）。期限が近い権利を使い忘れずに済む。\n\n## やらないとどうなるか / 今のコスト\n\nリセット権は期限を過ぎると消える。今は claude.ai の画面を開かないと残数も期限も分からない。\n\n## 概要\n\n取得元を特定する子 issue の結論に従って、Claude の各アカウントのリセット権を取得し、アカウントの行の末尾に出す。表示の規則は Codex の行（README「リセット権の有効期限」）と同じにする。期限まで 3 日以内は黄、24 時間以内は赤。残数だけ取れたら `期限不明`、取得に失敗したら前回の値に取得時刻を添える。取れなくなったら（内部の通信の仕様変更など）区画を出さないだけにする。\n\n## 触るファイル・関数\n\n- 取得元が usage API なら `plugins/dev-workflow/scripts/usage-probe.sh` の `parse()` と `~/.claude/.usage-snapshot` の書き出し、別の通信なら取得を足す場所を取得元の調査結果で決める\n- `plugins/statusline/scripts/statusline.sh`: アカウント行の組み立て（6",
+      "date": "2026-10-20T10:56:55Z",
+      "isLeadUserSignal": true,
+      "problem": "Unable to see remaining Claude reset rights and their expiration, risking missed usage and lost rights",
+      "selfBuiltSolution": "Modified statusline scripts to fetch Claude usage via usage-probe.sh, parse the reset count and expiry, and display them with color coding directly in the account line",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "AI usage monitoring",
+      "reasoning": "The author describes a concrete workflow they built to solve a professional need for tracking AI reset quotas, which is beyond typical user behavior.",
+      "topic": "Japan · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/minsik2e5/sumus-quiz-battle/pull/88",
+      "author": "minsik2e5",
+      "title": "새 그림 40장 넣기 · 메뉴·학습·배지·영웅 (v13.93.0)",
+      "snippet": "Refs #45\n\n## 새 그림 40장 (에셋 08)\nGPT로 만든 08-1 ~ 08-10 시트(1024×1024 투명 PNG, 2×2)를 잘라서, 선 아이콘과 이모지가 있던 자리에 넣었어요.\n\n| 시트 | 들어간 곳 |\n|---|---|\n| 08-1 | 하단 메뉴(패드에서는 왼쪽 메뉴): 홈 · 학습 · 야차전 · 놀이터 |\n| 08-2 | 하단 메뉴 나 · 나 화면 타일(내 펫·꾸미기, 랭킹, 칭호 도감) |\n| 08-3 | 나 메뉴(내 기록, 계정·설정) · 야차전 방식(스피드전, 실력전) |\n| 08-4 | 나 메뉴(출석 도장, 어려운 단어, 알림, 앱 설치) |\n| 08-5 | 모은 꾸미기 · 못 만난 펫 · 못 만난 전설 펫 · 빈 기록 |\n| 08-6 | 학습 카드(단어 학습, 어법·어휘) · 시험 카드(연습시험, 실전시험) |\n| 08-7 | 오늘의 추천 학습 · 카드로 외우기 · 다 외웠어요 · 빈 단어 목록 |\n| 08-8 | 성취 배지 4개 |\n| 08-9 | 연습 결과 도장(PERFECT · 아주 잘했어요 · 잘했어요 · 다시 도전) |\n| 08-10 | 펫 도감 타일 · 못 만난 영웅 펫 · 영웅 알 · 영웅 배지 |\n\n- 36곳은 v",
+      "date": "2026-10-03T09:40:13Z",
+      "isLeadUserSignal": true,
+      "problem": "Need custom UI icons and graphics for multiple menu, badge, and hero sections of a learning app",
+      "selfBuiltSolution": "Generated 10 high‑resolution transparent PNG sheets (1024×1024) with GPT, sliced them into individual assets, and replaced the existing line icons and emojis in the app’s UI",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 85,
+      "theme": "AI‑driven UI assets",
+      "reasoning": "The author describes a concrete workflow where they personally used GPT to create and integrate visual assets, addressing a professional design need ahead of typical practice.",
+      "topic": "Korea · practitioners using AI",
+      "firstSeenAt": "2026-10-12T14:18:31.009Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/Jeihyuck/Rubicon_evaluation/pull/3",
+      "author": "Copilot",
+      "title": "Samsung Rubicon QA: auto-input questions to samsung.com/sec, read answers, evaluate with GPT",
+      "snippet": "Implements the end-to-end QA automation for the Rubicon chatbot on www.samsung.com/sec — auto-submitting prepared questions, extracting DOM answers, and scoring responses with OpenAI GPT.\n\n## Pipeline (already in base, completed here)\n- **Browser automation** (`samsung_rubicon.py`): opens samsung.com/sec, dismisses popups, resolves Rubicon chatbot widget (iframe-aware), submits each question with DOM-verified input, polls DOM for answer stabilization\n- **Answer extraction** (`dom_extractor.py`): DOM-first, OCR fallback on failure\n- **GPT evaluation** (`evaluator.py`): OpenAI Responses API with",
+      "date": "2026-04-29T05:38:28Z",
+      "isLeadUserSignal": true,
+      "problem": "Automated evaluation of Samsung Rubicon chatbot's answers for QA testing",
+      "selfBuiltSolution": "Created a full pipeline that uses browser automation to submit prepared questions, extracts answers via DOM parsing with OCR fallback, and scores responses using OpenAI GPT via the Responses API",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Chatbot QA Automation",
+      "reasoning": "The author demonstrates a concrete professional need and builds a bespoke end‑to‑end system, indicating a genuine lead‑user signal.",
+      "topic": "Korea · practitioners using AI",
+      "firstSeenAt": "2026-10-13T13:27:59.475Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/Jeihyuck/Rubicon_evaluation/pull/1",
+      "author": "Copilot",
+      "title": "Add Samsung Chat QA browser automation system",
+      "snippet": "Implements a fully operational browser-UI-based chatbot QA pipeline targeting `www.samsung.com`. No Samsung API calls — automation only via Playwright screen interaction.\n\n## Project Structure\n- `app/` — modular Python package: config, logger, models, csv_loader, browser, samsung_chat, evaluator, report_writer, utils\n- `testcases/questions.csv` — pipe-delimited keyword test cases (id, category, locale, page_url, question, expected_keywords, forbidden_keywords)\n- `artifacts/{fullpage,chatbox}/` — timestamped PNG screenshots per case\n- `reports/` — JSON, CSV, Markdown outputs + `runtime.log`\n- `",
+      "date": "2026-03-30T05:07:39Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to perform comprehensive QA of Samsung's web-based chatbot UI without direct API access",
+      "selfBuiltSolution": "Created a Playwright-driven browser automation pipeline that reads CSV test cases, interacts with the chat UI, captures screenshots, and generates JSON/CSV/Markdown reports",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Chatbot QA Automation",
+      "reasoning": "The author describes a concrete, self‑built workflow addressing a professional testing need, indicating a genuine lead‑user signal.",
+      "topic": "Korea · practitioners using AI",
+      "firstSeenAt": "2026-10-18T10:18:24.630Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/Gamevalentine/NeuralNote/pull/12",
+      "author": "Gamevalentine",
+      "title": "[NOTIQ] Giai đoạn 5 — xuất MIDI đa track, ZIP từng nhạc cụ và hướng dẫn Cubase/Kontakt",
+      "snippet": "## NOTIQ — Giai đoạn 5: xuất MIDI đa track vào Cubase, Cakewalk, Kontakt\n\nBase: `feature/notiq-stage4-native-muscriptor-bridge` (MuScriptor native/Giai đoạn 4). Head: `feature/notiq-stage5-daw-midi-export`. Chỉ chỉnh Web/TypeScript chức năng xuất MIDI; **không merge main, không triển khai production, không chạm bản Electron Stage 4 đang được dùng**.\n\n### Thay đổi\n- **Xuất → MIDI đa track (.mid)** theo định dạng GM Type 1, lưu BPM, cao độ, trường độ, velocity, instrument program.\n- **Xuất → Gói MIDI từng track (.zip)** bao gồm `NOTIQ_ALL_TRACKS.mid`, MIDI stem của từng nhạc cụ trong `MIDI_TRACK",
+      "date": "2026-10-20T10:57:05Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to export multi‑track, GM Type 1 MIDI with full instrument, tempo, velocity data for use in DAWs like Cubase, Cakewalk, Kontakt",
+      "selfBuiltSolution": "Implemented a TypeScript/Web feature in NOTIQ that generates multi‑track MIDI files and packages each instrument's stem into a ZIP, integrating directly with the existing Muscriptor bridge",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Music notation export",
+      "reasoning": "The author describes a concrete, self‑built workflow to solve a professional music‑software need, indicating advanced, non‑trivial AI‑assisted development.",
+      "topic": "Vietnam · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/r00t3r20/graph-engineer-topic/issues/1",
+      "author": "r00t3r20",
+      "title": "[RFC] Graph Engineering for Agentic Coding — Kickoff & Architecture Discussion",
+      "snippet": "# RFC: Graph Engineering for Agentic Coding\n\n> **Status:** Open for architecture discussion — **not approved for implementation**  \n> **Discussion home:** This GitHub Issue. Treat issue comments and explicit decisions as the shared conversation record.  \n> **Participants:** Repository owner, Claude Code, and ChatGPT (แจ๋ว) via GitHub Issues.\n\n## 1. Why we are here\n\nWe want to redesign the **agentic coding execution workflow** using Graph Engineering, rather than only adding instructions to an agent prompt. The goal is to improve **correctness, controlled autonomy, observability, recovery, and ",
+      "date": "2026-10-12T06:48:50Z",
+      "isLeadUserSignal": true,
+      "problem": "Improving the correctness, controlled autonomy, observability, and recovery of agentic coding execution workflows",
+      "selfBuiltSolution": "Proposing and architecting a graph‑engineering based execution framework that orchestrates AI agents (Claude, ChatGPT) via a structured graph model to replace linear prompt instructions",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 80,
+      "theme": "Agentic Coding Workflow",
+      "reasoning": "The author defines a specific professional workflow need and outlines a concrete graph‑based solution they are building with AI agents, indicating genuine lead‑user activity.",
+      "topic": "Thailand · practitioners using AI",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/Fosowl/agenticSeek",
+      "author": "Fosowl",
+      "title": "Show HN: AgenticSeek – Self-hosted alternative to cloud-based AI tools",
+      "snippet": "I’ve spent the last two months building AgenticSeek, a privacy-focused alternative to cloud-based AI tools like ManusAI. It runs entirely on your machine—no API calls, no data leaks. Why AgenticSeek? Optimized for local LLMs (developed mostly on an RTX 3060 running deepseek r1 14b). Truly private: All components (TTS, STT, planner) run locally. More responsive than alternatives (we respond fast to issues + active Discord). Designed to be fun—think JARVIS-like voice control, multi-agent workflows, and a slick web UI. Current Features: Web browsing (research + form filling), code write&#x2F;fix,",
+      "date": "2025-04-26T17:23:49Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for private, offline AI tools that avoid data leaks and reliance on cloud APIs",
+      "selfBuiltSolution": "Developed AgenticSeek, a self-hosted, locally-run AI suite with voice control, multi-agent workflows, web browsing, and code assistance, optimized for local LLMs on consumer hardware",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 78,
+      "theme": "Privacy AI",
+      "reasoning": "The author identifies a clear privacy-driven need and has built a functional local AI platform to meet it, demonstrating concrete, advanced use beyond typical prompts.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-09-04T10:34:23.768Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=40717198",
+      "author": "everfly",
+      "title": "Hello HN Community, As a GenAI application developer, the constant need to switch between…",
+      "snippet": "Hello HN Community, As a GenAI application developer, the constant need to switch between different tools for prompt testing in playgrounds, seeking assistance from various AI assistants like ChatGPT or Claude, and performing batch evaluations to test the stability of prompts can be incredibly frustrating. That&#x27;s why we&#x27;ve developed ConsoleX, a highly integrated playground that brings it all together in one place. ConsoleX is a unified development environment that incorporates chat interfaces, playground debugging, and bulk evaluations, allowing you to switch seamlessly between diffe",
+      "date": "2024-06-18T12:48:13Z",
+      "isLeadUserSignal": true,
+      "problem": "Switching between multiple AI tools for prompt testing, assistance, and batch evaluations is frustrating for GenAI developers",
+      "selfBuiltSolution": "Created ConsoleX, an integrated playground that unifies chat interfaces, debugging, and bulk prompt evaluations in one environment",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 75,
+      "theme": "AI dev workflow",
+      "reasoning": "The author identifies a professional pain point and has built a concrete tool to address it, showing clear lead‑user behavior.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-10-18T10:18:24.630Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/DenchHQ/DenchClaw",
+      "author": "kumar_abhirup",
+      "title": "Show HN: DenchClaw – Local CRM on Top of OpenClaw",
+      "snippet": "Hi everyone, I am Kumar, co-founder of Dench ( https:&#x2F;&#x2F;denchclaw.com ). We were part of YC S24, an agentic workflow company that previously worked with sales floors automating niche enterprise tasks such as outbound calling, legal intake, etc. Building consumer &#x2F; power-user software always gave me more joy than FDEing into an enterprise. It did not give me joy to manually add AI tools to a cloud harness for every small new thing, at least not as much as completely local software that is open source and has all the powers of OpenClaw (I can now talk to my CRM on Telegram!). A wee",
+      "date": "2026-03-09T14:55:42Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for a privacy-preserving, locally hosted CRM with AI assistance and seamless messaging integration for sales and enterprise workflows",
+      "selfBuiltSolution": "Created DenchClaw, a local CRM built on OpenClaw that embeds AI tools locally and enables interaction via Telegram",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 75,
+      "theme": "Local AI CRM",
+      "reasoning": "The author describes a concrete, self‑built AI‑enhanced CRM addressing a professional workflow need, indicating a genuine lead‑user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://consolex.ai/plugins",
+      "author": "everfly",
+      "title": "Show HN: PlugNFunc – Invoke ChatGPT Plugins as Functions by API",
+      "snippet": "Hello HN Community, I&#x27;m thrilled to introduce you to a tool I&#x27;ve developed called PlugNFunc. - ChatGPT plugins are valuable but usually locked behind a paywall. - OpenAI&#x27;s function-calling capabilities are powerful but cumbersome to implement and debug. PlugNFunc tackles both issues by enabling users to easily invoke ChatGPT plugins as functions, and what&#x27;s more—it&#x27;s completely free to use! Why PlugNFunc? We created PlugNFunc to democratize access to ChatGPT&#x27;s advanced features and make it easier for developers to integrate these capabilities into their applicatio",
+      "date": "2023-10-21T13:42:04Z",
+      "isLeadUserSignal": true,
+      "problem": "Integrating ChatGPT plugins is costly and function-calling APIs are hard to implement and debug",
+      "selfBuiltSolution": "Developed PlugNFunc, a free tool that lets users invoke ChatGPT plugins as simple functions, removing paywalls and simplifying debugging",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "Plugin integration",
+      "reasoning": "The author identified a concrete developer pain point and built a functional tool to solve it, indicating genuine lead‑user activity.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-10-14T11:05:24.402Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=44298819",
+      "author": "evavillaro",
+      "title": "Hi HN!",
+      "snippet": "Hi HN! I built AudioGretel (audiogretel.com), an AI-powered platform that generates personalized audio stories for children in multiple languages. THE BACKSTORY: As a parent of multilingual kids, I was frustrated with the lack of quality, varied bedtime stories that could also help with language learning. Most story apps either have limited content or are monolingual. WHAT IT DOES: • Generates unique audio stories using AI (OpenAI GPT) • Supports Spanish, English, Italian, and French • Adapts content for different age groups and language levels • Creates high-quality audio using advanced TTS •",
+      "date": "2025-06-17T13:16:01Z",
+      "isLeadUserSignal": true,
+      "problem": "Lack of high-quality, multilingual, personalized bedtime stories for children that also support language learning",
+      "selfBuiltSolution": "Created AudioGretel, an AI platform that uses OpenAI GPT to generate unique audio stories in Spanish, English, Italian, and French, adapts content to age and language level, and produces high‑quality audio via advanced TTS",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "Multilingual story generation",
+      "reasoning": "The author identified a personal need for multilingual bedtime stories and built a concrete AI‑driven product to meet it, demonstrating a lead‑user signal.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-10-17T10:05:20.591Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=47915183",
+      "author": "kofdai",
+      "title": "Thanks for the heads-up!",
+      "snippet": "Thanks for the heads-up! Since I&#x27;m new here, I didn&#x27;t realize the formatting rules and ended up missing the 2-hour edit window. I&#x27;ve replied to my original comment with the properly formatted version. I appreciate the help! I’m a student developer building Verantyx, a native macOS IDE solving a core dilemma in AI coding: We need the reasoning power of frontier models like Claude 4.7 Opus, but cannot legally or ethically leak proprietary source code, hardcoded secrets, or core business logic to their APIs. With the industry worried about losing &quot;tacit knowledge&quot; to AI, ",
+      "date": "2026-04-26T22:05:35Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to leverage powerful LLM reasoning (e.g., Claude 4.7 Opus) for code assistance without exposing proprietary source code, secrets, or core business logic to external APIs",
+      "selfBuiltSolution": "Developing Verantyx, a native macOS IDE that integrates frontier AI models while enforcing on‑device isolation and privacy safeguards to keep proprietary code and data local",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 85,
+      "theme": "Secure AI coding",
+      "reasoning": "The author articulates a clear professional need and is actively building a specialized IDE to solve it, indicating a genuine lead‑user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/longtail-labs/slide.code",
+      "author": "Jonovono",
+      "title": "Show HN: Graphical Vibe Coding Environment (VCE) for Claude Code",
+      "snippet": "Been using Cursor and Claude Code to build a pretty involved electron browser. Wanted a little UI for Claude Code. Found I would always go to tiktok or instagram while waiting for the agent to complete my code. Wanted to play around with that idea a bit further so I decided to fork my electron app and make a little environment for vibe coding, that provides activities to do while you are waiting for the ai to code. Listen to music, browse HN, watch tbpn and play a massive multiplayer game. At any rate, if you are building an electron app, I can confidently say it&#x27;s the best starter templa",
+      "date": "2025-08-06T18:18:51Z",
+      "isLeadUserSignal": true,
+      "problem": "Idle time while waiting for Claude Code to generate code in an Electron app, causing distraction and reduced productivity",
+      "selfBuiltSolution": "Forked the Electron app to create a Graphical Vibe Coding Environment (VCE) that embeds Claude Code and adds music, HN browsing, and a multiplayer game to keep the user productively occupied while the AI writes code",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "AI coding productivity",
+      "reasoning": "The author identifies a real workflow bottleneck and builds a custom UI integration to address it, demonstrating a concrete, ahead‑of‑the‑mainstream solution.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/lovaxi/Rubato_Device",
+      "author": "Beartificial",
+      "title": "Show HN: Rubato – Retro-Mac desk device mirrors AI coding state-ESP8266",
+      "snippet": "Hi everyone! I have built an AI health device (ESP8266 + 240*240 screen). It can show AI Agents&#x27; status in real time with breathing bubble. And remind user dringking water, toilet, streth, etc. support: DeepSeek Harness, opencode, OpenClaw, Claude Code, Cursor. Hardware design, firmware and plugins are all opensource. urls are here: https:&#x2F;&#x2F;github.com&#x2F;lovaxi&#x2F;Rubato_Device https:&#x2F;&#x2F;github.com&#x2F;lovaxi&#x2F;Rubato_Plugins Type-c power supply, 2.4G wifi. Online sell on Tindie: https:&#x2F;&#x2F;www.tindie.com&#x2F;products&#x2F;beartificialintelligence&#x2F;ru",
+      "date": "2026-09-05T03:16:57Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to track AI coding agents' status and receive real-time health reminders while working at a desk",
+      "selfBuiltSolution": "Created the Rubato device (ESP8266 + 240×240 screen) with custom firmware and open‑source plugins that display AI agent status, breathing bubble visualizations, and push health reminders, integrating DeepSeek, Claude, Cursor, etc.",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "AI coding monitor",
+      "reasoning": "The author built a dedicated hardware‑software system to solve a personal workflow need, demonstrating concrete, self‑implemented AI integration beyond typical tutorials.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-18T10:18:24.630Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/leoning60/browsernode",
+      "author": "leoning",
+      "title": "Show HN: Browsernode – Open-source TS browser agent(browser-use compatible)",
+      "snippet": "Hey HN, I&#x27;m leoning. I built Browsernode ( https:&#x2F;&#x2F;browsernode.com ), an open-source TypeScript browser agent ( https:&#x2F;&#x2F;github.com&#x2F;leoning60&#x2F;browsernode ) for AI agents to interact with the web. It is 100% compatible with the APIs and all the features of browser-use ( https:&#x2F;&#x2F;github.com&#x2F;browser-use&#x2F;browser-use ) — but rebuilt from the ground up for modern TypeScript environments. We really like browser-use and started with it, but our tech stack is entirely TypeScript&#x2F;JavaScript, so we decided to build something that fits more natural",
+      "date": "2025-08-07T16:08:02Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for AI agents to interact with web using a TypeScript/JavaScript stack while preserving browser-use API compatibility",
+      "selfBuiltSolution": "Created Browsernode, an open‑source TypeScript browser agent that replicates browser-use features for modern TS environments",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "AI agent tooling",
+      "reasoning": "The author identifies a professional need for TS‑native web‑interaction for AI agents and delivers a concrete, self‑built library, indicating a genuine lead‑user signal.",
+      "topic": "Singapore · practitioners using AI",
+      "firstSeenAt": "2026-10-08T12:44:10.905Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/nabaho/pureunall/pull/2632",
+      "author": "nabaho",
+      "title": "fix(뉴스레터 핵심판): ChatGPT(Codex) 독립 코드 검토 12건 보완 + 자동화 점검 거짓 경고",
+      "snippet": "대표 지시 2026-10-15 「뉴스레터 코딩한거 챗지피티로 코딩 검토해서 문제점 보완해라」.\n\n합쳐진 핵심판 코드(#2624~#2628)를 **Codex(ChatGPT)가 읽기 전용으로 독립 검토** → 12건 지적 → 하나씩 코드로 확인한 뒤 고쳤다. (npm 설치 Codex 는 모델 미지원으로 실패해 Codex 앱에 딸린 새 실행 파일로 돌림. 자세한 것은 `status/2026-10-15-news-core-review.md`)\n\n## 고친 것 (심각도순)\n| 심각도 | 문제 | 조치 |\n|---|---|---|\n| 상 | 판 충돌 뒤 다시 읽기가 `핵심`을 안 읽어 **다음 저장이 서버의 카드를 지움** | 다시 읽기에 추가 + «읽지 않은 칸은 쓰지 않음» |\n| 상 | 먼저 시작한 저장이 끝나며 옛 객체로 **더 새 입력을 덮고**, 뒤 저장은 옛 판으로 «남이 고쳤다» 막힘 | 회차별 **저장 줄 세우기** · 끝나도 «판만» 올림 · 치는 중엔 안 그림 |\n| 중 | 금요일 서버가 낡은 목록으로 **이미 쓴 후보를 되살림** | 후보는 «지금 비어 있을 때만» 거래로 |\n| 중 | AI 대기 중 회차를 옮기면 후보가 **다른(보낸) 회차에 저장",
+      "date": "2026-10-15T03:06:35Z",
+      "isLeadUserSignal": true,
+      "problem": "Newsletter core code had critical bugs causing data loss, version conflicts, and stale candidate reuse",
+      "selfBuiltSolution": "Used Codex (ChatGPT) in read‑only mode to automatically scan the combined core code, generate a list of 12 issues, then applied targeted code fixes and added automation checks (custom executable due to npm limits)",
+      "solubilityScore": 75,
+      "expectedBenefitScore": 80,
+      "theme": "AI code review",
+      "reasoning": "The author demonstrates a concrete, self‑built AI workflow that directly solves a professional coding problem, indicating a genuine lead‑user signal.",
+      "topic": "Korea · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/tutd3/terraform/pull/12",
+      "author": "tutd3",
+      "title": "Scope CI role to EC2/VPC, EKS, S3, IAM (replace AdministratorAccess)",
+      "snippet": "## Summary\n- `gh-actions-terraform` role sekarang pakai custom policy scoped ke 4 service yang benar-benar dipakai Terraform di repo ini: **EC2/VPC, EKS, S3, IAM** - bukan `AdministratorAccess` lagi.\n- Service lain di akun AWS (RDS, Lambda, Billing, Organizations, CloudFormation, Route53, dll) **tidak lagi bisa diakses** role ini sama sekali.\n- Trade-off: dalam 4 service itu masih full `*` per-action (bukan least-privilege sampai per-action), supaya tidak gampang break kalau ada action yang kelewat. **IAM** tetap yang paling sensitif - role ini masih bisa bikin IAM principal baru dengan akses ",
+      "date": "2026-10-20T08:35:42Z",
+      "isLeadUserSignal": true,
+      "problem": "Overly permissive CI role (AdministratorAccess) exposing AWS account to unnecessary access",
+      "selfBuiltSolution": "Created a custom IAM policy scoped to only EC2/VPC, EKS, S3, and IAM for the gh‑actions‑terraform role, replacing AdministratorAccess and limiting access to other services",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "CI security",
+      "reasoning": "The author details a concrete, self‑implemented policy change to solve a real security need, showing a genuine lead‑user workflow.",
+      "topic": "Indonesia · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/dinotong/Manga-Translator/issues/42",
+      "author": "HetCreep",
+      "title": "options: allSpent นับ key ว่างเป็นโควตาหมด จึงขึ้น 'ใช้ครบทุก key แล้ว' ทั้งที่ยังไม่มี key",
+      "snippet": "## สิ่งที่พบ\n\n`extension/src/entrypoints/options/main.tsx:185` `const allSpent = keys.length > 0 && !report.some((r) => r.state === 'active')` เป็นจริงเมื่อทุก key มีสถานะ `empty` เช่นหลังกด '+ เพิ่ม key' แต่ยังไม่ได้วาง key แล้วบรรทัด ~301 แสดง 'ใช้ครบทุก key แล้ว' ใน `core/quota.ts:294` มีฟังก์ชัน `allSpent(keys, statuses, now)` ที่ตัด key ว่างออกแล้ว\n\n## ผลกระทบ (ตามจริง)\n\nข้อความเตือนผิดสำหรับผู้ใช้ใหม่ที่ยังไม่ได้ใส่ key\n\n## ข้อเสนอ (ยังไม่ได้ทดสอบ)\n\nใช้ `allSpent` จาก `core/quota.ts` แทนเงื่อนไขเฉพาะที่\n\n## ที่ไม่ได้ตรวจ\n\n—\n\n*ที่มา: ตรวจ repo ด้วย AI ช่วย (Claude) โดยมีคนกำกับ finding มา",
+      "date": "2026-10-15T11:21:11Z",
+      "isLeadUserSignal": true,
+      "problem": "False warning 'ใช้ครบทุก key แล้ว' appears when all keys are empty, misleading new users",
+      "selfBuiltSolution": "Employed Claude to scan the repo, pinpointed the faulty condition in options/main.tsx and proposed swapping it for the existing allSpent function from core/quota.ts to correctly ignore empty keys",
+      "solubilityScore": 85,
+      "expectedBenefitScore": 70,
+      "theme": "AI-assisted debugging",
+      "reasoning": "The author leveraged Claude for a concrete code‑review workflow, identified a specific bug, and devised a precise fix, showing a genuine professional need and self‑built AI solution.",
+      "topic": "Thailand · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://recursive.support",
+      "author": "alanmcintyre",
+      "title": "Show HN: Recursive – AI support agents for small businesses",
+      "snippet": "I&#x27;m a solo developer who&#x27;s been writing code for 26 years, mostly consulting work in computational geometry and CAD software these days. A month or two ago I watched a YouTube video about using an AI agent as a resume assistant, and thought it sounded like a fun idea. More importantly, it sounded like something I could actually learn to build quickly. Around the same time my longest-running client, a small company that makes a SolidWorks plugin, needed a better way to handle technical support. They&#x27;re a three-person shop--they don&#x27;t have a support team or an IT team. So I b",
+      "date": "2026-02-18T13:58:28Z",
+      "isLeadUserSignal": true,
+      "problem": "Small SolidWorks plugin company lacks a dedicated support/IT team and needs an efficient way to handle technical support queries",
+      "selfBuiltSolution": "Developing a custom AI support agent (Recursive) that automates ticket triage, answers common technical questions, and integrates with the client’s support workflow",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 80,
+      "theme": "Support AI Agent",
+      "reasoning": "The author identifies a real client need and is actively building an AI-driven support tool to address it, demonstrating a concrete lead‑user workflow.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-10-14T11:05:24.402Z",
+      "isNew": false
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/snapbrief.bsky.social/post/3mjz56t2do72s",
+      "author": "snapbrief.bsky.social",
+      "title": "Small business owners using ChatGPT: how much time do you spend re-explaining your business at the start of each session",
+      "snippet": "Small business owners using ChatGPT: how much time do you spend re-explaining your business at the start of each session?\n\nI built SnapBrief to fix it — 10 questions → reusable context brief. Paste once, AI starts from knowing you. Free: snapbrief.fly.dev",
+      "date": "2026-04-21T13:56:53.839829+00:00",
+      "isLeadUserSignal": true,
+      "problem": "Repeatedly re‑explaining business context to ChatGPT each session wastes time for small business owners",
+      "selfBuiltSolution": "Built SnapBrief—a 10‑question reusable brief that users paste once so the AI retains the business context across sessions",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "Context Management",
+      "reasoning": "The author identifies a clear workflow pain and has independently engineered a reusable AI‑prompt solution, indicating genuine lead‑user activity.",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-09-12T10:00:01.106Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/werriesjacob1-cmyk/Full-Count/issues/91",
+      "author": "werriesjacob1-cmyk",
+      "title": "FULL COUNT Agent Bridge — Jacob / Codex / Claude Code / SUPERCHAD",
+      "snippet": "# FULL COUNT Agent Bridge\n\nThis issue is the durable control and communication channel between **Jacob\n(final authority)**, **Codex**, **Claude Code**, and **SUPERCHAD/ChatGPT**\nwhen it serves as architecture reviewer or relay.\n\n## Purpose\n\nCodex and Claude Code do not have a direct realtime connection. They\ncommunicate asynchronously by reading and posting structured comments here,\nwith repository commits, draft PRs, CI runs, and retained artifacts as the\ntechnical evidence.\n\n## Required behavior\n\nEach active agent must read this issue and every new comment:\n\n1. before claiming a major workst",
+      "date": "2026-10-19T20:55:24Z",
+      "isLeadUserSignal": true,
+      "problem": "No real‑time, coordinated communication channel between multiple AI agents (Codex, Claude, ChatGPT) for architecture review and code relay",
+      "selfBuiltSolution": "Created a \"FULL COUNT Agent Bridge\" using a GitHub issue as a durable control and communication hub where each AI agent reads/writes structured comments, links repository commits, PRs, CI runs, and artifacts to asynchronously coordinate work",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 80,
+      "theme": "AI Agent Integration",
+      "reasoning": "The author defines a concrete workflow they built to link several LLMs for code architecture tasks, addressing a professional need not yet met by mainstream tools",
+      "topic": "Small business owners using ChatGPT",
+      "firstSeenAt": "2026-09-23T10:41:46.450Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://www.ipynb.ai",
+      "author": "risos8200",
+      "title": "Show HN: Jupyt – We made Jupyter notebooks agentic",
+      "snippet": "We built Jupyt ( https:&#x2F;&#x2F;www.ipynb.ai ), an AI-native coding assistant for Jupyter notebooks that helps you write, run, and analyze Python code faster. What it does: • Automatically creates, updates and deletes cells • Run and reference outputs autonomously with “Agent Mode” • Search datasets from HuggingFace, Kaggle, and more • Supports all major model providers (OpenAI, Claude, Gemini, etc.) We’re targeting a gap between powerful modern editors like Cursor and the outdated Jupyter&#x2F;Colab workflow millions still use. Our goal is to bring AI-first productivity to research, data a",
+      "date": "2025-05-14T18:31:55Z",
+      "isLeadUserSignal": true,
+      "problem": "Researchers and data scientists face a productivity gap between modern AI‑enhanced editors and the traditional Jupyter/Colab notebook workflow, lacking autonomous code generation, cell management, and dataset search within notebooks",
+      "selfBuiltSolution": "Created Jupyt (www.ipynb.ai), an AI‑native assistant that automatically creates, updates, deletes cells, runs and references outputs in “Agent Mode”, searches datasets from HuggingFace/Kaggle, and integrates with major model providers",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI notebook workflow",
+      "reasoning": "The author identifies a professional pain point in notebook work and has built a concrete AI‑driven tool to address it, indicating a genuine lead‑user signal.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://talkmate.online",
+      "author": "digi_wares",
+      "title": "Show HN: TalkMate – Someone to Talk To, Anytime",
+      "snippet": "I work alone. I travel constantly:- Bangkok, Dubai, Singapore, Vietnam. I&#x27;m a workaholic and honestly pretty confined to myself because there&#x27;s never enough time. Sometimes I just want to talk through what&#x27;s on my mind but it&#x27;s 3 am, or I&#x27;m in a new city, or I don&#x27;t want to bother anyone with half-formed thoughts. So I built TalkMate. It&#x27;s a voice companion that actually talks back. Open it in your browser, start speaking, and it responds out loud. No signup, no account needed. I used to earlier chat with ChatGPT and Claude in my free time but talking to some",
+      "date": "2026-01-15T18:39:31Z",
+      "isLeadUserSignal": true,
+      "problem": "Needs a private, always-available voice companion to talk through thoughts while traveling alone at odd hours",
+      "selfBuiltSolution": "Built TalkMate, a browser‑based voice AI that listens and responds out loud using ChatGPT/Claude without signup",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 70,
+      "theme": "AI Voice Companion",
+      "reasoning": "The author identified a personal loneliness workflow and engineered a concrete voice‑AI tool to meet it, demonstrating a genuine lead‑user signal.",
+      "topic": "Singapore · practitioners using AI",
+      "firstSeenAt": "2026-10-18T10:18:24.630Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/vimvis/agent-communication/issues/1",
+      "author": "vimvis",
+      "title": "🤖 모아-서아 대화방",
+      "snippet": "## 📋 에이전트 간 소통 채널\\n\\n**참여자**\\n- @모아 (Moa) - 남자, 메모리/자동화 담당\\n- @서아 (Seo-a) - 여자, AI Daily 담당\\n\\n**목적**\\n형규형(오빠) 업무 협업 및 인수인계\\n\\n**사용 방법**\\n이 Issue에 댓글로 대화합니다.\\n\\n---\\n\\n### 📝 최근 대화\\n\\n**[2026-03-30]**\\n- 모아: 서아야 안녕! 이제부터 여기서 대화하자. AI Daily 인수인계 핵심 정보 별낼게.",
+      "date": "2026-03-31T08:41:17Z",
+      "isLeadUserSignal": true,
+      "problem": "Need a structured handoff and collaboration channel between specialized AI agents (memory/automation and AI Daily) for work continuity",
+      "selfBuiltSolution": "Created a dedicated GitHub issue as a conversational interface where the agents exchange messages via comments to transfer knowledge and tasks",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 80,
+      "theme": "AI Agent Handoff",
+      "reasoning": "The author outlines a concrete workflow using GitHub issues for AI agents to communicate and hand over responsibilities, showing a genuine lead‑user implementation.",
+      "topic": "Korea · practitioners using AI",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/tranhuunguyenhuy-hue/dongphugia.com.vn/issues/160",
+      "author": "tranhuunguyenhuy-hue",
+      "title": "Coordination: Codex goal reconciliation and public website recovery readiness",
+      "snippet": "# Public Website Recovery — Codex Goal & Current-State Reconciliation\n\n## Overall project goal (authoritative for this coordination request)\nRestore the public-facing **dongphugia.vn** website after AWS credits ran out, using **Cloudflare Free + Supabase Free** as a temporary low/no-cost infrastructure. Preserve product catalogue, images, SEO, and core public browsing. Prioritize public availability; Admin, AI and nonessential background workflows are deferred. No AWS runtime dependency in the recovered public serving path.\n\n## Request to Codex: report BEFORE further implementation\nPlease publ",
+      "date": "2026-10-20T10:55:45Z",
+      "isLeadUserSignal": true,
+      "problem": "Restore public website dongphugia.vn after AWS credits expired, preserving catalogue, images, SEO with no AWS runtime",
+      "selfBuiltSolution": "Using Codex to generate migration scripts and configuration for a temporary infrastructure built on Cloudflare Free and Supabase Free, handling DNS, storage, and static site serving",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 80,
+      "theme": "Low‑cost site recovery",
+      "reasoning": "The author articulates a professional need and explicitly plans to leverage Codex to build a concrete migration workflow, which is a sophisticated, cost‑saving AI‑driven solution.",
+      "topic": "Vietnam · practitioners using AI",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=46492939",
+      "author": "niqhtcrawler",
+      "title": "Launching my first product today and would love this community&#x27;s thoughts.",
+      "snippet": "Launching my first product today and would love this community&#x27;s thoughts. Background: I&#x27;m 17, been coding for a while, and kept running into the same problem: I wanted AI features in my apps but didn&#x27;t want to pay OpenAI&#x27;s API fees or build a backend just to hide my keys. What I built: Scaffold - a no-code tool that lets you create custom AI tools and embed them anywhere. Think Typeform but for AI prompts. The flow: Build a form (fields like &quot;topic&quot;, &quot;budget&quot;, whatever) Write a prompt template using {{field_name}} variables Get an embed code, paste it i",
+      "date": "2026-01-04T22:22:22Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to add AI features to apps without paying OpenAI API fees or managing a backend to hide API keys",
+      "selfBuiltSolution": "Created Scaffold, a no-code platform that lets users design custom AI prompt forms and generate embed code to integrate AI functionality directly into apps",
+      "solubilityScore": 80,
+      "expectedBenefitScore": 65,
+      "theme": "No-code AI embedding",
+      "reasoning": "The author identifies a clear personal need and has built a concrete tool to solve it, demonstrating genuine lead‑user behavior.",
+      "topic": "Advanced OpenAI / ChatGPT users",
+      "firstSeenAt": "2026-10-17T10:05:20.591Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/mats16/ai-deck-factory/pull/77",
+      "author": "mats16",
+      "title": "Codex のプラグインとしても入れられるようにし、プロンプトで呼んだスキルにも rules/ を出す",
+      "snippet": "## 変えること\n\nAI Deck Factory を Codex（CLI と ChatGPT のデスクトップアプリの Codex）のプラグインとしても入れられるようにする。Codex は Claude Code の形（`.claude-plugin/marketplace.json`・`plugin.json`・`hooks/hooks.json`・`${CLAUDE_PLUGIN_ROOT}`）をそのまま読むので、Codex のための別のファイルは置かず、入れ方を `docs/codex-plugin.md`・README・INSTALL.md に書く。あわせて、`$ai-deck-factory:<スキル>`（Codex）・`/ai-deck-factory:<スキル>`（Claude Code）で呼んだスキルにも `rules/<スキル>/SKILL.md` を出す hook（UserPromptSubmit）を足す。\n\n## 理由\n\n- Codex でも同じスキル・決まりの層を使えるようにする。スキルはもう Codex の会話を前提にしたところ（deck-review の Codex の子、dreaming の `run.sh codex`・Codex の会話の記録）があり、足りなかったのは入れ方だけだった。\n- プロンプトで呼んだスキルは、道具を通らずに SKILL.m",
+      "date": "2026-10-20T10:40:07Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to integrate AI Deck Factory as a plugin for Codex (CLI and ChatGPT desktop) and have skill invocations via prompts automatically generate corresponding rules files",
+      "selfBuiltSolution": "Adapt AI Deck Factory to be a Codex plugin without extra files, document installation in docs/codex-plugin.md, README, INSTALL.md, and add a UserPromptSubmit hook that outputs rules/<skill>/SKILL.md when invoking $ai-deck-factory:<skill> or /ai-deck-factory:<skill>",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 75,
+      "theme": "AI plugin integration",
+      "reasoning": "The author outlines a concrete, self‑built workflow to extend a specialized AI tool into a new platform, demonstrating a genuine lead‑user effort.",
+      "topic": "Japan · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/dinotong/Manga-Translator/issues/33",
+      "author": "HetCreep",
+      "title": "CI: ตรึง actions/checkout และ actions/setup-node กับ commit SHA แทนแท็ก",
+      "snippet": "## สิ่งที่พบ\n\n`.github/workflows/check.yml:19-20` ใช้ `actions/checkout@v4` และ `actions/setup-node@v7` แท็กเปลี่ยนเป้าหมายได้ จึงไม่รับประกันว่า CI รันโค้ด revision เดิมทุกครั้ง\n\n## ผลกระทบ (ตามจริง)\n\nเป็นการเสริมความแข็งแรงของ supply chain ของ CI (ระดับต่ำ) workflow ใช้สิทธิ์ `contents: read` อยู่แล้ว\n\n## ข้อเสนอ (ยังไม่ได้ทดสอบ)\n\nตรึงด้วย commit SHA เต็ม พร้อม comment ระบุเวอร์ชัน ให้ dependabot (ที่ตั้งไว้แล้ว) อัปเดต SHA ให้\n\n## ที่ไม่ได้ตรวจ\n\nไม่ได้ตรวจ SHA ของแต่ละเวอร์ชัน\n\n*ที่มา: ตรวจ repo ด้วย AI ช่วย (Claude) โดยมีคนกำกับ finding มาจาก CodeRabbit บน PR snapshot https://github.com/He",
+      "date": "2026-10-15T11:20:55Z",
+      "isLeadUserSignal": true,
+      "problem": "CI supply chain security – ensuring CI runs exact code revisions by avoiding mutable tags",
+      "selfBuiltSolution": "Pin actions/checkout and actions/setup-node to full commit SHA and add a comment for dependabot to auto‑update the SHA",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 75,
+      "theme": "CI supply chain",
+      "reasoning": "The author identifies a real CI security need, used AI to discover it, and proposes a concrete self‑implemented workflow change.",
+      "topic": "Thailand · practitioners using AI",
+      "firstSeenAt": "2026-10-17T10:05:20.591Z",
+      "isNew": false
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/yksr-melt/Meltype/issues/978",
+      "author": "kazuki-N5",
+      "title": "[機能提案] Space で変換したとき、Jevに文節の候補を選ばせる(外部に入力を送る)",
+      "snippet": "外部に入力した内容を送るので読まずにcloseしていただいても構いません、試しにwindowsでフォークして作成し、便利だと感じたので提案しておきます。\n### 困っていること\n\n正しい候補が ↓ の一覧にあるのに、文脈に合わない候補が 1 番目に来ることがあります。\n\n- わたしはきょうさっかーをします → 私は**共**サッカーをします\n- きのうげーむをかった → **機能**ゲームを買った\n\n### 提案\n\n1 回目の Space で、各文節の候補を OpenRouter の Jev (`typesafe/jev-1.14`) に送り、一番自然なものを選ばせます。\n\nhttps://github.com/user-attachments/assets/9a71d337-99af-4560-ada2-3cf3eac953a6\n\n**送るプロンプト**\n\nMozc が「私は | 共サッカーを | します」と区切ったとき、**文節ごとに 1 問ずつ** (c0・c1・c2)、全部を 1 回のリクエストで聞きます。\n\n- `state`: 文全体の読み。今の変換結果は送りません (Jev がそれに引っ張られないように)\n- `criteria`: その文節の候補 (↓ の一覧の上から最大 10 件) → その候補を入れた文。ほかの文節は読みのままにして、その文節だけで比べます\n\n`",
+      "date": "2026-10-20T11:06:33Z",
+      "isLeadUserSignal": true,
+      "problem": "Japanese IME (Mozc) often puts an incorrect candidate at the top of the suggestion list, causing mismatched conversions like \"共サッカー\" instead of \"サッカー\"",
+      "selfBuiltSolution": "Forked Mozc on Windows and implemented a workflow that sends each segmented phrase (文節) and its candidate list to OpenRouter's Jev model via a single request, using a custom prompt to let Jev rank and select the most natural candidate",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 65,
+      "theme": "Japanese IME",
+      "reasoning": "The author demonstrates a concrete, self‑built integration of an LLM to solve a specific professional need, indicating a genuine lead‑user signal.",
+      "topic": "Japan · practitioners using AI",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=43898064",
+      "author": "simonw",
+      "title": "&gt; However, for more complex code questions particularly around less popular libraries…",
+      "snippet": "&gt; However, for more complex code questions particularly around less popular libraries which have fewer code examples scraped from Stack Overflow and GitHub, I am more cautious of the LLM’s outputs. That&#x27;s changed for me in the past couple of months. I&#x27;ve been using the ChatGPT interface to o3 and o4-mini for a bunch of code questions against more recent libraries and finding that they&#x27;re surprisingly good at using their search tool to look up new details. Best version of that so far: &quot;This code needs to be upgraded to the new recommended JavaScript library from Google. F",
+      "date": "2025-05-05T18:40:23Z",
+      "isLeadUserSignal": true,
+      "problem": "Need reliable assistance for complex code questions on obscure or newly-updated libraries where public examples are scarce",
+      "selfBuiltSolution": "Uses ChatGPT (o3/o4‑mini) with its built‑in search capability to retrieve up‑to‑date library documentation and generate code upgrades (e.g., migrating to a new Google JavaScript library)",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 60,
+      "theme": "library migration aid",
+      "reasoning": "The author demonstrates a concrete workflow leveraging AI search to solve a professional coding problem that typical developers struggle with.",
+      "topic": "Farmers using ChatGPT",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=38683751",
+      "author": "everforward",
+      "title": "You can do the &quot;almost-realtime&quot; part, all locally.",
+      "snippet": "You can do the &quot;almost-realtime&quot; part, all locally. I tinkered with a Python script for a few hours that used Whisper to speech-to-text, fed that into a local Mistral model (don&#x27;t recall which), and then piped the output into text-to-speech. It wasn&#x27;t really streamed, though. Audio input was buffered, fully evaluated to a string, then fed into the LLM and the full text was converted back to audio. The Whisper speech-to-text was pretty real-time, the LLM was not. I was barely scraping by on hardware specs, though.",
+      "date": "2023-12-18T15:30:04Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for near real-time, offline speech-to-text, LLM processing, and text-to-speech pipeline",
+      "selfBuiltSolution": "Python script that buffers audio, uses Whisper for real-time transcription, feeds the transcript to a local Mistral LLM, then pipes the LLM output to a TTS engine",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 60,
+      "theme": "Local Real-time AI",
+      "reasoning": "The author describes a concrete, self‑built workflow tackling a specific offline, low‑latency AI use case, showing genuine lead‑user activity.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "bluesky",
+      "url": "https://bsky.app/profile/uogbuji.bsky.social/post/3mfrweoll2s2g",
+      "author": "uogbuji.bsky.social",
+      "title": "Anya. Been noodling as I pondered #OpenClaw. Defo for tinkerers, but alr very useful for me. Ideas: 1) Clarity of short-",
+      "snippet": "Anya. Been noodling as I pondered #OpenClaw. Defo for tinkerers, but alr very useful for me. Ideas: 1) Clarity of short-branch DAG flow 2) Separation of deterministic from ND blocks 3) Simple UNIX spirit. Local #LLM provider support\ngithub.com/uogbuji/Anya\n#GenAI #LLMOps #AgenticAI #Agent",
+      "date": "2026-02-26T19:25:28.191Z",
+      "isLeadUserSignal": true,
+      "problem": "Need for clearer, modular, UNIX‑style workflow management of short‑branch DAGs and deterministic vs nondeterministic blocks when running local LLM providers",
+      "selfBuiltSolution": "Created the open‑source \"Anya\" framework (github.com/uogbuji/Anya) that structures LLM pipelines as DAGs, separates deterministic and nondeterministic components, and supports local LLM providers",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 60,
+      "theme": "LLM Ops Workflow",
+      "reasoning": "The author describes a concrete personal workflow need and provides a self‑built open‑source tool addressing it, indicating genuine lead‑user activity.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-10-11T12:01:48.578Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=44373698",
+      "author": "rajeshpatel15",
+      "title": "You’re definitely not alone “AI code loot box” is a great description!",
+      "snippet": "You’re definitely not alone “AI code loot box” is a great description! I’ve been experimenting with Claude Code (and the other major models) since late last year, and my success rate seems to track yours unless I’m deliberate about “prompt engineering” and workflow. Here are a few things that have helped me get better, more reliable results: 1. Be uncomfortably explicit in prompts: Claude Code in particular is very sensitive to ambiguity. When I write a prompt, I’ll often: Specify coding style, performance constraints, and even “avoid X library” if needed. Give sample input&#x2F;output (even h",
+      "date": "2025-06-25T04:48:02Z",
+      "isLeadUserSignal": true,
+      "problem": "Unreliable and ambiguous AI-generated code from Claude Code",
+      "selfBuiltSolution": "Developed a detailed prompt engineering workflow that includes specifying coding style, performance constraints, library exclusions, and providing sample input/output to guide the model",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 60,
+      "theme": "AI coding workflow",
+      "reasoning": "The author describes a concrete, self‑crafted prompting process to reliably harness AI for code generation, indicating a genuine lead‑user approach.",
+      "topic": "AI coding agent power users",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/tranhuunguyenhuy-hue/dongphugia.com.vn/issues/160",
+      "author": "tranhuunguyenhuy-hue",
+      "title": "Coordination: Codex goal reconciliation and public website recovery readiness",
+      "snippet": "# Public Website Recovery — Codex Goal & Current-State Reconciliation\n\n## Overall project goal (authoritative for this coordination request)\nRestore the public-facing **dongphugia.vn** website after AWS credits ran out, using **Cloudflare Free + Supabase Free** as a temporary low/no-cost infrastructure. Preserve product catalogue, images, SEO, and core public browsing. Prioritize public availability; Admin, AI and nonessential background workflows are deferred. No AWS runtime dependency in the recovered public serving path.\n\n## Request to Codex: report BEFORE further implementation\nPlease publ",
+      "date": "2026-10-20T10:55:45Z",
+      "isLeadUserSignal": true,
+      "problem": "Restore the public‑facing dongphugia.vn website after AWS credits expired, needing a low‑cost infrastructure while preserving catalogue, images, SEO, and public access",
+      "selfBuiltSolution": "Using Codex to generate a detailed goal‑state and current‑state reconciliation report and migration plan to move the site to Cloudflare Free + Supabase Free",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 60,
+      "theme": "Website Recovery",
+      "reasoning": "The author presents a concrete professional need and explicitly leverages Codex to produce a specific migration workflow, indicating genuine lead‑user activity.",
+      "topic": "Singapore · practitioners using AI",
+      "firstSeenAt": "2026-10-19T11:59:08.936Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://github.com/TilmanGriesel/chipper",
+      "author": "TilmanGriesel",
+      "title": "Show HN: Chipper AI/RAG Interface for Tinkerers (Ollama, Haystack RAG, Python)",
+      "snippet": "I started this project as a way to help my girlfriend with her new book and to learn a bit about LLMs and RAGs. The idea was to use local embeddings to ask questions about characters and explore creative possibilities, all while keeping everything local. What began as a bunch of a wild colelction of scripts is now growing into a labour of love pet-project. You maybe know how it sometimes goes :) It&#x27;s not finished and polished yet, but I&#x27;ve made some good progress and brought it to a much better overall state over Christmas day. I&#x27;d love to show it to a few people and get some fe",
+      "date": "2024-12-30T12:52:56Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to query and explore character information for a new book while keeping data local",
+      "selfBuiltSolution": "Developed a Python-based RAG interface (Chipper AI) using Ollama and Haystack with local embeddings to ask questions about characters and generate creative ideas",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 55,
+      "theme": "Creative Writing Aid",
+      "reasoning": "The author describes a specific, personal workflow and a self‑built local RAG tool, indicating a genuine lead‑user effort beyond generic AI usage.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-10-14T11:05:24.402Z",
+      "isNew": false
+    },
+    {
+      "source": "hackernews",
+      "url": "https://news.ycombinator.com/item?id=37530986",
+      "author": "bytefactory",
+      "title": "I think local LLMs are great for tinkerers, and with quantization can run on most modern…",
+      "snippet": "I think local LLMs are great for tinkerers, and with quantization can run on most modern PCs. I am not comfortable sending over my personal data over to OpenAI&#x2F;Anthropic, so I&#x27;ve been playing around with https:&#x2F;&#x2F;github.com&#x2F;PromtEngineer&#x2F;localGPT&#x2F; , GPT4All, etc. which keep the data all local. Sliding window chunking, RAG, etc. seem more sophisticated than the other document LLM tools, so I would love to try this out if you ever add the ability to run LLMs locally!",
+      "date": "2023-09-16T01:06:41Z",
+      "isLeadUserSignal": true,
+      "problem": "Need to keep personal data private by running LLMs locally instead of sending it to cloud services",
+      "selfBuiltSolution": "Set up quantized local LLMs using tools like localGPT and GPT4All, implemented sliding‑window chunking and retrieval‑augmented generation (RAG) to process documents entirely on a modern PC",
+      "solubilityScore": 70,
+      "expectedBenefitScore": 55,
+      "theme": "Local AI Privacy",
+      "reasoning": "The author articulates a clear privacy need and describes a concrete, self‑built local LLM workflow using specific tools and techniques.",
+      "topic": "Local LLM tinkerers",
+      "firstSeenAt": "2026-10-20T10:52:32.418Z",
+      "isNew": true
+    },
+    {
+      "source": "github",
+      "url": "https://github.com/takkub/agent-takkub/issues/878",
+      "author": "takkub",
+      "title": "assign --mode subagent tells Lead to use subagent_type='reviewer', which does not exist in the Claude Agent tool",
+      "snippet": "## What happened\nThe output of `takkub assign --role reviewer --mode subagent ...` says: \"Dispatch one native subagent with subagent_type='reviewer' and task capsule: ...\". The Claude Code Lead has no `reviewer` agent type. Its Agent tool lists only claude, claude-code-guide, Explore, general-purpose, Plan and statusline-setup. The Lead has to guess, and used general-purpose. If the Lead followed the instruction literally, the call would fail.\n\n## Expected\nPrint a subagent_type that exists for the Lead's provider (general-purpose on Claude, or the provider equivalent), or say \"any general agen",
+      "date": "2026-10-15T08:48:07Z",
+      "isLeadUserSignal": true,
+      "problem": "subagent_type='reviewer' does not exist in Claude Code Lead, causing command to fail",
+      "selfBuiltSolution": "",
+      "solubilityScore": 20,
+      "expectedBenefitScore": 75,
+      "theme": "AI workflow integration",
+      "reasoning": "The author describes a concrete, advanced use of Claude subagents that reveals a real workflow need, indicating lead‑user status despite not having solved the issue themselves.",
+      "topic": "Thailand · practitioners using AI",
+      "firstSeenAt": "2026-10-16T10:36:07.846Z",
+      "isNew": false
+    }
+  ],
+  "themesByTopic": {
+    "Advanced OpenAI / ChatGPT users": [
+      {
+        "theme": "AI‑human expert integration",
+        "count": 1
+      },
+      {
+        "theme": "AI Agent Coordination",
+        "count": 1
+      },
+      {
+        "theme": "Real-time Voice AI",
+        "count": 1
+      },
+      {
+        "theme": "AI dev workflow",
+        "count": 1
+      },
+      {
+        "theme": "Plugin integration",
+        "count": 1
+      },
+      {
+        "theme": "Multilingual story generation",
+        "count": 1
+      },
+      {
+        "theme": "No-code AI embedding",
+        "count": 1
+      }
+    ],
+    "Farmers using ChatGPT": [
+      {
+        "theme": "Real‑time AI assistant",
+        "count": 1
+      },
+      {
+        "theme": "library migration aid",
+        "count": 1
+      }
+    ],
+    "Scientists using AI in research": [],
+    "Small business owners using ChatGPT": [
+      {
+        "theme": "Support AI Agent",
+        "count": 1
+      },
+      {
+        "theme": "Context Management",
+        "count": 1
+      },
+      {
+        "theme": "AI Agent Integration",
+        "count": 1
+      }
+    ],
+    "Local LLM tinkerers": [
+      {
+        "theme": "Algorithmic Trading",
+        "count": 1
+      },
+      {
+        "theme": "LLM benchmarking",
+        "count": 1
+      },
+      {
+        "theme": "Privacy AI",
+        "count": 1
+      },
+      {
+        "theme": "Local Real-time AI",
+        "count": 1
+      },
+      {
+        "theme": "LLM Ops Workflow",
+        "count": 1
+      },
+      {
+        "theme": "Creative Writing Aid",
+        "count": 1
+      },
+      {
+        "theme": "Local AI Privacy",
+        "count": 1
+      }
+    ],
+    "AI coding agent power users": [
+      {
+        "theme": "Secure AI coding",
+        "count": 2
+      },
+      {
+        "theme": "AI Agent Knowledge Sharing",
+        "count": 1
+      },
+      {
+        "theme": "AI Coding Sandbox",
+        "count": 1
+      },
+      {
+        "theme": "AI SEO automation",
+        "count": 1
+      },
+      {
+        "theme": "AI benchmarking",
+        "count": 1
+      },
+      {
+        "theme": "Local AI CRM",
+        "count": 1
+      },
+      {
+        "theme": "AI coding productivity",
+        "count": 1
+      },
+      {
+        "theme": "AI coding monitor",
+        "count": 1
+      },
+      {
+        "theme": "AI notebook workflow",
+        "count": 1
+      },
+      {
+        "theme": "AI coding workflow",
+        "count": 1
+      }
+    ],
+    "Singapore · practitioners using AI": [
+      {
+        "theme": "Privacy‑Preserving AI",
+        "count": 1
+      },
+      {
+        "theme": "AI agent tooling",
+        "count": 1
+      },
+      {
+        "theme": "AI Voice Companion",
+        "count": 1
+      },
+      {
+        "theme": "Website Recovery",
+        "count": 1
+      }
+    ],
+    "Mandarin · practitioners using AI": [
+      {
+        "theme": "API spec automation",
+        "count": 1
+      }
+    ],
+    "Japan · practitioners using AI": [
+      {
+        "theme": "AI Content Production",
+        "count": 1
+      },
+      {
+        "theme": "AI usage monitoring",
+        "count": 1
+      },
+      {
+        "theme": "AI plugin integration",
+        "count": 1
+      },
+      {
+        "theme": "Japanese IME",
+        "count": 1
+      }
+    ],
+    "Korea · practitioners using AI": [
+      {
+        "theme": "Chatbot QA Automation",
+        "count": 2
+      },
+      {
+        "theme": "AI‑driven UI assets",
+        "count": 1
+      },
+      {
+        "theme": "AI code review",
+        "count": 1
+      },
+      {
+        "theme": "AI Agent Handoff",
+        "count": 1
+      }
+    ],
+    "Indonesia · practitioners using AI": [
+      {
+        "theme": "CI security",
+        "count": 1
+      }
+    ],
+    "Vietnam · practitioners using AI": [
+      {
+        "theme": "Music notation export",
+        "count": 1
+      },
+      {
+        "theme": "Low‑cost site recovery",
+        "count": 1
+      }
+    ],
+    "Thailand · practitioners using AI": [
+      {
+        "theme": "Agentic Coding Workflow",
+        "count": 1
+      },
+      {
+        "theme": "AI-assisted debugging",
+        "count": 1
+      },
+      {
+        "theme": "CI supply chain",
+        "count": 1
+      },
+      {
+        "theme": "AI workflow integration",
+        "count": 1
+      }
+    ]
+  },
+  "notesByTopic": {
+    "Advanced OpenAI / ChatGPT users": [
+      "2 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Farmers using ChatGPT": [
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Scientists using AI in research": [
+      "4 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Small business owners using ChatGPT": [
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Local LLM tinkerers": [
+      "1 candidate(s) failed LLM classification and were skipped."
+    ],
+    "AI coding agent power users": [
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Singapore · practitioners using AI": [
+      "1 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Mandarin · practitioners using AI": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Japan · practitioners using AI": [
+      "Reddit unavailable: RSS fallback returned no results (Reddit may be rate-limiting)",
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Korea · practitioners using AI": [
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Indonesia · practitioners using AI": [
+      "2 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Vietnam · practitioners using AI": [
+      "3 candidate(s) failed LLM classification and were skipped."
+    ],
+    "Thailand · practitioners using AI": [
+      "2 candidate(s) failed LLM classification and were skipped."
+    ]
+  }
+}
